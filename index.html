@@ -8,61 +8,54 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:Arial,Helvetica,sans-serif;background:#050505;color:#fff;overflow-x:hidden}
+body{font-family:Arial,Helvetica,sans-serif;background:#030303;color:#fff;overflow-x:hidden}
 a{text-decoration:none;color:inherit}
+:root{--gold:#c6a15b;--dark:#030303;--soft:#b8b8b8}
 
-.header{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:22px 7%;display:flex;align-items:center;justify-content:space-between;background:rgba(0,0,0,.42);backdrop-filter:blur(18px)}
-.logo{font-weight:900;letter-spacing:3px;font-size:20px}
-.logo span{color:#c7a15a}
-.right{display:flex;align-items:center;gap:16px}
-.lang{border:1px solid rgba(199,161,90,.7);border-radius:30px;padding:9px 14px;color:#fff;background:rgba(0,0,0,.25);font-weight:800}
-.menu-btn{width:42px;height:42px;border:1px solid rgba(255,255,255,.25);border-radius:50%;background:rgba(255,255,255,.05);display:flex;align-items:center;justify-content:center;font-size:22px}
+.header{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:22px 7%;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(180deg,rgba(0,0,0,.85),rgba(0,0,0,.25));backdrop-filter:blur(14px)}
+.logo{font-size:22px;font-weight:900;letter-spacing:4px}.logo b{color:#fff}.logo span{color:var(--gold)}
+.top-actions{display:flex;align-items:center;gap:14px}
+.lang{border:1px solid rgba(198,161,91,.7);border-radius:999px;padding:12px 16px;background:rgba(0,0,0,.25);color:#fff;font-weight:900}
+.burger{width:52px;height:52px;border:1px solid rgba(255,255,255,.25);border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.04);font-size:28px}
 
-.menu{position:fixed;top:0;right:-100%;width:78%;max-width:360px;height:100vh;background:#080808;z-index:2000;padding:90px 35px;transition:.4s;border-left:1px solid rgba(199,161,90,.25)}
-.menu.active{right:0}
-.menu a{display:block;font-size:24px;margin:26px 0;color:#ddd}
-.close{position:absolute;top:25px;right:30px;font-size:34px;color:#c7a15a}
+.menu{position:fixed;top:0;right:-100%;width:80%;max-width:390px;height:100vh;background:#070707;z-index:2000;padding:95px 38px;transition:.45s;border-left:1px solid rgba(198,161,91,.3)}
+.menu.active{right:0}.menu a{display:block;font-size:28px;font-weight:900;margin:30px 0}.close{position:absolute;right:30px;top:25px;font-size:40px;color:var(--gold)}
 
-.hero{min-height:100vh;background:linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.35)),url('Screenshot_20260620_141238_Instagram.jpg') center/cover;display:flex;align-items:center;padding:120px 7%}
-.hero-content{max-width:780px}
-.kicker{color:#c7a15a;letter-spacing:7px;font-size:12px;margin-bottom:20px;text-transform:uppercase}
-h1{font-size:clamp(50px,8vw,110px);line-height:.88;text-transform:uppercase;letter-spacing:-5px;margin-bottom:28px}
-.service-box{min-height:150px;margin:25px 0}
-.service-title{color:#c7a15a;font-size:clamp(28px,5vw,52px);font-weight:900;text-transform:uppercase;transition:.5s}
-.service-text{color:#ddd;font-size:19px;line-height:1.7;max-width:650px;margin-top:14px;transition:.5s}
-.btns{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
-.btn{padding:16px 28px;border-radius:40px;font-weight:900;text-transform:uppercase;font-size:13px;letter-spacing:1px}
-.primary{background:linear-gradient(135deg,#f1db9b,#9e7834);color:#060606}
-.secondary{border:1px solid rgba(255,255,255,.25);color:#fff}
+.hero{min-height:100vh;position:relative;display:flex;align-items:center;padding:130px 7% 80px;background:url('Screenshot_20260620_141238_Instagram.jpg') center/cover}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#000 0%,rgba(0,0,0,.88) 38%,rgba(0,0,0,.35) 100%)}
+.hero:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 72% 35%,rgba(198,161,91,.18),transparent 32%)}
+.hero-content{position:relative;z-index:2;max-width:760px}
+.kicker{letter-spacing:8px;color:var(--gold);font-size:12px;margin-bottom:24px;text-transform:uppercase}
+h1{font-size:clamp(52px,9vw,118px);line-height:.84;letter-spacing:-6px;text-transform:uppercase;margin-bottom:30px}
+.showcase{min-height:230px;margin-top:20px;border-left:3px solid var(--gold);padding-left:28px}
+.service-name{font-size:clamp(34px,6vw,68px);font-weight:900;text-transform:uppercase;transition:.45s}
+.service-sub{color:var(--gold);font-size:20px;font-weight:900;margin:12px 0;letter-spacing:2px;text-transform:uppercase;transition:.45s}
+.service-desc{color:#ddd;font-size:19px;line-height:1.75;max-width:650px;transition:.45s}
+.progress{width:260px;height:3px;background:rgba(255,255,255,.18);margin-top:26px;overflow:hidden}
+.progress span{display:block;height:100%;width:0;background:var(--gold);animation:bar 7s linear infinite}
+@keyframes bar{from{width:0}to{width:100%}}
+.btns{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}.btn{padding:16px 28px;border-radius:999px;font-weight:900;text-transform:uppercase;font-size:13px}
+.primary{background:linear-gradient(135deg,#f2dc9d,#9b7432);color:#050505}.ghost{border:1px solid rgba(255,255,255,.3)}
 
-section{padding:110px 7%}
-.label{color:#c7a15a;letter-spacing:5px;text-transform:uppercase;font-size:12px;margin-bottom:18px}
-h2{font-size:clamp(36px,5vw,74px);line-height:.95;letter-spacing:-3px;margin-bottom:35px}
-.text{color:#cfcfcf;font-size:18px;line-height:1.8;max-width:850px}
-
-.services{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px}
-.card{background:rgba(255,255,255,.04);padding:32px;border-radius:28px;min-height:250px;border:1px solid rgba(255,255,255,.09);transition:.35s}
-.card:hover{transform:translateY(-10px);border-color:#c7a15a;background:rgba(199,161,90,.08)}
-.card small{color:#c7a15a;letter-spacing:3px}
-.card h3{font-size:24px;margin:18px 0}
-.card p{color:#bdbdbd;line-height:1.7}
+section{padding:100px 7%}.label{color:var(--gold);letter-spacing:7px;text-transform:uppercase;font-size:12px;margin-bottom:18px}
+h2{font-size:clamp(38px,6vw,78px);line-height:.92;letter-spacing:-4px;margin-bottom:45px}
+.service-strip{display:flex;flex-direction:column;gap:28px}
+.service-row{display:grid;grid-template-columns:110px 1fr;gap:28px;align-items:center;padding:28px 0;border-bottom:1px solid rgba(255,255,255,.12);cursor:pointer}
+.service-row h3{font-size:clamp(30px,5vw,58px);text-transform:uppercase}.service-row p{color:#bdbdbd;font-size:18px;line-height:1.7;max-width:760px}
+.icon{width:92px;height:92px;border-radius:50%;border:1px solid rgba(198,161,91,.6);display:grid;place-items:center;transition:.4s}
+.service-row:hover .icon{transform:rotate(10deg) scale(1.08);background:rgba(198,161,91,.12)}
+.dumbbell,.plate,.fork,.phone{font-size:36px;color:var(--gold)}
 
 .about{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.about-img{min-height:540px;border-radius:36px;background:url('Screenshot_20260620_141238_Instagram.jpg') center/cover;border:1px solid rgba(199,161,90,.35)}
+.about-img{min-height:560px;background:url('Screenshot_20260620_141238_Instagram.jpg') center/cover;border-radius:34px}
+.text{color:#cfcfcf;font-size:19px;line-height:1.8}
+.faq-item{padding:28px 0;border-bottom:1px solid rgba(255,255,255,.12)}.faq-item h3{font-size:24px;margin-bottom:10px}.faq-item p{color:#bbb;line-height:1.7}
+.contact{text-align:center;background:radial-gradient(circle at center,rgba(198,161,91,.16),transparent 42%)}
+footer{padding:35px 7%;display:flex;justify-content:space-between;color:#999;border-top:1px solid rgba(255,255,255,.1)}
 
-.faq{background:#0b0b0b}
-.faq-item{border-bottom:1px solid rgba(255,255,255,.13);padding:28px 0}
-.faq-item h3{font-size:22px;color:#fff;margin-bottom:10px}
-.faq-item p{color:#bbb;line-height:1.7}
-
-.contact{text-align:center;background:radial-gradient(circle at center,rgba(199,161,90,.18),transparent 42%)}
-footer{padding:35px 7%;display:flex;justify-content:space-between;border-top:1px solid rgba(255,255,255,.1);color:#999}
-
-@media(max-width:900px){
-.hero{background-position:center;padding-top:140px}
-.services,.about{grid-template-columns:1fr}
-.about-img{min-height:400px}
-footer{flex-direction:column;gap:10px}
+@media(max-width:850px){
+.hero{background-position:center right}.hero:before{background:linear-gradient(180deg,rgba(0,0,0,.58),#000 76%)}
+.service-row{grid-template-columns:1fr}.about{grid-template-columns:1fr}.about-img{min-height:400px}footer{flex-direction:column;gap:10px}
 }
 </style>
 </head>
@@ -70,48 +63,65 @@ footer{flex-direction:column;gap:10px}
 <body>
 
 <header class="header">
-<div class="logo">LU <span>FITNESS COACHING</span></div>
-<div class="right">
+<div class="logo"><b>LU</b> <span>FITNESS COACHING</span></div>
+<div class="top-actions">
 <button class="lang" onclick="switchLang()">DE / ES</button>
-<button class="menu-btn" onclick="openMenu()">☰</button>
+<button class="burger" onclick="openMenu()">☰</button>
 </div>
 </header>
 
-<div class="menu" id="menu">
+<nav class="menu" id="menu">
 <div class="close" onclick="closeMenu()">×</div>
 <a href="#home" onclick="closeMenu()" data-de="Start" data-es="Inicio">Start</a>
-<a href="#services" onclick="closeMenu()" data-de="Leistungen" data-es="Servicios">Leistungen</a>
+<a href="#services" onclick="closeMenu()" data-de="Services" data-es="Servicios">Services</a>
 <a href="#about" onclick="closeMenu()" data-de="Über LU" data-es="Sobre LU">Über LU</a>
 <a href="#faq" onclick="closeMenu()">FAQ</a>
 <a href="#contact" onclick="closeMenu()" data-de="Kontakt" data-es="Contacto">Kontakt</a>
-</div>
+</nav>
 
 <section class="hero" id="home">
 <div class="hero-content">
-<div class="kicker">BODY, MIND AND SOUL</div>
-<h1>LU FITNESS COACHING</h1>
+<div class="kicker">Body, Mind and Soul</div>
+<h1>LU Fitness Coaching</h1>
 
-<div class="service-box">
-<div class="service-title" id="serviceTitle">PERSONAL TRAINING</div>
-<div class="service-text" id="serviceText">Individuelles 1:1 Training mit klarer Struktur, sauberer Technik und persönlicher Betreuung.</div>
+<div class="showcase">
+<div class="service-name" id="heroTitle">Personal Training</div>
+<div class="service-sub" id="heroSub">1:1 Betreuung</div>
+<div class="service-desc" id="heroText">Individuelles Training mit direkter Kontrolle, sauberer Technik und klarer Progression.</div>
+<div class="progress"><span></span></div>
 </div>
 
 <div class="btns">
-<a class="btn primary" href="#contact" data-de="Jetzt starten" data-es="Empezar ahora">Jetzt starten</a>
-<a class="btn secondary" href="#services" data-de="Mehr erfahren" data-es="Ver más">Mehr erfahren</a>
+<a class="btn primary" href="#contact" data-de="Beratung anfragen" data-es="Pedir consulta">Beratung anfragen</a>
+<a class="btn ghost" href="#services" data-de="Services ansehen" data-es="Ver servicios">Services ansehen</a>
 </div>
 </div>
 </section>
 
 <section id="services">
-<div class="label" data-de="Leistungen" data-es="Servicios">Leistungen</div>
-<h2 data-de="Coaching, das zu deinem Leben passt." data-es="Coaching que se adapta a tu vida.">Coaching, das zu deinem Leben passt.</h2>
+<div class="label" data-de="Services" data-es="Servicios">Services</div>
+<h2 data-de="Kein Zufall. Ein System." data-es="No es suerte. Es sistema.">Kein Zufall. Ein System.</h2>
 
-<div class="services">
-<div class="card"><small>01</small><h3>Personal Training</h3><p data-de="1:1 Betreuung für Technik, Kraft, Fortschritt und klare Resultate." data-es="Seguimiento 1:1 para técnica, fuerza, progreso y resultados claros.">1:1 Betreuung für Technik, Kraft, Fortschritt und klare Resultate.</p></div>
-<div class="card"><small>02</small><h3>Fitness Coaching</h3><p data-de="Strukturierte Planung für Training, Disziplin und nachhaltige Entwicklung." data-es="Planificación estructurada para entrenamiento, disciplina y desarrollo sostenible.">Strukturierte Planung für Training, Disziplin und nachhaltige Entwicklung.</p></div>
-<div class="card"><small>03</small><h3>Ernährungsberatung</h3><p data-de="Ernährung, die zu deinem Alltag, Körper und Ziel passt." data-es="Nutrición adaptada a tu día a día, cuerpo y objetivo.">Ernährung, die zu deinem Alltag, Körper und Ziel passt.</p></div>
-<div class="card"><small>04</small><h3>Online Coaching</h3><p data-de="Professionelle Betreuung und Planung, unabhängig von deinem Standort." data-es="Seguimiento profesional y planificación estés donde estés.">Professionelle Betreuung und Planung, unabhängig von deinem Standort.</p></div>
+<div class="service-strip">
+<div class="service-row">
+<div class="icon"><div class="dumbbell">🏋️</div></div>
+<div><h3>Personal Training</h3><p data-de="Training 1:1 mit persönlicher Betreuung, Technik-Korrektur und direkter Motivation." data-es="Entrenamiento 1:1 con seguimiento personal, corrección técnica y motivación directa.">Training 1:1 mit persönlicher Betreuung, Technik-Korrektur und direkter Motivation.</p></div>
+</div>
+
+<div class="service-row">
+<div class="icon"><div class="plate">⚙️</div></div>
+<div><h3>Fitness Coaching</h3><p data-de="Begleitung im Gym: Trainingsplan, Übungsausführung, Kontrolle und Anpassung deiner Fortschritte." data-es="Acompañamiento en el gimnasio: plan, ejecución, control y ajuste de tu progreso.">Begleitung im Gym: Trainingsplan, Übungsausführung, Kontrolle und Anpassung deiner Fortschritte.</p></div>
+</div>
+
+<div class="service-row">
+<div class="icon"><div class="fork">🥗</div></div>
+<div><h3>Ernährungsberatung</h3><p data-de="Praktische Ernährung, passend zu deinem Alltag, deinem Ziel und deinem Körper." data-es="Nutrición práctica adaptada a tu día a día, objetivo y cuerpo.">Praktische Ernährung, passend zu deinem Alltag, deinem Ziel und deinem Körper.</p></div>
+</div>
+
+<div class="service-row">
+<div class="icon"><div class="phone">📱</div></div>
+<div><h3>Online Coaching</h3><p data-de="Professionelle Planung und Kontrolle, auch wenn du nicht vor Ort trainierst." data-es="Planificación y seguimiento profesional aunque entrenes a distancia.">Professionelle Planung und Kontrolle, auch wenn du nicht vor Ort trainierst.</p></div>
+</div>
 </div>
 </section>
 
@@ -119,35 +129,22 @@ footer{flex-direction:column;gap:10px}
 <div class="about-img"></div>
 <div>
 <div class="label">Über LU</div>
-<h2 data-de="Disziplin. Struktur. Resultate." data-es="Disciplina. Estructura. Resultados.">Disziplin. Struktur. Resultate.</h2>
-<p class="text" data-de="LU Fitness Coaching steht für persönliche Betreuung, klare Planung und echte Umsetzung. Jeder Plan wird individuell an Ziele, Alltag und Leistungsniveau angepasst." data-es="LU Fitness Coaching representa seguimiento personal, planificación clara y ejecución real. Cada plan se adapta a los objetivos, rutina y nivel de cada persona.">LU Fitness Coaching steht für persönliche Betreuung, klare Planung und echte Umsetzung. Jeder Plan wird individuell an Ziele, Alltag und Leistungsniveau angepasst.</p>
+<h2 data-de="Disziplin. Technik. Kontrolle." data-es="Disciplina. Técnica. Control.">Disziplin. Technik. Kontrolle.</h2>
+<p class="text" data-de="LU Fitness Coaching verbindet Training, Struktur und persönliche Betreuung. Ziel ist nicht nur ein Plan, sondern echte Umsetzung im Alltag und im Gym." data-es="LU Fitness Coaching une entrenamiento, estructura y seguimiento personal. El objetivo no es solo un plan, sino ejecución real en la vida diaria y en el gimnasio.">LU Fitness Coaching verbindet Training, Struktur und persönliche Betreuung. Ziel ist nicht nur ein Plan, sondern echte Umsetzung im Alltag und im Gym.</p>
 </div>
 </section>
 
-<section class="faq" id="faq">
+<section id="faq">
 <div class="label">FAQ</div>
-<h2 data-de="Häufige Fragen." data-es="Preguntas frecuentes.">Häufige Fragen.</h2>
-
-<div class="faq-item">
-<h3 data-de="Ist das Coaching online oder persönlich?" data-es="¿El coaching es online o presencial?">Ist das Coaching online oder persönlich?</h3>
-<p data-de="Beides ist möglich. Das Coaching wird je nach Ziel, Standort und Verfügbarkeit angepasst." data-es="Ambas opciones son posibles. El coaching se adapta según objetivo, ubicación y disponibilidad.">Beides ist möglich. Das Coaching wird je nach Ziel, Standort und Verfügbarkeit angepasst.</p>
-</div>
-
-<div class="faq-item">
-<h3 data-de="Brauche ich Erfahrung im Training?" data-es="¿Necesito experiencia entrenando?">Brauche ich Erfahrung im Training?</h3>
-<p data-de="Nein. Das Coaching wird an dein aktuelles Niveau angepasst." data-es="No. El coaching se adapta a tu nivel actual.">Nein. Das Coaching wird an dein aktuelles Niveau angepasst.</p>
-</div>
-
-<div class="faq-item">
-<h3 data-de="Gibt es Ernährungsberatung?" data-es="¿Hay asesoría nutricional?">Gibt es Ernährungsberatung?</h3>
-<p data-de="Ja. Die Ernährung wird einfach, praktisch und passend zu deinem Alltag aufgebaut." data-es="Sí. La nutrición se estructura de forma sencilla, práctica y adaptada a tu vida diaria.">Ja. Die Ernährung wird einfach, praktisch und passend zu deinem Alltag aufgebaut.</p>
-</div>
+<h2 data-de="Fragen vor dem Start." data-es="Preguntas antes de empezar.">Fragen vor dem Start.</h2>
+<div class="faq-item"><h3 data-de="Ist es online oder persönlich?" data-es="¿Es online o presencial?">Ist es online oder persönlich?</h3><p data-de="Beides ist möglich. Es hängt von Standort, Ziel und Verfügbarkeit ab." data-es="Ambas opciones son posibles. Depende de la ubicación, objetivo y disponibilidad.">Beides ist möglich. Es hängt von Standort, Ziel und Verfügbarkeit ab.</p></div>
+<div class="faq-item"><h3 data-de="Brauche ich Erfahrung?" data-es="¿Necesito experiencia?">Brauche ich Erfahrung?</h3><p data-de="Nein. Das Coaching wird an dein aktuelles Niveau angepasst." data-es="No. El coaching se adapta a tu nivel actual.">Nein. Das Coaching wird an dein aktuelles Niveau angepasst.</p></div>
 </section>
 
 <section class="contact" id="contact">
 <div class="label" data-de="Kontakt" data-es="Contacto">Kontakt</div>
-<h2 data-de="Bereit für deinen nächsten Schritt?" data-es="¿Listo para tu próximo paso?">Bereit für deinen nächsten Schritt?</h2>
-<p class="text" style="margin:auto" data-de="WhatsApp, Instagram und Kontaktformular werden bald ergänzt." data-es="WhatsApp, Instagram y formulario se añadirán pronto.">WhatsApp, Instagram und Kontaktformular werden bald ergänzt.</p>
+<h2 data-de="Bereit für den nächsten Schritt?" data-es="¿Listo para el próximo paso?">Bereit für den nächsten Schritt?</h2>
+<p class="text" style="margin:auto" data-de="WhatsApp und Instagram werden bald ergänzt." data-es="WhatsApp e Instagram se añadirán pronto.">WhatsApp und Instagram werden bald ergänzt.</p>
 </section>
 
 <footer>
@@ -157,47 +154,45 @@ footer{flex-direction:column;gap:10px}
 
 <script>
 let lang="de";
+let current=0;
 
-const services={
+const heroServices={
 de:[
-["PERSONAL TRAINING","Individuelles 1:1 Training mit klarer Struktur, sauberer Technik und persönlicher Betreuung."],
-["FITNESS COACHING","Komplette Trainingsplanung für mehr Kraft, bessere Form und nachhaltige Resultate."],
-["ERNÄHRUNGSBERATUNG","Praktische Ernährung, die zu deinem Alltag, deinem Körper und deinem Ziel passt."],
-["ONLINE COACHING","Professionelle Betreuung und Planung, unabhängig davon, wo du dich befindest."]
+["Personal Training","1:1 Betreuung","Individuelles Training mit direkter Kontrolle, sauberer Technik und klarer Progression."],
+["Fitness Coaching","Gym Begleitung","Trainingsplan, Übungsausführung, Kontrolle und Anpassung deiner Fortschritte im Gym."],
+["Ernährungsberatung","Alltagstaugliche Ernährung","Praktische Ernährung, passend zu deinem Alltag, deinem Ziel und deinem Körper."],
+["Online Coaching","Planung aus der Distanz","Professionelle Betreuung und Kontrolle, auch wenn du nicht vor Ort trainierst."]
 ],
 es:[
-["ENTRENAMIENTO PERSONAL","Entrenamiento 1:1 con estructura clara, buena técnica y seguimiento personal."],
-["FITNESS COACHING","Planificación completa para ganar fuerza, mejorar tu físico y conseguir resultados sostenibles."],
-["ASESORÍA NUTRICIONAL","Nutrición práctica adaptada a tu día a día, tu cuerpo y tu objetivo."],
-["COACHING ONLINE","Seguimiento profesional y planificación sin importar dónde estés."]
+["Entrenamiento Personal","Seguimiento 1:1","Entrenamiento individual con control directo, técnica correcta y progresión clara."],
+["Fitness Coaching","Acompañamiento en gym","Plan, ejecución, control y ajustes de tu progreso dentro del gimnasio."],
+["Asesoría Nutricional","Nutrición práctica","Nutrición adaptada a tu día a día, objetivo y cuerpo."],
+["Coaching Online","Planificación a distancia","Seguimiento profesional aunque no entrenes presencialmente."]
 ]
 };
 
-let index=0;
-
-function rotateService(){
-index=(index+1)%services[lang].length;
-document.getElementById("serviceTitle").style.opacity=0;
-document.getElementById("serviceText").style.opacity=0;
+function setHero(){
+document.getElementById("heroTitle").style.opacity=0;
+document.getElementById("heroSub").style.opacity=0;
+document.getElementById("heroText").style.opacity=0;
 setTimeout(()=>{
-document.getElementById("serviceTitle").textContent=services[lang][index][0];
-document.getElementById("serviceText").textContent=services[lang][index][1];
-document.getElementById("serviceTitle").style.opacity=1;
-document.getElementById("serviceText").style.opacity=1;
+document.getElementById("heroTitle").textContent=heroServices[lang][current][0];
+document.getElementById("heroSub").textContent=heroServices[lang][current][1];
+document.getElementById("heroText").textContent=heroServices[lang][current][2];
+document.getElementById("heroTitle").style.opacity=1;
+document.getElementById("heroSub").style.opacity=1;
+document.getElementById("heroText").style.opacity=1;
 },350);
 }
 
-setInterval(rotateService,5500);
+setInterval(()=>{current=(current+1)%heroServices[lang].length;setHero();},7000);
 
 function switchLang(){
 lang=lang==="de"?"es":"de";
 document.documentElement.lang=lang;
-document.querySelectorAll("[data-de]").forEach(el=>{el.textContent=el.dataset[lang]});
-index=0;
-document.getElementById("serviceTitle").textContent=services[lang][0][0];
-document.getElementById("serviceText").textContent=services[lang][0][1];
+document.querySelectorAll("[data-de]").forEach(el=>el.textContent=el.dataset[lang]);
+current=0;setHero();
 }
-
 function openMenu(){document.getElementById("menu").classList.add("active")}
 function closeMenu(){document.getElementById("menu").classList.remove("active")}
 </script>
