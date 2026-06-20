@@ -23,19 +23,12 @@ header{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:22px 6%;displ
 .close{position:absolute;right:32px;top:28px;font-size:42px}
 .menu a{display:block;font-size:32px;font-weight:900;text-transform:uppercase;margin:28px 0}
 
-.hero{min-height:90vh;position:relative;display:flex;align-items:end;padding:115px 6% 52px;background:url('Screenshot_20260620_141238_Instagram.jpg') center/cover}
+.hero{min-height:82vh;position:relative;display:flex;align-items:end;padding:115px 6% 58px;background:url('Screenshot_20260620_141238_Instagram.jpg') center/cover}
 .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.18),rgba(0,0,0,.86)),linear-gradient(90deg,rgba(0,0,0,.78),rgba(0,0,0,.08))}
 .hero-content{position:relative;z-index:2;max-width:900px}
 .hero-kicker{font-size:18px;letter-spacing:5px;text-transform:uppercase;margin-bottom:18px;color:#ddd}
 h1{font-size:clamp(50px,10vw,125px);line-height:.82;text-transform:uppercase;letter-spacing:-6px;margin-bottom:18px}
-.hero-text{font-size:20px;line-height:1.55;color:#ddd;max-width:720px;margin-bottom:30px}
-.trial-box{max-width:620px;border:1px solid rgba(255,255,255,.45);background:rgba(255,255,255,.04);backdrop-filter:blur(10px);padding:24px;display:grid;grid-template-columns:1fr 46px;gap:20px;align-items:center;transition:.25s}
-.trial-box:hover{background:#fff;color:#000;transform:translateY(-4px)}
-.trial-box span{display:block;font-size:13px;letter-spacing:3px;text-transform:uppercase;font-weight:900;margin-bottom:8px}
-.trial-box h3{font-size:24px;text-transform:uppercase;line-height:1.1;margin-bottom:8px}
-.trial-box p{font-size:15px;color:#cfcfcf;line-height:1.5}
-.trial-box:hover p{color:#333}
-.trial-arrow{font-size:36px;text-align:right}
+.hero-text{font-size:20px;line-height:1.55;color:#ddd;max-width:720px;margin-bottom:0}
 
 section{padding:86px 6%}
 .label{font-size:13px;letter-spacing:4px;text-transform:uppercase;color:#888;margin-bottom:18px}
@@ -92,7 +85,7 @@ footer{padding:32px 6%;border-top:1px solid var(--line);display:flex;justify-con
 
 @media(max-width:900px){
 header{padding:20px 5%}.logo{font-size:20px}.right{gap:14px}
-.hero{min-height:86vh;padding:105px 5% 44px;background-position:center}
+.hero{min-height:78vh;padding:105px 5% 48px;background-position:center}
 h1{letter-spacing:-4px}
 section{padding:72px 5%}
 .acc-head{grid-template-columns:50px 1fr 30px}
@@ -130,15 +123,6 @@ footer{flex-direction:column;gap:12px}
 <div class="hero-kicker">Wir begleiten dich ans Ziel</div>
 <h1 id="serviceTitle">Personal Training</h1>
 <p class="hero-text" id="serviceText">Das komplette Paket: Training, Ernährung, Messungen, Kontrolle und persönliche Betreuung.</p>
-
-<a class="trial-box" href="https://wa.me/41767401541" target="_blank">
-<div>
-<span>Überzeuge dich selbst</span>
-<h3>Buche jetzt dein kostenloses Probetraining</h3>
-<p>Lerne mich persönlich kennen und erlebe den Unterschied selbst.</p>
-</div>
-<div class="trial-arrow">→</div>
-</a>
 </div>
 </section>
 
@@ -164,7 +148,7 @@ footer{flex-direction:column;gap:12px}
 <div class="accordion">
 <div class="acc-item active"><div class="acc-head"><div class="acc-num">01</div><h3>Personal Training</h3><div class="plus">+</div></div><div class="acc-body"><p>Das komplette Paket mit persönlicher Betreuung. Training, Ernährung, Messungen, Kontrolle und Anpassung in einem System.</p><ul><li>Training</li><li>Ernährung</li><li>Messungen & Gewicht</li><li>Kontrolle & Anpassung</li></ul><br><a class="btn primary" href="https://wa.me/41767401541" target="_blank">Jetzt buchen</a></div></div>
 
-<div class="acc-item"><div class="acc-head"><div class="acc-num">02</div><h3>Fitness Coaching</h3><div class="plus">+</div></div><div class="acc-body"><p>Begleitung ausschließlich für dein Training im Gym. Fokus auf Trainingsplan, Ausführung, Kontrolle und Fortschritt. Keine Ernährung enthalten.</p><ul><li>Trainingsplan</li><li>Übungsausführung</li><li>Fortschrittskontrolle</li></ul><br><a class="btn primary" href="https://wa.me/41767401541" target="_blank">Jetzt buchen</a></div></div>
+<div class="acc-item"><div class="acc-head"><div class="acc-num">02</div><h3>Fitness Coaching</h3><div class="plus">+</div></div><div class="acc-body"><p>Gezielte Betreuung für dein Training: Trainingsplan, Technik, Ausführung, Kontrolle und Fortschritt. Keine Ernährung enthalten.</p><ul><li>Trainingsplan</li><li>Übungsausführung</li><li>Fortschrittskontrolle</li></ul><br><a class="btn primary" href="https://wa.me/41767401541" target="_blank">Jetzt buchen</a></div></div>
 
 <div class="acc-item"><div class="acc-head"><div class="acc-num">03</div><h3>Ernährungsberatung</h3><div class="plus">+</div></div><div class="acc-body">Individuelle Ernährung, die zu deinem Alltag, deinem Körper und deinem Ziel passt. Praktisch, klar und umsetzbar.<br><br><a class="btn primary" href="https://wa.me/41767401541" target="_blank">Jetzt buchen</a></div></div>
 
@@ -215,7 +199,7 @@ footer{flex-direction:column;gap:12px}
 <h2>Fragen vor dem Start</h2>
 <div class="accordion">
 <div class="acc-item"><div class="acc-head"><div class="acc-num">01</div><h3>Ist das Probetraining kostenlos?</h3><div class="plus">+</div></div><div class="acc-body">Ja. Das Probetraining dient dazu, dein Niveau zu sehen und zu prüfen, wie wir am besten starten.</div></div>
-<div class="acc-item"><div class="acc-head"><div class="acc-num">02</div><h3>Unterschied Personal Training und Fitness Coaching?</h3><div class="plus">+</div></div><div class="acc-body">Personal Training ist das komplette Paket mit Training, Ernährung und Betreuung. Fitness Coaching konzentriert sich nur auf dein Training im Gym.</div></div>
+<div class="acc-item"><div class="acc-head"><div class="acc-num">02</div><h3>Unterschied Personal Training und Fitness Coaching?</h3><div class="plus">+</div></div><div class="acc-body">Personal Training ist das komplette Paket mit Training, Ernährung und Betreuung. Fitness Coaching konzentriert sich nur auf dein Training.</div></div>
 <div class="acc-item"><div class="acc-head"><div class="acc-num">03</div><h3>Brauche ich Erfahrung im Gym?</h3><div class="plus">+</div></div><div class="acc-body">Nein. Das Coaching wird an dein aktuelles Niveau angepasst.</div></div>
 </div>
 </section>
@@ -241,7 +225,7 @@ footer{flex-direction:column;gap:12px}
 <script>
 const heroServices=[
 ["Personal Training","Das komplette Paket: Training, Ernährung, Messungen, Kontrolle und persönliche Betreuung."],
-["Fitness Coaching","Nur Gym: Trainingsplan, Übungsausführung, Kontrolle und Fortschritt. Keine Ernährung enthalten."],
+["Fitness Coaching","Gezielte Betreuung für dein Training: Trainingsplan, Technik, Ausführung, Kontrolle und Fortschritt."],
 ["Ernährungsberatung","Praktische Ernährung passend zu Alltag, Körper und Ziel."],
 ["Online Coaching","Planung und Betreuung aus der Distanz mit klarer Struktur."]
 ];
@@ -270,4 +254,4 @@ item.addEventListener("click",()=>item.classList.toggle("active"));
 </script>
 
 </body>
-  </html>
+</html>
