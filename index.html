@@ -27,7 +27,7 @@ header{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:22px 6%;displ
 .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.18),rgba(0,0,0,.86)),linear-gradient(90deg,rgba(0,0,0,.78),rgba(0,0,0,.08))}
 .hero-content{position:relative;z-index:2;max-width:900px}
 .hero-kicker{font-size:18px;letter-spacing:5px;text-transform:uppercase;margin-bottom:18px;color:#ddd}
-h1{font-size:clamp(50px,10vw,125px);line-height:.82;text-transform:uppercase;letter-spacing:-6px;margin-bottom:24px}
+h1{font-size:clamp(50px,10vw,125px);line-height:.82;text-transform:uppercase;letter-spacing:-6px;margin-bottom:18px}
 .hero-text{font-size:20px;line-height:1.55;color:#ddd;max-width:720px;margin-bottom:30px}
 .trial-box{max-width:620px;border:1px solid rgba(255,255,255,.45);background:rgba(255,255,255,.04);backdrop-filter:blur(10px);padding:24px;display:grid;grid-template-columns:1fr 46px;gap:20px;align-items:center;transition:.25s}
 .trial-box:hover{background:#fff;color:#000;transform:translateY(-4px)}
@@ -72,7 +72,6 @@ h2{font-size:clamp(38px,7vw,82px);line-height:.9;letter-spacing:-4px;text-transf
 .btn{display:inline-block;padding:16px 26px;border:1px solid rgba(255,255,255,.45);border-radius:6px;text-transform:uppercase;font-size:13px;font-weight:900;letter-spacing:1.2px;transition:.25s}
 .btn:hover{background:#fff;color:#000;transform:translateY(-3px)}
 .btn.primary{background:#fff;color:#000;border-color:#fff}
-.btn.primary:hover{background:#dcdcdc}
 
 .about{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
 .about-img{min-height:520px;background:url('Screenshot_20260620_141238_Instagram.jpg') center/cover}
@@ -128,9 +127,9 @@ footer{flex-direction:column;gap:12px}
 
 <section class="hero" id="home">
 <div class="hero-content">
-<div class="hero-kicker">Wir begleiten dich</div>
-<h1>Dein Ziel.<br>Unser System.</h1>
-<p class="hero-text">Individuelles Training, persönliche Betreuung und klare Strategien für Ergebnisse, die bleiben.</p>
+<div class="hero-kicker">Wir begleiten dich ans Ziel</div>
+<h1 id="serviceTitle">Personal Training</h1>
+<p class="hero-text" id="serviceText">Das komplette Paket: Training, Ernährung, Messungen, Kontrolle und persönliche Betreuung.</p>
 
 <a class="trial-box" href="https://wa.me/41767401541" target="_blank">
 <div>
@@ -178,59 +177,17 @@ footer{flex-direction:column;gap:12px}
 <h2>Programme & Preise</h2>
 
 <div class="pricing-grid">
-<div class="price-card">
-<div class="price-icon">FC</div>
-<div class="type">Fitness Coaching</div>
-<h3>Silver</h3>
-<div class="price">CHF 399 <span>/ Monat</span></div>
-<ul><li>Trainingsplan</li><li>Technik-Korrektur</li><li>Wöchentliche Kontrolle</li><li>Fortschrittsanalyse</li></ul>
-<a class="btn primary" href="https://wa.me/41767401541" target="_blank">Jetzt buchen</a>
-</div>
+<div class="price-card"><div class="price-icon">FC</div><div class="type">Fitness Coaching</div><h3>Silver</h3><div class="price">CHF 399 <span>/ Monat</span></div><ul><li>Trainingsplan</li><li>Technik-Korrektur</li><li>Wöchentliche Kontrolle</li><li>Fortschrittsanalyse</li></ul><a class="btn primary" href="https://wa.me/41767401541" target="_blank">Jetzt buchen</a></div>
 
-<div class="price-card featured">
-<div class="price-icon">FC</div>
-<div class="type">Fitness Coaching</div>
-<h3>Gold</h3>
-<div class="price">CHF 749 <span>/ Monat</span></div>
-<ul><li>Trainingsplan</li><li>Technik-Korrektur</li><li>Wöchentliche Kontrolle</li><li>Prioritäts-Support</li></ul>
-<a class="btn" href="https://wa.me/41767401541" target="_blank">Jetzt buchen</a>
-</div>
+<div class="price-card featured"><div class="price-icon">FC</div><div class="type">Fitness Coaching</div><h3>Gold</h3><div class="price">CHF 749 <span>/ Monat</span></div><ul><li>Trainingsplan</li><li>Technik-Korrektur</li><li>Wöchentliche Kontrolle</li><li>Prioritäts-Support</li></ul><a class="btn" href="https://wa.me/41767401541" target="_blank">Jetzt buchen</a></div>
 
-<div class="price-card">
-<div class="price-icon">PT</div>
-<div class="type">Personal Training</div>
-<h3>Silver</h3>
-<div class="price">CHF 499 <span>/ Monat</span></div>
-<ul><li>Trainingsplan</li><li>Ernährung</li><li>Messungen</li><li>1 Personal Training pro Woche</li></ul>
-<a class="btn primary" href="https://wa.me/41767401541" target="_blank">Jetzt buchen</a>
-</div>
+<div class="price-card"><div class="price-icon">PT</div><div class="type">Personal Training</div><h3>Silver</h3><div class="price">CHF 499 <span>/ Monat</span></div><ul><li>Trainingsplan</li><li>Ernährung</li><li>Messungen</li><li>1 Personal Training pro Woche</li></ul><a class="btn primary" href="https://wa.me/41767401541" target="_blank">Jetzt buchen</a></div>
 
-<div class="price-card featured">
-<div class="price-icon">PT</div>
-<div class="type">Personal Training</div>
-<h3>Gold</h3>
-<div class="price">CHF 899 <span>/ Monat</span></div>
-<ul><li>Trainingsplan</li><li>Ernährung</li><li>Messungen</li><li>2 Personal Trainings pro Woche</li></ul>
-<a class="btn" href="https://wa.me/41767401541" target="_blank">Jetzt buchen</a>
-</div>
+<div class="price-card featured"><div class="price-icon">PT</div><div class="type">Personal Training</div><h3>Gold</h3><div class="price">CHF 899 <span>/ Monat</span></div><ul><li>Trainingsplan</li><li>Ernährung</li><li>Messungen</li><li>2 Personal Trainings pro Woche</li></ul><a class="btn" href="https://wa.me/41767401541" target="_blank">Jetzt buchen</a></div>
 
-<div class="price-card">
-<div class="price-icon">1H</div>
-<div class="type">Einzelstunde</div>
-<h3>Personal Training</h3>
-<div class="price">CHF 130</div>
-<ul><li>1 Personal Training Session</li><li>Individuelle Betreuung</li></ul>
-<a class="btn primary" href="https://wa.me/41767401541" target="_blank">Jetzt buchen</a>
-</div>
+<div class="price-card"><div class="price-icon">1H</div><div class="type">Einzelstunde</div><h3>Personal Training</h3><div class="price">CHF 130</div><ul><li>1 Personal Training Session</li><li>Individuelle Betreuung</li></ul><a class="btn primary" href="https://wa.me/41767401541" target="_blank">Jetzt buchen</a></div>
 
-<div class="price-card">
-<div class="price-icon">10</div>
-<div class="type">10er Paket</div>
-<h3>Personal Training</h3>
-<div class="price">CHF 1'000</div>
-<ul><li>10 Personal Training Sessions</li><li>Flexible Terminplanung</li></ul>
-<a class="btn primary" href="https://wa.me/41767401541" target="_blank">Jetzt buchen</a>
-</div>
+<div class="price-card"><div class="price-icon">10</div><div class="type">10er Paket</div><h3>Personal Training</h3><div class="price">CHF 1'000</div><ul><li>10 Personal Training Sessions</li><li>Flexible Terminplanung</li></ul><a class="btn primary" href="https://wa.me/41767401541" target="_blank">Jetzt buchen</a></div>
 </div>
 
 <div class="info-box">
@@ -282,6 +239,28 @@ footer{flex-direction:column;gap:12px}
 </footer>
 
 <script>
+const heroServices=[
+["Personal Training","Das komplette Paket: Training, Ernährung, Messungen, Kontrolle und persönliche Betreuung."],
+["Fitness Coaching","Nur Gym: Trainingsplan, Übungsausführung, Kontrolle und Fortschritt. Keine Ernährung enthalten."],
+["Ernährungsberatung","Praktische Ernährung passend zu Alltag, Körper und Ziel."],
+["Online Coaching","Planung und Betreuung aus der Distanz mit klarer Struktur."]
+];
+let heroIndex=0;
+function rotateHero(){
+heroIndex=(heroIndex+1)%heroServices.length;
+const title=document.getElementById("serviceTitle");
+const text=document.getElementById("serviceText");
+title.style.opacity=0;
+text.style.opacity=0;
+setTimeout(()=>{
+title.textContent=heroServices[heroIndex][0];
+text.textContent=heroServices[heroIndex][1];
+title.style.opacity=1;
+text.style.opacity=1;
+},250);
+}
+setInterval(rotateHero,5200);
+
 function switchLang(){}
 function openMenu(){document.getElementById("menu").classList.add("active")}
 function closeMenu(){document.getElementById("menu").classList.remove("active")}
@@ -291,4 +270,4 @@ item.addEventListener("click",()=>item.classList.toggle("active"));
 </script>
 
 </body>
-</html>
+  </html>
