@@ -1,89 +1,125 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LU Fitness Coaching</title>
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:Arial,Helvetica,sans-serif;background:#f6f7f4;color:#101413;overflow-x:hidden}
+body{font-family:Arial,Helvetica,sans-serif;background:#050505;color:#fff;overflow-x:hidden}
 a{text-decoration:none;color:inherit}
-:root{--dark:#101413;--green:#0f5f55;--mint:#c9f2e7;--soft:#65706c;--line:#d9dedb;--white:#fff}
+:root{--bg:#050505;--card:#151515;--line:rgba(255,255,255,.16);--text:#fff;--muted:#b8b8b8;--accent:#ffffff}
 
-header{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:18px 6%;display:flex;justify-content:space-between;align-items:center;background:rgba(246,247,244,.86);backdrop-filter:blur(18px);border-bottom:1px solid rgba(0,0,0,.06)}
-.logo{font-weight:900;letter-spacing:2px;font-size:20px;color:var(--dark)}
-.actions{display:flex;gap:12px;align-items:center}
-.lang,.burger{border:1px solid var(--line);background:var(--white);color:var(--dark)}
-.lang{border-radius:40px;padding:10px 15px;font-weight:900}
-.burger{width:48px;height:48px;border-radius:50%;font-size:24px}
+header{
+position:fixed;top:0;left:0;width:100%;z-index:1000;
+padding:26px 6%;
+display:flex;align-items:center;justify-content:space-between;
+background:linear-gradient(180deg,rgba(0,0,0,.88),rgba(0,0,0,.18));
+backdrop-filter:blur(10px)
+}
+.logo{font-size:28px;font-weight:300;letter-spacing:-1px;text-transform:uppercase}
+.right{display:flex;align-items:center;gap:24px}
+.lang{background:none;border:0;color:#fff;font-size:15px;font-weight:900;letter-spacing:1px}
+.menu-btn{background:none;border:0;color:#fff;font-size:15px;font-weight:900;letter-spacing:1px}
+.menu-btn span{font-size:26px;margin-left:12px;font-weight:300}
 
-.menu{position:fixed;right:-100%;top:0;width:82%;max-width:390px;height:100vh;background:var(--dark);color:white;z-index:2000;padding:90px 36px;transition:.35s}
+.menu{
+position:fixed;right:-100%;top:0;width:82%;max-width:420px;height:100vh;
+background:#080808;z-index:2000;padding:100px 38px;transition:.4s;
+border-left:1px solid var(--line)
+}
 .menu.active{right:0}
-.close{position:absolute;right:28px;top:22px;font-size:42px;color:var(--mint)}
-.menu a{display:block;font-size:26px;font-weight:900;margin:26px 0}
+.close{position:absolute;right:32px;top:28px;font-size:42px;cursor:pointer}
+.menu a{display:block;font-size:34px;font-weight:900;text-transform:uppercase;margin:28px 0}
 
-.hero{min-height:100vh;display:grid;grid-template-columns:1.05fr .95fr;background:var(--dark);color:white}
-.hero-left{padding:135px 7% 70px;display:flex;flex-direction:column;justify-content:center}
-.hero-photo{background:url('Screenshot_20260620_141238_Instagram.jpg') center/cover;min-height:100vh}
-.kicker{color:var(--mint);font-size:13px;text-transform:uppercase;letter-spacing:4px;font-weight:900;margin-bottom:22px}
-h1{font-size:clamp(52px,8vw,118px);line-height:.86;text-transform:uppercase;letter-spacing:-5px;margin-bottom:26px}
-.hero p{font-size:20px;line-height:1.65;color:#d8dfdc;max-width:650px}
-.hero-service{margin:28px 0 34px;min-height:110px;border-left:4px solid var(--mint);padding-left:22px}
-.hero-service h3{font-size:clamp(28px,4vw,48px);text-transform:uppercase;color:white}
-.hero-service p{font-size:17px;color:#cbd4d0;margin-top:8px}
-.btns{display:flex;gap:14px;flex-wrap:wrap}
-.btn{padding:16px 26px;border-radius:40px;font-weight:900;text-transform:uppercase;font-size:13px;letter-spacing:1px}
-.primary{background:var(--mint);color:#06110f}
-.secondary{border:1px solid rgba(255,255,255,.35);color:white}
+.hero{
+min-height:100vh;position:relative;display:flex;align-items:end;
+padding:130px 6% 80px;
+background:url('Screenshot_20260620_141238_Instagram.jpg') center/cover;
+}
+.hero:before{
+content:"";position:absolute;inset:0;
+background:linear-gradient(180deg,rgba(0,0,0,.2),rgba(0,0,0,.88)),
+linear-gradient(90deg,rgba(0,0,0,.65),rgba(0,0,0,.08));
+}
+.hero-content{position:relative;z-index:2;max-width:1000px}
+.hero h1{
+font-size:clamp(58px,12vw,150px);
+line-height:.78;letter-spacing:-7px;text-transform:uppercase;font-weight:900;
+margin-bottom:26px
+}
+.switch-title{
+font-size:clamp(28px,6vw,72px);
+font-weight:900;text-transform:uppercase;margin-bottom:12px
+}
+.switch-text{font-size:20px;line-height:1.55;color:#e5e5e5;max-width:680px;margin-bottom:36px}
+.btns{display:flex;gap:18px;flex-wrap:wrap}
+.btn{
+padding:19px 32px;border:1px solid rgba(255,255,255,.45);
+border-radius:6px;text-transform:uppercase;font-size:14px;font-weight:900;letter-spacing:1.2px
+}
+.btn.primary{background:#fff;color:#000;border-color:#fff}
+.scroll{position:absolute;bottom:30px;right:6%;z-index:2;color:#aaa;font-size:12px;letter-spacing:3px;text-transform:uppercase}
 
-section{padding:95px 7%}
-.label{font-size:13px;text-transform:uppercase;letter-spacing:4px;color:var(--green);font-weight:900;margin-bottom:18px}
-h2{font-size:clamp(40px,6vw,86px);line-height:.9;letter-spacing:-4px;text-transform:uppercase;margin-bottom:50px}
+section{padding:115px 6%}
+.label{font-size:13px;letter-spacing:4px;text-transform:uppercase;color:#999;margin-bottom:22px}
+h2{
+font-size:clamp(48px,9vw,110px);
+line-height:.82;letter-spacing:-6px;text-transform:uppercase;margin-bottom:55px
+}
+.intro{font-size:22px;line-height:1.55;color:#cfcfcf;max-width:860px;margin-bottom:55px}
 
-.process{background:white}
-.timeline{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}
-.step{border-top:3px solid var(--green);padding-top:22px}
-.step span{color:var(--green);font-weight:900}
-.step h3{font-size:21px;margin:14px 0;color:var(--dark)}
-.step p{color:var(--soft);line-height:1.6;font-size:15px}
+.process{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line)}
+.step{background:#050505;padding:42px 28px;min-height:280px}
+.step span{display:block;color:#777;font-size:15px;font-weight:900;margin-bottom:34px}
+.step h3{font-size:30px;text-transform:uppercase;line-height:1;margin-bottom:22px}
+.step p{color:#bdbdbd;line-height:1.65;font-size:16px}
 
-.options{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.option{background:white;border:1px solid var(--line);border-radius:30px;padding:30px;min-height:360px;transition:.35s}
-.option:hover{transform:translateY(-8px);box-shadow:0 22px 55px rgba(0,0,0,.10)}
-.icon{width:68px;height:68px;border-radius:20px;background:#e5f7f2;position:relative;margin-bottom:26px}
-.icon.training:before{content:"";position:absolute;width:42px;height:6px;background:var(--green);left:13px;top:31px}
-.icon.training:after{content:"";position:absolute;width:56px;height:20px;border-left:6px solid var(--green);border-right:6px solid var(--green);left:6px;top:24px}
-.icon.gym:before{content:"";position:absolute;width:36px;height:36px;border:5px solid var(--green);border-radius:50%;left:16px;top:16px}
-.icon.food:before{content:"";position:absolute;width:6px;height:44px;background:var(--green);left:31px;top:12px}
-.icon.food:after{content:"";position:absolute;width:26px;height:26px;border:4px solid var(--green);border-radius:50%;left:21px;top:13px}
-.icon.online:before{content:"";position:absolute;width:26px;height:42px;border:4px solid var(--green);border-radius:9px;left:21px;top:12px}
-.option h3{font-size:28px;text-transform:uppercase;line-height:1;margin-bottom:16px}
-.option p{color:var(--soft);line-height:1.65;font-size:16px}
-.option ul{list-style:none;margin-top:18px}
-.option li{margin:9px 0;color:#1b211f}
-.option li:before{content:"";display:inline-block;width:8px;height:8px;background:var(--green);border-radius:50%;margin-right:10px}
+.services{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+.service{
+display:grid;grid-template-columns:42% 58%;gap:50px;
+padding:62px 0;border-bottom:1px solid var(--line);align-items:start
+}
+.service h3{font-size:clamp(42px,7vw,88px);line-height:.82;text-transform:uppercase;letter-spacing:-5px}
+.service p{color:#cfcfcf;font-size:20px;line-height:1.65;max-width:780px}
+.service ul{list-style:none;margin-top:24px;color:#fff}
+.service li{margin:12px 0;font-size:17px}
+.service li:before{content:"+";margin-right:14px;color:#fff}
 
-.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center}
-.about-img{min-height:520px;border-radius:34px;background:url('Screenshot_20260620_141238_Instagram.jpg') center/cover}
-.text{font-size:19px;line-height:1.8;color:var(--soft)}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about-img{
+min-height:620px;background:url('Screenshot_20260620_141238_Instagram.jpg') center/cover
+}
+.about p{font-size:20px;line-height:1.75;color:#cfcfcf}
 
-.faq{background:white}
-.faq-item{border-top:1px solid var(--line);padding:26px 0}
-.faq-item h3{font-size:23px;margin-bottom:10px}
-.faq-item p{color:var(--soft);line-height:1.7}
+.cta{
+min-height:70vh;display:flex;align-items:center;justify-content:center;text-align:center;
+background:#111
+}
+.cta h2{margin-bottom:30px}
 
-.contact{background:var(--mint);text-align:center}
-.contact h2{margin-bottom:20px}
-footer{padding:35px 7%;display:flex;justify-content:space-between;background:var(--dark);color:white}
+.faq-item{border-top:1px solid var(--line);padding:34px 0}
+.faq-item h3{font-size:28px;text-transform:uppercase;margin-bottom:12px}
+.faq-item p{color:#bdbdbd;font-size:18px;line-height:1.65}
 
-@media(max-width:950px){
-.hero{grid-template-columns:1fr}
-.hero-photo{order:-1;min-height:55vh}
-.hero-left{padding:55px 6% 80px}
-.timeline,.options,.about{grid-template-columns:1fr}
-footer{flex-direction:column;gap:10px}
+footer{
+padding:38px 6%;border-top:1px solid var(--line);
+display:flex;justify-content:space-between;color:#999;text-transform:uppercase;letter-spacing:2px
+}
+
+@media(max-width:900px){
+header{padding:22px 5%}
+.logo{font-size:24px}
+.right{gap:14px}
+.hero{padding:125px 5% 72px;background-position:center}
+.hero h1{letter-spacing:-4px}
+section{padding:85px 5%}
+.process{grid-template-columns:1fr}
+.service,.about{grid-template-columns:1fr}
+.about-img{min-height:430px}
+footer{flex-direction:column;gap:12px}
 }
 </style>
 </head>
@@ -91,17 +127,17 @@ footer{flex-direction:column;gap:10px}
 <body>
 
 <header>
-<div class="logo">LU FITNESS COACHING</div>
-<div class="actions">
+<div class="logo">LU</div>
+<div class="right">
 <button class="lang" onclick="switchLang()">DE / ES</button>
-<button class="burger" onclick="openMenu()">☰</button>
+<button class="menu-btn" onclick="openMenu()">MENU <span>+</span></button>
 </div>
 </header>
 
 <nav class="menu" id="menu">
 <div class="close" onclick="closeMenu()">×</div>
 <a href="#home" onclick="closeMenu()" data-de="Start" data-es="Inicio">Start</a>
-<a href="#process" onclick="closeMenu()" data-de="So funktioniert es" data-es="Cómo trabajamos">So funktioniert es</a>
+<a href="#process" onclick="closeMenu()" data-de="So arbeiten wir" data-es="Cómo trabajamos">So arbeiten wir</a>
 <a href="#services" onclick="closeMenu()" data-de="Leistungen" data-es="Servicios">Leistungen</a>
 <a href="#about" onclick="closeMenu()" data-de="Über LU" data-es="Sobre LU">Über LU</a>
 <a href="#faq" onclick="closeMenu()">FAQ</a>
@@ -109,66 +145,58 @@ footer{flex-direction:column;gap:10px}
 </nav>
 
 <section class="hero" id="home">
-<div class="hero-left">
-<div class="kicker" data-de="Kostenlos starten" data-es="Empieza gratis">Kostenlos starten</div>
-<h1>LU Fitness Coaching</h1>
-<p data-de="Starte mit einem kostenlosen Probetraining. Wir schauen dein Ziel, dein aktuelles Niveau und den besten Weg für deine Umsetzung an." data-es="Empieza con un entrenamiento de prueba gratuito. Revisamos tu objetivo, tu nivel actual y el mejor camino para ejecutarlo.">Starte mit einem kostenlosen Probetraining. Wir schauen dein Ziel, dein aktuelles Niveau und den besten Weg für deine Umsetzung an.</p>
-
-<div class="hero-service">
-<h3 id="serviceTitle">Personal Training</h3>
-<p id="serviceText">Das komplette Paket: Training, Ernährung, Messungen, Kontrolle und persönliche Betreuung.</p>
-</div>
-
+<div class="hero-content">
+<h1>LU FITNESS COACHING</h1>
+<div class="switch-title" id="serviceTitle">Personal Training</div>
+<p class="switch-text" id="serviceText">Das komplette Paket: Training, Ernährung, Messungen, Kontrolle und persönliche Betreuung.</p>
 <div class="btns">
 <a class="btn primary" href="#contact" data-de="Gratis Probetraining buchen" data-es="Reservar prueba gratis">Gratis Probetraining buchen</a>
-<a class="btn secondary" href="#process" data-de="So funktioniert es" data-es="Cómo trabajamos">So funktioniert es</a>
+<a class="btn" href="#process" data-de="So funktioniert es" data-es="Cómo funciona">So funktioniert es</a>
 </div>
 </div>
-<div class="hero-photo"></div>
+<div class="scroll">Scroll</div>
 </section>
 
-<section class="process" id="process">
+<section id="process">
 <div class="label" data-de="Ablauf" data-es="Proceso">Ablauf</div>
-<h2 data-de="So funktioniert es" data-es="Cómo trabajamos">So funktioniert es</h2>
-<div class="timeline">
-<div class="step"><span>01</span><h3 data-de="Erstgespräch" data-es="Primera charla">Erstgespräch</h3><p data-de="Ziel, Erfahrung, Alltag und mögliche Einschränkungen." data-es="Objetivo, experiencia, rutina y posibles limitaciones.">Ziel, Erfahrung, Alltag und mögliche Einschränkungen.</p></div>
-<div class="step"><span>02</span><h3>Probetraining</h3><p data-de="Wir trainieren zusammen und prüfen dein aktuelles Niveau." data-es="Entrenamos juntos y vemos tu nivel actual.">Wir trainieren zusammen und prüfen dein aktuelles Niveau.</p></div>
-<div class="step"><span>03</span><h3 data-de="Messungen" data-es="Medidas">Messungen</h3><p data-de="Gewicht, Körpermaße, Trainingsstand und Ziel." data-es="Peso, medidas, nivel y objetivo.">Gewicht, Körpermaße, Trainingsstand und Ziel.</p></div>
-<div class="step"><span>04</span><h3 data-de="Planung" data-es="Planificación">Planung</h3><p data-de="Ein individueller Plan passend zu deinem Alltag." data-es="Un plan individual adaptado a tu rutina.">Ein individueller Plan passend zu deinem Alltag.</p></div>
-<div class="step"><span>05</span><h3 data-de="Umsetzung" data-es="Ejecución">Umsetzung</h3><p data-de="Training, Kontrolle und klare Arbeit." data-es="Entrenamiento, control y trabajo claro.">Training, Kontrolle und klare Arbeit.</p></div>
-<div class="step"><span>06</span><h3 data-de="Anpassung" data-es="Ajustes">Anpassung</h3><p data-de="Kontrolle und Änderungen nach Entwicklung." data-es="Control y cambios según evolución.">Kontrolle und Änderungen nach Entwicklung.</p></div>
+<h2 data-de="So arbeiten wir" data-es="Cómo trabajamos">So arbeiten wir</h2>
+<p class="intro" data-de="Vom ersten Gespräch bis zur Umsetzung: Du weißt von Anfang an, was passiert, warum wir es machen und wie dein Fortschritt kontrolliert wird." data-es="Desde la primera charla hasta la ejecución: sabes desde el principio qué hacemos, por qué lo hacemos y cómo se controla tu progreso.">Vom ersten Gespräch bis zur Umsetzung: Du weißt von Anfang an, was passiert, warum wir es machen und wie dein Fortschritt kontrolliert wird.</p>
+
+<div class="process">
+<div class="step"><span>01</span><h3>Erstgespräch</h3><p data-de="Wir sprechen über dein Ziel, Erfahrung, Alltag und mögliche Einschränkungen." data-es="Hablamos de tu objetivo, experiencia, rutina y posibles limitaciones.">Wir sprechen über dein Ziel, Erfahrung, Alltag und mögliche Einschränkungen.</p></div>
+<div class="step"><span>02</span><h3>Probetraining</h3><p data-de="Kostenloses Training, um dein aktuelles Niveau und deinen Bedarf zu sehen." data-es="Entrenamiento gratis para ver tu nivel actual y lo que necesitas.">Kostenloses Training, um dein aktuelles Niveau und deinen Bedarf zu sehen.</p></div>
+<div class="step"><span>03</span><h3>Analyse</h3><p data-de="Gewicht, Körpermaße, Trainingsstand und Ziel werden festgehalten." data-es="Registramos peso, medidas, nivel y objetivo.">Gewicht, Körpermaße, Trainingsstand und Ziel werden festgehalten.</p></div>
+<div class="step"><span>04</span><h3>Planung</h3><p data-de="Du bekommst eine klare Struktur passend zu deinem Alltag." data-es="Recibes una estructura clara adaptada a tu rutina.">Du bekommst eine klare Struktur passend zu deinem Alltag.</p></div>
+<div class="step"><span>05</span><h3>Umsetzung</h3><p data-de="Training, Kontrolle und konsequente Ausführung stehen im Mittelpunkt." data-es="Entrenamiento, control y ejecución constante son el centro.">Training, Kontrolle und konsequente Ausführung stehen im Mittelpunkt.</p></div>
+<div class="step"><span>06</span><h3>Anpassung</h3><p data-de="Der Plan wird angepasst, wenn dein Körper oder Alltag es verlangt." data-es="El plan se ajusta cuando tu cuerpo o tu rutina lo necesite.">Der Plan wird angepasst, wenn dein Körper oder Alltag es verlangt.</p></div>
 </div>
 </section>
 
 <section id="services">
 <div class="label" data-de="Leistungen" data-es="Servicios">Leistungen</div>
-<h2 data-de="Was brauchst du?" data-es="¿Qué necesitas?">Was brauchst du?</h2>
+<h2 data-de="Was passt zu dir?" data-es="¿Qué encaja contigo?">Was passt zu dir?</h2>
 
-<div class="options">
-<div class="option">
-<div class="icon training"></div>
+<div class="services">
+<div class="service">
 <h3>Personal Training</h3>
-<p data-de="Das komplette Paket mit persönlicher Betreuung. Nicht nur Training, sondern ein vollständiges System." data-es="El paquete completo con seguimiento personal. No solo entrenamiento, sino un sistema completo.">Das komplette Paket mit persönlicher Betreuung. Nicht nur Training, sondern ein vollständiges System.</p>
-<ul><li>Training</li><li data-de="Ernährung" data-es="Nutrición">Ernährung</li><li data-de="Messungen & Gewicht" data-es="Medidas y peso">Messungen & Gewicht</li><li data-de="Kontrolle & Anpassung" data-es="Control y ajustes">Kontrolle & Anpassung</li></ul>
+<div><p data-de="Das komplette Paket mit persönlicher Betreuung. Hier geht es nicht nur um Training, sondern um ein vollständiges System." data-es="El paquete completo con seguimiento personal. Aquí no se trata solo de entrenar, sino de un sistema completo.">Das komplette Paket mit persönlicher Betreuung. Hier geht es nicht nur um Training, sondern um ein vollständiges System.</p>
+<ul><li>Training</li><li data-de="Ernährung" data-es="Nutrición">Ernährung</li><li data-de="Messungen & Gewicht" data-es="Medidas y peso">Messungen & Gewicht</li><li data-de="Kontrolle & Anpassung" data-es="Control y ajustes">Kontrolle & Anpassung</li></ul></div>
 </div>
 
-<div class="option">
-<div class="icon gym"></div>
+<div class="service">
 <h3>Fitness Coaching</h3>
-<p data-de="Begleitung ausschließlich für dein Training im Gym. Fokus auf Trainingsplan, Ausführung, Kontrolle und Fortschritt." data-es="Seguimiento exclusivamente para tu entrenamiento en el gimnasio. Enfoque en plan, ejecución, control y progreso.">Begleitung ausschließlich für dein Training im Gym. Fokus auf Trainingsplan, Ausführung, Kontrolle und Fortschritt.</p>
-<ul><li data-de="Trainingsplan" data-es="Plan de entrenamiento">Trainingsplan</li><li data-de="Übungsausführung" data-es="Ejecución">Übungsausführung</li><li data-de="Fortschrittskontrolle" data-es="Control de progreso">Fortschrittskontrolle</li><li data-de="Keine Ernährung enthalten" data-es="No incluye nutrición">Keine Ernährung enthalten</li></ul>
+<div><p data-de="Begleitung ausschließlich für dein Training im Gym. Fokus auf Trainingsplan, Ausführung, Kontrolle und Fortschritt. Keine Ernährung enthalten." data-es="Seguimiento exclusivamente para tu entrenamiento en el gimnasio. Enfoque en plan, ejecución, control y progreso. No incluye nutrición.">Begleitung ausschließlich für dein Training im Gym. Fokus auf Trainingsplan, Ausführung, Kontrolle und Fortschritt. Keine Ernährung enthalten.</p>
+<ul><li data-de="Trainingsplan" data-es="Plan de entrenamiento">Trainingsplan</li><li data-de="Übungsausführung" data-es="Ejecución">Übungsausführung</li><li data-de="Fortschrittskontrolle" data-es="Control de progreso">Fortschrittskontrolle</li></ul></div>
 </div>
 
-<div class="option">
-<div class="icon food"></div>
+<div class="service">
 <h3>Ernährungsberatung</h3>
-<p data-de="Ernährung, die zu deinem Alltag, deinem Körper und deinem Ziel passt. Praktisch und umsetzbar." data-es="Nutrición adaptada a tu día a día, cuerpo y objetivo. Práctica y fácil de ejecutar.">Ernährung, die zu deinem Alltag, deinem Körper und deinem Ziel passt. Praktisch und umsetzbar.</p>
+<div><p data-de="Ernährung, die zu deinem Alltag, deinem Körper und deinem Ziel passt. Praktisch, verständlich und umsetzbar." data-es="Nutrición adaptada a tu día a día, cuerpo y objetivo. Práctica, clara y fácil de ejecutar.">Ernährung, die zu deinem Alltag, deinem Körper und deinem Ziel passt. Praktisch, verständlich und umsetzbar.</p></div>
 </div>
 
-<div class="option">
-<div class="icon online"></div>
+<div class="service">
 <h3>Online Coaching</h3>
-<p data-de="Planung und Betreuung aus der Distanz. Ideal, wenn du flexibel arbeiten möchtest und trotzdem Struktur brauchst." data-es="Planificación y seguimiento a distancia. Ideal si quieres flexibilidad pero necesitas estructura.">Planung und Betreuung aus der Distanz. Ideal, wenn du flexibel arbeiten möchtest und trotzdem Struktur brauchst.</p>
+<div><p data-de="Planung und Betreuung aus der Distanz. Ideal, wenn du flexibel arbeiten möchtest und trotzdem Struktur brauchst." data-es="Planificación y seguimiento a distancia. Ideal si quieres flexibilidad pero necesitas estructura.">Planung und Betreuung aus der Distanz. Ideal, wenn du flexibel arbeiten möchtest und trotzdem Struktur brauchst.</p></div>
 </div>
 </div>
 </section>
@@ -177,22 +205,25 @@ footer{flex-direction:column;gap:10px}
 <div class="about-img"></div>
 <div>
 <div class="label">Über LU</div>
-<h2 data-de="Training mit Struktur" data-es="Entrenamiento con estructura">Training mit Struktur</h2>
-<p class="text" data-de="LU Fitness Coaching steht für persönliche Betreuung, klare Umsetzung und ehrliche Arbeit. Der Kunde soll genau verstehen, was gemacht wird, warum es gemacht wird und wie Fortschritt entsteht." data-es="LU Fitness Coaching representa seguimiento personal, ejecución clara y trabajo serio. El cliente debe entender qué se hace, por qué se hace y cómo se consigue el progreso.">LU Fitness Coaching steht für persönliche Betreuung, klare Umsetzung und ehrliche Arbeit.</p>
+<h2 data-de="Dein Coach" data-es="Tu coach">Dein Coach</h2>
+<p data-de="LU Fitness Coaching steht für persönliche Betreuung, klare Umsetzung und ehrliche Arbeit. Der Kunde soll genau verstehen, was gemacht wird, warum es gemacht wird und wie Fortschritt entsteht." data-es="LU Fitness Coaching representa seguimiento personal, ejecución clara y trabajo serio. El cliente debe entender qué se hace, por qué se hace y cómo se consigue el progreso.">LU Fitness Coaching steht für persönliche Betreuung, klare Umsetzung und ehrliche Arbeit.</p>
 </div>
 </section>
 
-<section class="faq" id="faq">
+<section id="faq">
 <div class="label">FAQ</div>
-<h2 data-de="Häufige Fragen" data-es="Preguntas frecuentes">Häufige Fragen</h2>
+<h2 data-de="Fragen vor dem Start" data-es="Preguntas antes de empezar">Fragen vor dem Start</h2>
+
 <div class="faq-item"><h3 data-de="Ist das Probetraining kostenlos?" data-es="¿La prueba es gratis?">Ist das Probetraining kostenlos?</h3><p data-de="Ja. Das Probetraining dient dazu, dein Niveau zu sehen und zu prüfen, wie wir am besten starten." data-es="Sí. La prueba sirve para ver tu nivel y comprobar cómo empezar mejor.">Ja. Das Probetraining dient dazu, dein Niveau zu sehen und zu prüfen, wie wir am besten starten.</p></div>
+
 <div class="faq-item"><h3 data-de="Was ist der Unterschied zwischen Personal Training und Fitness Coaching?" data-es="¿Cuál es la diferencia entre Personal Training y Fitness Coaching?">Was ist der Unterschied zwischen Personal Training und Fitness Coaching?</h3><p data-de="Personal Training ist das komplette Paket mit Training, Ernährung und Betreuung. Fitness Coaching konzentriert sich nur auf dein Training im Gym." data-es="Personal Training es el paquete completo con entrenamiento, nutrición y seguimiento. Fitness Coaching se centra solo en el gimnasio.">Personal Training ist das komplette Paket mit Training, Ernährung und Betreuung. Fitness Coaching konzentriert sich nur auf dein Training im Gym.</p></div>
 </section>
 
-<section class="contact" id="contact">
-<div class="label" data-de="Kontakt" data-es="Contacto">Kontakt</div>
-<h2 data-de="Gratis Probetraining buchen" data-es="Reservar prueba gratis">Gratis Probetraining buchen</h2>
-<p class="text" style="margin:auto" data-de="WhatsApp, Instagram und Kontaktformular werden bald ergänzt." data-es="WhatsApp, Instagram y formulario se añadirán pronto.">WhatsApp, Instagram und Kontaktformular werden bald ergänzt.</p>
+<section class="cta" id="contact">
+<div>
+<h2 data-de="Bereit zu starten?" data-es="¿Listo para empezar?">Bereit zu starten?</h2>
+<a class="btn primary" href="#" data-de="Gratis Probetraining buchen" data-es="Reservar prueba gratis">Gratis Probetraining buchen</a>
+</div>
 </section>
 
 <footer>
@@ -221,8 +252,14 @@ es:[
 
 function rotateService(){
 serviceIndex=(serviceIndex+1)%services[lang].length;
+document.getElementById("serviceTitle").style.opacity=0;
+document.getElementById("serviceText").style.opacity=0;
+setTimeout(()=>{
 document.getElementById("serviceTitle").textContent=services[lang][serviceIndex][0];
 document.getElementById("serviceText").textContent=services[lang][serviceIndex][1];
+document.getElementById("serviceTitle").style.opacity=1;
+document.getElementById("serviceText").style.opacity=1;
+},250);
 }
 setInterval(rotateService,5200);
 
