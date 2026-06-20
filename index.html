@@ -12,7 +12,7 @@ body{font-family:Arial,Helvetica,sans-serif;background:#050505;color:#fff;overfl
 a{text-decoration:none;color:inherit}
 :root{--line:rgba(255,255,255,.14);--muted:#aaa;--card:#0d0d0d}
 
-header{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:24px 6%;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(180deg,rgba(0,0,0,.92),rgba(0,0,0,.18));backdrop-filter:blur(12px)}
+header{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:22px 6%;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(180deg,rgba(0,0,0,.92),rgba(0,0,0,.18));backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08)}
 .logo{font-size:22px;font-weight:900;letter-spacing:2px;text-transform:uppercase}
 .right{display:flex;align-items:center;gap:24px}
 .lang,.menu-btn{background:none;border:0;color:white;font-size:15px;font-weight:900;letter-spacing:1px}
@@ -23,39 +23,41 @@ header{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:24px 6%;displ
 .close{position:absolute;right:32px;top:28px;font-size:42px}
 .menu a{display:block;font-size:32px;font-weight:900;text-transform:uppercase;margin:28px 0}
 
-.hero{min-height:100vh;position:relative;display:flex;align-items:end;padding:130px 6% 80px;background:url('Screenshot_20260620_141238_Instagram.jpg') center/cover}
-.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.9)),linear-gradient(90deg,rgba(0,0,0,.65),rgba(0,0,0,.05))}
-.hero-content{position:relative;z-index:2;max-width:1050px}
-h1{font-size:clamp(54px,11vw,145px);line-height:.8;text-transform:uppercase;letter-spacing:-6px;margin-bottom:28px}
-.switch-title{font-size:clamp(30px,5vw,66px);font-weight:900;text-transform:uppercase;margin-bottom:12px;transition:.25s}
-.switch-text{font-size:19px;line-height:1.55;color:#ddd;max-width:700px;margin-bottom:34px;transition:.25s}
-.btns{display:flex;gap:16px;flex-wrap:wrap}
-.btn{display:inline-block;padding:18px 30px;border:1px solid rgba(255,255,255,.45);border-radius:6px;text-transform:uppercase;font-size:13px;font-weight:900;letter-spacing:1.2px;transition:.25s}
-.btn:hover{background:#fff;color:#000;transform:translateY(-3px)}
-.btn.primary{background:#fff;color:#000;border-color:#fff}
-.btn.primary:hover{background:#dcdcdc}
+.hero{min-height:90vh;position:relative;display:flex;align-items:end;padding:115px 6% 52px;background:url('Screenshot_20260620_141238_Instagram.jpg') center/cover}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.18),rgba(0,0,0,.86)),linear-gradient(90deg,rgba(0,0,0,.78),rgba(0,0,0,.08))}
+.hero-content{position:relative;z-index:2;max-width:900px}
+.hero-kicker{font-size:18px;letter-spacing:5px;text-transform:uppercase;margin-bottom:18px;color:#ddd}
+h1{font-size:clamp(50px,10vw,125px);line-height:.82;text-transform:uppercase;letter-spacing:-6px;margin-bottom:24px}
+.hero-text{font-size:20px;line-height:1.55;color:#ddd;max-width:720px;margin-bottom:30px}
+.trial-box{max-width:620px;border:1px solid rgba(255,255,255,.45);background:rgba(255,255,255,.04);backdrop-filter:blur(10px);padding:24px;display:grid;grid-template-columns:1fr 46px;gap:20px;align-items:center;transition:.25s}
+.trial-box:hover{background:#fff;color:#000;transform:translateY(-4px)}
+.trial-box span{display:block;font-size:13px;letter-spacing:3px;text-transform:uppercase;font-weight:900;margin-bottom:8px}
+.trial-box h3{font-size:24px;text-transform:uppercase;line-height:1.1;margin-bottom:8px}
+.trial-box p{font-size:15px;color:#cfcfcf;line-height:1.5}
+.trial-box:hover p{color:#333}
+.trial-arrow{font-size:36px;text-align:right}
 
-section{padding:105px 6%}
-.label{font-size:13px;letter-spacing:4px;text-transform:uppercase;color:#888;margin-bottom:20px}
-h2{font-size:clamp(40px,7vw,90px);line-height:.88;letter-spacing:-5px;text-transform:uppercase;margin-bottom:42px}
-.intro{font-size:21px;line-height:1.55;color:#aaa;max-width:850px;margin-bottom:55px}
+section{padding:86px 6%}
+.label{font-size:13px;letter-spacing:4px;text-transform:uppercase;color:#888;margin-bottom:18px}
+h2{font-size:clamp(38px,7vw,82px);line-height:.9;letter-spacing:-4px;text-transform:uppercase;margin-bottom:36px}
+.intro{font-size:20px;line-height:1.55;color:#aaa;max-width:850px;margin-bottom:42px}
 
 .accordion{border-top:1px solid var(--line)}
 .acc-item{border-bottom:1px solid var(--line)}
-.acc-head{display:grid;grid-template-columns:70px 1fr 40px;gap:22px;align-items:center;padding:30px 0;cursor:pointer}
+.acc-head{display:grid;grid-template-columns:70px 1fr 40px;gap:22px;align-items:center;padding:28px 0;cursor:pointer}
 .acc-num{font-size:28px;font-weight:900;color:#aaa}
-.acc-head h3{font-size:clamp(24px,4vw,42px);text-transform:uppercase;line-height:1}
+.acc-head h3{font-size:clamp(24px,4vw,40px);text-transform:uppercase;line-height:1}
 .plus{font-size:34px;text-align:right}
-.acc-body{display:none;color:#aaa;font-size:17px;line-height:1.7;max-width:760px;padding:0 0 32px 92px}
+.acc-body{display:none;color:#aaa;font-size:17px;line-height:1.7;max-width:760px;padding:0 0 30px 92px}
 .acc-item.active .acc-body{display:block}
 .acc-body ul{list-style:none;margin-top:20px;color:#fff}
 .acc-body li{margin:10px 0;font-size:17px}
 .acc-body li:before{content:"+";margin-right:12px}
 
-.pricing-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-bottom:45px}
-.price-card{background:var(--card);border:1px solid var(--line);padding:34px;border-radius:6px;transition:.3s}
+.pricing-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-bottom:38px}
+.price-card{background:var(--card);border:1px solid var(--line);padding:32px;border-radius:6px;transition:.3s}
 .price-card:hover{transform:translateY(-6px);border-color:#fff}
-.price-icon{font-size:34px;margin-bottom:22px;filter:grayscale(1)}
+.price-icon{width:54px;height:54px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:900;letter-spacing:1px;margin-bottom:22px}
 .price-card h3{font-size:32px;text-transform:uppercase;margin-bottom:10px}
 .price-card .type{color:#aaa;text-transform:uppercase;letter-spacing:2px;font-size:12px;margin-bottom:22px}
 .price{font-size:48px;font-weight:900;margin-bottom:22px}
@@ -66,32 +68,38 @@ h2{font-size:clamp(40px,7vw,90px);line-height:.88;letter-spacing:-5px;text-trans
 .price-card.featured{background:#fff;color:#000}
 .price-card.featured .type,.price-card.featured .price span,.price-card.featured li{color:#333}
 .price-card.featured .btn{background:#000;color:#fff;border-color:#000}
-.price-card.featured .btn:hover{background:#222;color:#fff}
 
-.about{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.about-img{min-height:600px;background:url('Screenshot_20260620_141238_Instagram.jpg') center/cover}
+.btn{display:inline-block;padding:16px 26px;border:1px solid rgba(255,255,255,.45);border-radius:6px;text-transform:uppercase;font-size:13px;font-weight:900;letter-spacing:1.2px;transition:.25s}
+.btn:hover{background:#fff;color:#000;transform:translateY(-3px)}
+.btn.primary{background:#fff;color:#000;border-color:#fff}
+.btn.primary:hover{background:#dcdcdc}
+
+.about{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
+.about-img{min-height:520px;background:url('Screenshot_20260620_141238_Instagram.jpg') center/cover}
 .about p{font-size:19px;line-height:1.75;color:#cfcfcf;margin-bottom:18px}
 
-.info-box{border:1px solid var(--line);padding:38px;background:#0d0d0d;display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center;margin-top:40px}
-.info-box h3{font-size:34px;text-transform:uppercase;margin-bottom:14px}
+.info-box{border:1px solid var(--line);padding:34px;background:#0d0d0d;display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center;margin-top:36px}
+.info-box h3{font-size:32px;text-transform:uppercase;margin-bottom:14px}
 .info-box p{color:#aaa;line-height:1.7}
 
-.cta{min-height:70vh;display:flex;align-items:center;justify-content:center;text-align:center;background:#111}
-.cta h2{margin-bottom:30px}
+.cta{min-height:48vh;display:flex;align-items:center;justify-content:center;background:#111;padding:70px 6%}
+.cta-card{width:100%;border:1px solid var(--line);padding:34px;display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center;background:#0b0b0b}
+.cta-card h2{margin-bottom:12px}
+.cta-card p{color:#aaa;font-size:18px;line-height:1.6}
 
-.whatsapp-float{position:fixed;right:22px;bottom:22px;z-index:999;background:#25D366;color:#000;width:62px;height:62px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:900;box-shadow:0 12px 35px rgba(0,0,0,.35)}
+.whatsapp-float{position:fixed;right:22px;bottom:22px;z-index:999;background:#25D366;color:#000;width:62px;height:62px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900;box-shadow:0 12px 35px rgba(0,0,0,.35)}
 
-footer{padding:36px 6%;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:#888;text-transform:uppercase;letter-spacing:2px}
+footer{padding:32px 6%;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:#888;text-transform:uppercase;letter-spacing:2px}
 
 @media(max-width:900px){
-header{padding:22px 5%}.logo{font-size:20px}.right{gap:14px}
-.hero{padding:125px 5% 70px;background-position:center}
+header{padding:20px 5%}.logo{font-size:20px}.right{gap:14px}
+.hero{min-height:86vh;padding:105px 5% 44px;background-position:center}
 h1{letter-spacing:-4px}
-section{padding:85px 5%}
+section{padding:72px 5%}
 .acc-head{grid-template-columns:50px 1fr 30px}
 .acc-body{padding:0 0 28px 72px}
-.pricing-grid,.about,.info-box{grid-template-columns:1fr}
-.about-img{min-height:420px}
+.pricing-grid,.about,.info-box,.cta-card{grid-template-columns:1fr}
+.about-img{min-height:390px}
 footer{flex-direction:column;gap:12px}
 }
 </style>
@@ -120,13 +128,18 @@ footer{flex-direction:column;gap:12px}
 
 <section class="hero" id="home">
 <div class="hero-content">
-<h1>LU Fitness Coaching</h1>
-<div class="switch-title" id="serviceTitle">Personal Training</div>
-<p class="switch-text" id="serviceText">Das komplette Paket: Training, Ernährung, Messungen, Kontrolle und persönliche Betreuung.</p>
-<div class="btns">
-<a class="btn primary" href="https://wa.me/41767401541" target="_blank">Gratis Probetraining buchen</a>
-<a class="btn" href="#process">So funktioniert es</a>
+<div class="hero-kicker">Wir begleiten dich</div>
+<h1>Dein Ziel.<br>Unser System.</h1>
+<p class="hero-text">Individuelles Training, persönliche Betreuung und klare Strategien für Ergebnisse, die bleiben.</p>
+
+<a class="trial-box" href="https://wa.me/41767401541" target="_blank">
+<div>
+<span>Überzeuge dich selbst</span>
+<h3>Buche jetzt dein kostenloses Probetraining</h3>
+<p>Lerne mich persönlich kennen und erlebe den Unterschied selbst.</p>
 </div>
+<div class="trial-arrow">→</div>
+</a>
 </div>
 </section>
 
@@ -166,7 +179,7 @@ footer{flex-direction:column;gap:12px}
 
 <div class="pricing-grid">
 <div class="price-card">
-<div class="price-icon">🏋</div>
+<div class="price-icon">FC</div>
 <div class="type">Fitness Coaching</div>
 <h3>Silver</h3>
 <div class="price">CHF 399 <span>/ Monat</span></div>
@@ -175,7 +188,7 @@ footer{flex-direction:column;gap:12px}
 </div>
 
 <div class="price-card featured">
-<div class="price-icon">🏋</div>
+<div class="price-icon">FC</div>
 <div class="type">Fitness Coaching</div>
 <h3>Gold</h3>
 <div class="price">CHF 749 <span>/ Monat</span></div>
@@ -184,7 +197,7 @@ footer{flex-direction:column;gap:12px}
 </div>
 
 <div class="price-card">
-<div class="price-icon">💪</div>
+<div class="price-icon">PT</div>
 <div class="type">Personal Training</div>
 <h3>Silver</h3>
 <div class="price">CHF 499 <span>/ Monat</span></div>
@@ -193,7 +206,7 @@ footer{flex-direction:column;gap:12px}
 </div>
 
 <div class="price-card featured">
-<div class="price-icon">💪</div>
+<div class="price-icon">PT</div>
 <div class="type">Personal Training</div>
 <h3>Gold</h3>
 <div class="price">CHF 899 <span>/ Monat</span></div>
@@ -202,7 +215,7 @@ footer{flex-direction:column;gap:12px}
 </div>
 
 <div class="price-card">
-<div class="price-icon">⏱</div>
+<div class="price-icon">1H</div>
 <div class="type">Einzelstunde</div>
 <h3>Personal Training</h3>
 <div class="price">CHF 130</div>
@@ -233,7 +246,7 @@ footer{flex-direction:column;gap:12px}
 <div class="about-img"></div>
 <div>
 <div class="label">Über LU</div>
-<h2>Mehr als nur Training</h2>
+<h2>Mehr als Training</h2>
 <p>Ich arbeite nicht nach Standardprogrammen. Jeder Körper, jeder Alltag und jedes Ziel braucht eine andere Strategie. Genau darum geht es bei LU Fitness Coaching: Training, Ernährung und Betreuung so aufzubauen, dass es zu deinem Leben passt.</p>
 <p>Meine Erfahrung kommt aus der Praxis. Aus echten Trainingsflächen, echten Kunden und echten Fortschritten. Ich lege Wert auf saubere Technik, klare Struktur, ehrliche Kontrolle und konsequente Umsetzung.</p>
 <p>Kein unnötiges Gerede. Kein kompliziertes System. Du bekommst einen klaren Plan und eine Betreuung, die dich Schritt für Schritt weiterbringt.</p>
@@ -251,13 +264,17 @@ footer{flex-direction:column;gap:12px}
 </section>
 
 <section class="cta" id="contact">
+<div class="cta-card">
 <div>
-<h2>Jetzt Probetraining sichern</h2>
-<a class="btn primary" href="https://wa.me/41767401541" target="_blank">Gratis Probetraining buchen</a>
+<div class="label">Probetraining</div>
+<h2>Überzeuge dich selbst</h2>
+<p>Buche jetzt dein kostenloses Probetraining und lerne persönlich kennen, wie LU Fitness Coaching arbeitet.</p>
+</div>
+<a class="btn primary" href="https://wa.me/41767401541" target="_blank">Jetzt Probetraining buchen</a>
 </div>
 </section>
 
-<a class="whatsapp-float" href="https://wa.me/41767401541" target="_blank">☏</a>
+<a class="whatsapp-float" href="https://wa.me/41767401541" target="_blank">WA</a>
 
 <footer>
 <strong>LU FITNESS COACHING</strong>
@@ -265,34 +282,6 @@ footer{flex-direction:column;gap:12px}
 </footer>
 
 <script>
-let lang="de";
-let serviceIndex=0;
-const services={
-de:[
-["Personal Training","Das komplette Paket: Training, Ernährung, Messungen, Kontrolle und persönliche Betreuung."],
-["Fitness Coaching","Nur Gym: Trainingsplan, Übungsausführung, Kontrolle und Fortschritt. Keine Ernährung enthalten."],
-["Ernährungsberatung","Praktische Ernährung passend zu Alltag, Körper und Ziel."],
-["Online Coaching","Planung und Betreuung aus der Distanz mit klarer Struktur."]
-],
-es:[
-["Entrenamiento Personal","El paquete completo: entrenamiento, nutrición, medidas, control y seguimiento personal."],
-["Fitness Coaching","Solo gimnasio: plan, ejecución, control y progreso. No incluye nutrición."],
-["Asesoría Nutricional","Nutrición práctica adaptada a tu vida diaria, cuerpo y objetivo."],
-["Coaching Online","Planificación y seguimiento a distancia con estructura clara."]
-]
-};
-function rotateService(){
-serviceIndex=(serviceIndex+1)%services[lang].length;
-document.getElementById("serviceTitle").style.opacity=0;
-document.getElementById("serviceText").style.opacity=0;
-setTimeout(()=>{
-document.getElementById("serviceTitle").textContent=services[lang][serviceIndex][0];
-document.getElementById("serviceText").textContent=services[lang][serviceIndex][1];
-document.getElementById("serviceTitle").style.opacity=1;
-document.getElementById("serviceText").style.opacity=1;
-},250);
-}
-setInterval(rotateService,5200);
 function switchLang(){}
 function openMenu(){document.getElementById("menu").classList.add("active")}
 function closeMenu(){document.getElementById("menu").classList.remove("active")}
