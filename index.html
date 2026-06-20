@@ -25,15 +25,21 @@ header{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:22px 6%;displ
 
 .hero{min-height:82vh;position:relative;display:flex;align-items:end;padding:115px 6% 58px;background:url('Screenshot_20260620_141238_Instagram.jpg') center/cover}
 .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.18),rgba(0,0,0,.86)),linear-gradient(90deg,rgba(0,0,0,.78),rgba(0,0,0,.08))}
-.hero-content{position:relative;z-index:2;max-width:900px}
+.hero-content{position:relative;z-index:2;max-width:900px;overflow:hidden}
 .hero-kicker{font-size:18px;letter-spacing:5px;text-transform:uppercase;margin-bottom:18px;color:#ddd}
-h1{font-size:clamp(50px,10vw,125px);line-height:.82;text-transform:uppercase;letter-spacing:-6px;margin-bottom:18px}
+h1{font-size:clamp(46px,10vw,118px);line-height:.84;text-transform:uppercase;letter-spacing:-5px;margin-bottom:18px;max-width:100%;overflow-wrap:anywhere}
 .hero-text{font-size:20px;line-height:1.55;color:#ddd;max-width:720px;margin-bottom:0}
 
-section{padding:86px 6%}
+section{padding:78px 6%}
 .label{font-size:13px;letter-spacing:4px;text-transform:uppercase;color:#888;margin-bottom:18px}
-h2{font-size:clamp(38px,7vw,82px);line-height:.9;letter-spacing:-4px;text-transform:uppercase;margin-bottom:36px}
-.intro{font-size:20px;line-height:1.55;color:#aaa;max-width:850px;margin-bottom:42px}
+h2{font-size:clamp(36px,7vw,78px);line-height:.9;letter-spacing:-4px;text-transform:uppercase;margin-bottom:34px}
+.intro{font-size:20px;line-height:1.55;color:#aaa;max-width:850px;margin-bottom:40px}
+
+.image-band{height:360px;background:center/cover;border-top:1px solid var(--line);border-bottom:1px solid var(--line);position:relative}
+.image-band:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.7),rgba(0,0,0,.15))}
+.band-1{background-image:url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1600&q=80')}
+.band-2{background-image:url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1600&q=80')}
+.band-3{background-image:url('https://images.unsplash.com/photo-1571019613914-85f342c6a11e?auto=format&fit=crop&w=1600&q=80')}
 
 .accordion{border-top:1px solid var(--line)}
 .acc-item{border-bottom:1px solid var(--line)}
@@ -67,7 +73,7 @@ h2{font-size:clamp(38px,7vw,82px);line-height:.9;letter-spacing:-4px;text-transf
 .btn.primary{background:#fff;color:#000;border-color:#fff}
 
 .about{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
-.about-img{min-height:520px;background:url('Screenshot_20260620_141238_Instagram.jpg') center/cover}
+.about-img{min-height:520px;background:url('https://images.unsplash.com/photo-1594737625785-a6cbdabd333c?auto=format&fit=crop&w=1200&q=80') center/cover}
 .about p{font-size:19px;line-height:1.75;color:#cfcfcf;margin-bottom:18px}
 
 .info-box{border:1px solid var(--line);padding:34px;background:#0d0d0d;display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center;margin-top:36px}
@@ -84,10 +90,14 @@ h2{font-size:clamp(38px,7vw,82px);line-height:.9;letter-spacing:-4px;text-transf
 footer{padding:32px 6%;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:#888;text-transform:uppercase;letter-spacing:2px}
 
 @media(max-width:900px){
-header{padding:20px 5%}.logo{font-size:20px}.right{gap:14px}
+header{padding:20px 5%}
+.logo{font-size:19px}
+.right{gap:14px}
 .hero{min-height:78vh;padding:105px 5% 48px;background-position:center}
-h1{letter-spacing:-4px}
-section{padding:72px 5%}
+h1{font-size:clamp(42px,14vw,70px);letter-spacing:-3px;line-height:.88;word-break:break-word;overflow-wrap:anywhere}
+.hero-text{font-size:18px;max-width:100%}
+section{padding:66px 5%}
+.image-band{height:260px}
 .acc-head{grid-template-columns:50px 1fr 30px}
 .acc-body{padding:0 0 28px 72px}
 .pricing-grid,.about,.info-box,.cta-card{grid-template-columns:1fr}
@@ -141,6 +151,8 @@ footer{flex-direction:column;gap:12px}
 </div>
 </section>
 
+<div class="image-band band-1"></div>
+
 <section id="services">
 <div class="label">Leistungen</div>
 <h2>Unsere Leistungen</h2>
@@ -150,11 +162,13 @@ footer{flex-direction:column;gap:12px}
 
 <div class="acc-item"><div class="acc-head"><div class="acc-num">02</div><h3>Fitness Coaching</h3><div class="plus">+</div></div><div class="acc-body"><p>Gezielte Betreuung für dein Training: Trainingsplan, Technik, Ausführung, Kontrolle und Fortschritt. Keine Ernährung enthalten.</p><ul><li>Trainingsplan</li><li>Übungsausführung</li><li>Fortschrittskontrolle</li></ul><br><a class="btn primary" href="https://wa.me/41767401541" target="_blank">Jetzt buchen</a></div></div>
 
-<div class="acc-item"><div class="acc-head"><div class="acc-num">03</div><h3>Ernährungsberatung</h3><div class="plus">+</div></div><div class="acc-body">Individuelle Ernährung, die zu deinem Alltag, deinem Körper und deinem Ziel passt. Praktisch, klar und umsetzbar.<br><br><a class="btn primary" href="https://wa.me/41767401541" target="_blank">Jetzt buchen</a></div></div>
+<div class="acc-item"><div class="acc-head"><div class="acc-num">03</div><h3>Ernährung</h3><div class="plus">+</div></div><div class="acc-body">Individuelle Ernährung, die zu deinem Alltag, deinem Körper und deinem Ziel passt. Praktisch, klar und umsetzbar.<br><br><a class="btn primary" href="https://wa.me/41767401541" target="_blank">Jetzt buchen</a></div></div>
 
 <div class="acc-item"><div class="acc-head"><div class="acc-num">04</div><h3>Online Coaching</h3><div class="plus">+</div></div><div class="acc-body">Planung und Betreuung aus der Distanz. Ideal, wenn du flexibel trainieren möchtest und trotzdem klare Struktur brauchst.<br><br><a class="btn primary" href="https://wa.me/41767401541" target="_blank">Jetzt buchen</a></div></div>
 </div>
 </section>
+
+<div class="image-band band-2"></div>
 
 <section id="preise">
 <div class="label">Preise & Pakete</div>
@@ -182,6 +196,8 @@ footer{flex-direction:column;gap:12px}
 <a class="btn primary" href="https://wa.me/41767401541" target="_blank">WhatsApp</a>
 </div>
 </section>
+
+<div class="image-band band-3"></div>
 
 <section class="about" id="about">
 <div class="about-img"></div>
@@ -226,7 +242,7 @@ footer{flex-direction:column;gap:12px}
 const heroServices=[
 ["Personal Training","Das komplette Paket: Training, Ernährung, Messungen, Kontrolle und persönliche Betreuung."],
 ["Fitness Coaching","Gezielte Betreuung für dein Training: Trainingsplan, Technik, Ausführung, Kontrolle und Fortschritt."],
-["Ernährungsberatung","Praktische Ernährung passend zu Alltag, Körper und Ziel."],
+["Ernährung","Praktische Ernährung passend zu Alltag, Körper und Ziel."],
 ["Online Coaching","Planung und Betreuung aus der Distanz mit klarer Struktur."]
 ];
 let heroIndex=0;
@@ -254,4 +270,4 @@ item.addEventListener("click",()=>item.classList.toggle("active"));
 </script>
 
 </body>
-</html>
+  </html>
