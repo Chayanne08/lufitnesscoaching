@@ -10,9 +10,9 @@
 html{scroll-behavior:smooth}
 body{font-family:Arial,Helvetica,sans-serif;background:#050505;color:#fff;overflow-x:hidden}
 a{text-decoration:none;color:inherit}
-:root{--line:rgba(255,255,255,.14);--muted:#aaa}
+:root{--line:rgba(255,255,255,.14);--muted:#aaa;--card:#0d0d0d}
 
-header{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:24px 6%;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(180deg,rgba(0,0,0,.9),rgba(0,0,0,.15));backdrop-filter:blur(12px)}
+header{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:24px 6%;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(180deg,rgba(0,0,0,.92),rgba(0,0,0,.18));backdrop-filter:blur(12px)}
 .logo{font-size:22px;font-weight:900;letter-spacing:2px;text-transform:uppercase}
 .right{display:flex;align-items:center;gap:24px}
 .lang,.menu-btn{background:none;border:0;color:white;font-size:15px;font-weight:900;letter-spacing:1px}
@@ -27,11 +27,13 @@ header{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:24px 6%;displ
 .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.9)),linear-gradient(90deg,rgba(0,0,0,.65),rgba(0,0,0,.05))}
 .hero-content{position:relative;z-index:2;max-width:1050px}
 h1{font-size:clamp(54px,11vw,145px);line-height:.8;text-transform:uppercase;letter-spacing:-6px;margin-bottom:28px}
-.switch-title{font-size:clamp(30px,5vw,66px);font-weight:900;text-transform:uppercase;margin-bottom:12px}
-.switch-text{font-size:19px;line-height:1.55;color:#ddd;max-width:700px;margin-bottom:34px}
+.switch-title{font-size:clamp(30px,5vw,66px);font-weight:900;text-transform:uppercase;margin-bottom:12px;transition:.25s}
+.switch-text{font-size:19px;line-height:1.55;color:#ddd;max-width:700px;margin-bottom:34px;transition:.25s}
 .btns{display:flex;gap:16px;flex-wrap:wrap}
-.btn{display:inline-block;padding:18px 30px;border:1px solid rgba(255,255,255,.45);border-radius:6px;text-transform:uppercase;font-size:13px;font-weight:900;letter-spacing:1.2px}
+.btn{display:inline-block;padding:18px 30px;border:1px solid rgba(255,255,255,.45);border-radius:6px;text-transform:uppercase;font-size:13px;font-weight:900;letter-spacing:1.2px;transition:.25s}
+.btn:hover{background:#fff;color:#000;transform:translateY(-3px)}
 .btn.primary{background:#fff;color:#000;border-color:#fff}
+.btn.primary:hover{background:#dcdcdc}
 
 section{padding:105px 6%}
 .label{font-size:13px;letter-spacing:4px;text-transform:uppercase;color:#888;margin-bottom:20px}
@@ -51,7 +53,9 @@ h2{font-size:clamp(40px,7vw,90px);line-height:.88;letter-spacing:-5px;text-trans
 .acc-body li:before{content:"+";margin-right:12px}
 
 .pricing-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-bottom:45px}
-.price-card{background:#0d0d0d;border:1px solid var(--line);padding:34px;border-radius:6px}
+.price-card{background:var(--card);border:1px solid var(--line);padding:34px;border-radius:6px;transition:.3s}
+.price-card:hover{transform:translateY(-6px);border-color:#fff}
+.price-icon{font-size:34px;margin-bottom:22px;filter:grayscale(1)}
 .price-card h3{font-size:32px;text-transform:uppercase;margin-bottom:10px}
 .price-card .type{color:#aaa;text-transform:uppercase;letter-spacing:2px;font-size:12px;margin-bottom:22px}
 .price{font-size:48px;font-weight:900;margin-bottom:22px}
@@ -62,6 +66,7 @@ h2{font-size:clamp(40px,7vw,90px);line-height:.88;letter-spacing:-5px;text-trans
 .price-card.featured{background:#fff;color:#000}
 .price-card.featured .type,.price-card.featured .price span,.price-card.featured li{color:#333}
 .price-card.featured .btn{background:#000;color:#fff;border-color:#000}
+.price-card.featured .btn:hover{background:#222;color:#fff}
 
 .about{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
 .about-img{min-height:600px;background:url('Screenshot_20260620_141238_Instagram.jpg') center/cover}
@@ -104,13 +109,13 @@ footer{flex-direction:column;gap:12px}
 
 <nav class="menu" id="menu">
 <div class="close" onclick="closeMenu()">×</div>
-<a href="#home" onclick="closeMenu()" data-de="Start" data-es="Inicio">Start</a>
-<a href="#process" onclick="closeMenu()" data-de="System" data-es="Sistema">System</a>
-<a href="#services" onclick="closeMenu()" data-de="Leistungen" data-es="Servicios">Leistungen</a>
-<a href="#preise" onclick="closeMenu()" data-de="Preise" data-es="Precios">Preise</a>
-<a href="#about" onclick="closeMenu()" data-de="Über LU" data-es="Sobre LU">Über LU</a>
+<a href="#home" onclick="closeMenu()">Start</a>
+<a href="#process" onclick="closeMenu()">System</a>
+<a href="#services" onclick="closeMenu()">Leistungen</a>
+<a href="#preise" onclick="closeMenu()">Preise</a>
+<a href="#about" onclick="closeMenu()">Über LU</a>
 <a href="#faq" onclick="closeMenu()">FAQ</a>
-<a href="#contact" onclick="closeMenu()" data-de="Kontakt" data-es="Contacto">Kontakt</a>
+<a href="#contact" onclick="closeMenu()">Kontakt</a>
 </nav>
 
 <section class="hero" id="home">
@@ -119,45 +124,49 @@ footer{flex-direction:column;gap:12px}
 <div class="switch-title" id="serviceTitle">Personal Training</div>
 <p class="switch-text" id="serviceText">Das komplette Paket: Training, Ernährung, Messungen, Kontrolle und persönliche Betreuung.</p>
 <div class="btns">
-<a class="btn primary" href="https://wa.me/41767401541" target="_blank" data-de="Gratis Probetraining buchen" data-es="Reservar prueba gratis">Gratis Probetraining buchen</a>
-<a class="btn" href="#process" data-de="So funktioniert es" data-es="Cómo funciona">So funktioniert es</a>
+<a class="btn primary" href="https://wa.me/41767401541" target="_blank">Gratis Probetraining buchen</a>
+<a class="btn" href="#process">So funktioniert es</a>
 </div>
 </div>
 </section>
 
 <section id="process">
-<div class="label" data-de="Prozess" data-es="Proceso">Prozess</div>
-<h2 data-de="Dein Weg. Unser System." data-es="Tu camino. Nuestro sistema.">Dein Weg. Unser System.</h2>
-<p class="intro" data-de="Ein klarer Ablauf vom ersten Gespräch bis zur Umsetzung. Du weißt von Anfang an, was passiert, warum wir es machen und wie dein Fortschritt kontrolliert wird." data-es="Un proceso claro desde la primera conversación hasta la ejecución. Desde el principio sabes qué hacemos, por qué lo hacemos y cómo se controla tu progreso.">Ein klarer Ablauf vom ersten Gespräch bis zur Umsetzung. Du weißt von Anfang an, was passiert, warum wir es machen und wie dein Fortschritt kontrolliert wird.</p>
+<div class="label">Prozess</div>
+<h2>Dein Weg. Unser System.</h2>
+<p class="intro">Ein klarer Ablauf vom ersten Gespräch bis zur Umsetzung. Du weißt von Anfang an, was passiert, warum wir es machen und wie dein Fortschritt kontrolliert wird.</p>
 
 <div class="accordion">
-<div class="acc-item active"><div class="acc-head"><div class="acc-num">01</div><h3>Erstgespräch</h3><div class="plus">+</div></div><div class="acc-body" data-de="Wir sprechen über dein Ziel, deine Erfahrung, deinen Alltag und mögliche Einschränkungen." data-es="Hablamos de tu objetivo, experiencia, rutina y posibles limitaciones.">Wir sprechen über dein Ziel, deine Erfahrung, deinen Alltag und mögliche Einschränkungen.</div></div>
-<div class="acc-item"><div class="acc-head"><div class="acc-num">02</div><h3>Probetraining</h3><div class="plus">+</div></div><div class="acc-body" data-de="Kostenloses Training, um dein aktuelles Niveau und deinen Bedarf zu analysieren." data-es="Entrenamiento gratuito para analizar tu nivel actual y lo que necesitas.">Kostenloses Training, um dein aktuelles Niveau und deinen Bedarf zu analysieren.</div></div>
-<div class="acc-item"><div class="acc-head"><div class="acc-num">03</div><h3>Analyse & Messungen</h3><div class="plus">+</div></div><div class="acc-body" data-de="Gewicht, Körpermaße, Trainingsstand und Ziel werden festgehalten." data-es="Registramos peso, medidas, nivel y objetivo.">Gewicht, Körpermaße, Trainingsstand und Ziel werden festgehalten.</div></div>
-<div class="acc-item"><div class="acc-head"><div class="acc-num">04</div><h3>Individueller Plan</h3><div class="plus">+</div></div><div class="acc-body" data-de="Du bekommst eine klare Struktur, passend zu deinem Alltag, deinem Körper und deinem Ziel." data-es="Recibes una estructura clara adaptada a tu rutina, cuerpo y objetivo.">Du bekommst eine klare Struktur, passend zu deinem Alltag, deinem Körper und deinem Ziel.</div></div>
-<div class="acc-item"><div class="acc-head"><div class="acc-num">05</div><h3>Umsetzung</h3><div class="plus">+</div></div><div class="acc-body" data-de="Training, Ernährung und Gewohnheiten werden konsequent umgesetzt." data-es="Entrenamiento, nutrición y hábitos se ejecutan con constancia.">Training, Ernährung und Gewohnheiten werden konsequent umgesetzt.</div></div>
-<div class="acc-item"><div class="acc-head"><div class="acc-num">06</div><h3>Kontrolle & Anpassung</h3><div class="plus">+</div></div><div class="acc-body" data-de="Wir kontrollieren deinen Fortschritt und passen den Plan bei Bedarf an." data-es="Controlamos tu progreso y ajustamos el plan cuando haga falta.">Wir kontrollieren deinen Fortschritt und passen den Plan bei Bedarf an.</div></div>
+<div class="acc-item active"><div class="acc-head"><div class="acc-num">01</div><h3>Erstgespräch</h3><div class="plus">+</div></div><div class="acc-body">Wir sprechen über dein Ziel, deine Erfahrung, deinen Alltag und mögliche Einschränkungen.</div></div>
+<div class="acc-item"><div class="acc-head"><div class="acc-num">02</div><h3>Probetraining</h3><div class="plus">+</div></div><div class="acc-body">Kostenloses Training, um dein aktuelles Niveau und deinen Bedarf zu analysieren.</div></div>
+<div class="acc-item"><div class="acc-head"><div class="acc-num">03</div><h3>Analyse & Messungen</h3><div class="plus">+</div></div><div class="acc-body">Gewicht, Körpermaße, Trainingsstand und Ziel werden festgehalten.</div></div>
+<div class="acc-item"><div class="acc-head"><div class="acc-num">04</div><h3>Individueller Plan</h3><div class="plus">+</div></div><div class="acc-body">Du bekommst eine klare Struktur, passend zu deinem Alltag, deinem Körper und deinem Ziel.</div></div>
+<div class="acc-item"><div class="acc-head"><div class="acc-num">05</div><h3>Umsetzung</h3><div class="plus">+</div></div><div class="acc-body">Training, Ernährung und Gewohnheiten werden konsequent umgesetzt.</div></div>
+<div class="acc-item"><div class="acc-head"><div class="acc-num">06</div><h3>Kontrolle & Anpassung</h3><div class="plus">+</div></div><div class="acc-body">Wir kontrollieren deinen Fortschritt und passen den Plan bei Bedarf an.</div></div>
 </div>
 </section>
 
 <section id="services">
-<div class="label" data-de="Leistungen" data-es="Servicios">Leistungen</div>
-<h2 data-de="Unsere Leistungen" data-es="Nuestros servicios">Unsere Leistungen</h2>
+<div class="label">Leistungen</div>
+<h2>Unsere Leistungen</h2>
 
 <div class="accordion">
-<div class="acc-item active"><div class="acc-head"><div class="acc-num">01</div><h3>Personal Training</h3><div class="plus">+</div></div><div class="acc-body"><p>Das komplette Paket mit persönlicher Betreuung. Hier geht es nicht nur um Training, sondern um ein vollständiges System.</p><ul><li>Training</li><li>Ernährung</li><li>Messungen & Gewicht</li><li>Kontrolle & Anpassung</li></ul><br><a class="btn primary" href="https://wa.me/41767401541" target="_blank">Jetzt buchen</a></div></div>
+<div class="acc-item active"><div class="acc-head"><div class="acc-num">01</div><h3>Personal Training</h3><div class="plus">+</div></div><div class="acc-body"><p>Das komplette Paket mit persönlicher Betreuung. Training, Ernährung, Messungen, Kontrolle und Anpassung in einem System.</p><ul><li>Training</li><li>Ernährung</li><li>Messungen & Gewicht</li><li>Kontrolle & Anpassung</li></ul><br><a class="btn primary" href="https://wa.me/41767401541" target="_blank">Jetzt buchen</a></div></div>
+
 <div class="acc-item"><div class="acc-head"><div class="acc-num">02</div><h3>Fitness Coaching</h3><div class="plus">+</div></div><div class="acc-body"><p>Begleitung ausschließlich für dein Training im Gym. Fokus auf Trainingsplan, Ausführung, Kontrolle und Fortschritt. Keine Ernährung enthalten.</p><ul><li>Trainingsplan</li><li>Übungsausführung</li><li>Fortschrittskontrolle</li></ul><br><a class="btn primary" href="https://wa.me/41767401541" target="_blank">Jetzt buchen</a></div></div>
+
 <div class="acc-item"><div class="acc-head"><div class="acc-num">03</div><h3>Ernährungsberatung</h3><div class="plus">+</div></div><div class="acc-body">Individuelle Ernährung, die zu deinem Alltag, deinem Körper und deinem Ziel passt. Praktisch, klar und umsetzbar.<br><br><a class="btn primary" href="https://wa.me/41767401541" target="_blank">Jetzt buchen</a></div></div>
+
 <div class="acc-item"><div class="acc-head"><div class="acc-num">04</div><h3>Online Coaching</h3><div class="plus">+</div></div><div class="acc-body">Planung und Betreuung aus der Distanz. Ideal, wenn du flexibel trainieren möchtest und trotzdem klare Struktur brauchst.<br><br><a class="btn primary" href="https://wa.me/41767401541" target="_blank">Jetzt buchen</a></div></div>
 </div>
 </section>
 
 <section id="preise">
-<div class="label" data-de="Preise & Pakete" data-es="Precios y paquetes">Preise & Pakete</div>
-<h2 data-de="Klare Pakete" data-es="Paquetes claros">Klare Pakete</h2>
+<div class="label">Preise & Pakete</div>
+<h2>Programme & Preise</h2>
 
 <div class="pricing-grid">
 <div class="price-card">
+<div class="price-icon">🏋</div>
 <div class="type">Fitness Coaching</div>
 <h3>Silver</h3>
 <div class="price">CHF 399 <span>/ Monat</span></div>
@@ -166,6 +175,7 @@ footer{flex-direction:column;gap:12px}
 </div>
 
 <div class="price-card featured">
+<div class="price-icon">🏋</div>
 <div class="type">Fitness Coaching</div>
 <h3>Gold</h3>
 <div class="price">CHF 749 <span>/ Monat</span></div>
@@ -174,6 +184,7 @@ footer{flex-direction:column;gap:12px}
 </div>
 
 <div class="price-card">
+<div class="price-icon">💪</div>
 <div class="type">Personal Training</div>
 <h3>Silver</h3>
 <div class="price">CHF 499 <span>/ Monat</span></div>
@@ -182,6 +193,7 @@ footer{flex-direction:column;gap:12px}
 </div>
 
 <div class="price-card featured">
+<div class="price-icon">💪</div>
 <div class="type">Personal Training</div>
 <h3>Gold</h3>
 <div class="price">CHF 899 <span>/ Monat</span></div>
@@ -190,6 +202,7 @@ footer{flex-direction:column;gap:12px}
 </div>
 
 <div class="price-card">
+<div class="price-icon">⏱</div>
 <div class="type">Einzelstunde</div>
 <h3>Personal Training</h3>
 <div class="price">CHF 130</div>
@@ -198,6 +211,7 @@ footer{flex-direction:column;gap:12px}
 </div>
 
 <div class="price-card">
+<div class="price-icon">10</div>
 <div class="type">10er Paket</div>
 <h3>Personal Training</h3>
 <div class="price">CHF 1'000</div>
@@ -208,8 +222,8 @@ footer{flex-direction:column;gap:12px}
 
 <div class="info-box">
 <div>
-<h3 data-de="Unsicher, welches Paket passt?" data-es="¿No sabes qué paquete elegir?">Unsicher, welches Paket passt?</h3>
-<p data-de="Schreib mir direkt auf WhatsApp. Wir klären dein Ziel, dein aktuelles Niveau und welches Paket wirklich Sinn macht." data-es="Escríbeme directamente por WhatsApp. Aclaramos tu objetivo, tu nivel actual y qué paquete tiene más sentido para ti.">Schreib mir direkt auf WhatsApp. Wir klären dein Ziel, dein aktuelles Niveau und welches Paket wirklich Sinn macht.</p>
+<h3>Welches Programm passt zu dir?</h3>
+<p>Wenn du unsicher bist, schreib mir direkt auf WhatsApp. Wir klären dein Ziel, dein aktuelles Niveau und welches Paket für dich Sinn macht.</p>
 </div>
 <a class="btn primary" href="https://wa.me/41767401541" target="_blank">WhatsApp</a>
 </div>
@@ -219,26 +233,27 @@ footer{flex-direction:column;gap:12px}
 <div class="about-img"></div>
 <div>
 <div class="label">Über LU</div>
-<h2 data-de="Dein Coach" data-es="Tu coach">Dein Coach</h2>
-<p>Seit über 10 Jahren arbeite ich als Trainer und begleite Menschen dabei, stärker, fitter und selbstbewusster zu werden. Ich habe in bekannten Fitnessstudios in der Schweiz gearbeitet und weiß, wie Training in der Praxis wirklich funktioniert.</p>
-<p>Mein Fokus liegt auf sauberer Technik, klarer Struktur und echter Umsetzung. Kein unnötiges Gerede, keine komplizierten Systeme. Du bekommst einen Plan, der zu deinem Alltag passt und konsequent kontrolliert wird.</p>
+<h2>Mehr als nur Training</h2>
+<p>Ich arbeite nicht nach Standardprogrammen. Jeder Körper, jeder Alltag und jedes Ziel braucht eine andere Strategie. Genau darum geht es bei LU Fitness Coaching: Training, Ernährung und Betreuung so aufzubauen, dass es zu deinem Leben passt.</p>
+<p>Meine Erfahrung kommt aus der Praxis. Aus echten Trainingsflächen, echten Kunden und echten Fortschritten. Ich lege Wert auf saubere Technik, klare Struktur, ehrliche Kontrolle und konsequente Umsetzung.</p>
+<p>Kein unnötiges Gerede. Kein kompliziertes System. Du bekommst einen klaren Plan und eine Betreuung, die dich Schritt für Schritt weiterbringt.</p>
 </div>
 </section>
 
 <section id="faq">
 <div class="label">FAQ</div>
-<h2 data-de="Fragen vor dem Start" data-es="Preguntas antes de empezar">Fragen vor dem Start</h2>
+<h2>Fragen vor dem Start</h2>
 <div class="accordion">
 <div class="acc-item"><div class="acc-head"><div class="acc-num">01</div><h3>Ist das Probetraining kostenlos?</h3><div class="plus">+</div></div><div class="acc-body">Ja. Das Probetraining dient dazu, dein Niveau zu sehen und zu prüfen, wie wir am besten starten.</div></div>
-<div class="acc-item"><div class="acc-head"><div class="acc-num">02</div><h3>Was ist der Unterschied zwischen Personal Training und Fitness Coaching?</h3><div class="plus">+</div></div><div class="acc-body">Personal Training ist das komplette Paket mit Training, Ernährung und Betreuung. Fitness Coaching konzentriert sich nur auf dein Training im Gym.</div></div>
+<div class="acc-item"><div class="acc-head"><div class="acc-num">02</div><h3>Unterschied Personal Training und Fitness Coaching?</h3><div class="plus">+</div></div><div class="acc-body">Personal Training ist das komplette Paket mit Training, Ernährung und Betreuung. Fitness Coaching konzentriert sich nur auf dein Training im Gym.</div></div>
 <div class="acc-item"><div class="acc-head"><div class="acc-num">03</div><h3>Brauche ich Erfahrung im Gym?</h3><div class="plus">+</div></div><div class="acc-body">Nein. Das Coaching wird an dein aktuelles Niveau angepasst.</div></div>
 </div>
 </section>
 
 <section class="cta" id="contact">
 <div>
-<h2 data-de="Bereit zu starten?" data-es="¿Listo para empezar?">Bereit zu starten?</h2>
-<a class="btn primary" href="https://wa.me/41767401541" target="_blank" data-de="Gratis Probetraining buchen" data-es="Reservar prueba gratis">Gratis Probetraining buchen</a>
+<h2>Jetzt Probetraining sichern</h2>
+<a class="btn primary" href="https://wa.me/41767401541" target="_blank">Gratis Probetraining buchen</a>
 </div>
 </section>
 
@@ -278,14 +293,7 @@ document.getElementById("serviceText").style.opacity=1;
 },250);
 }
 setInterval(rotateService,5200);
-function switchLang(){
-lang=lang==="de"?"es":"de";
-document.documentElement.lang=lang;
-document.querySelectorAll("[data-de]").forEach(el=>el.textContent=el.dataset[lang]);
-serviceIndex=0;
-document.getElementById("serviceTitle").textContent=services[lang][0][0];
-document.getElementById("serviceText").textContent=services[lang][0][1];
-}
+function switchLang(){}
 function openMenu(){document.getElementById("menu").classList.add("active")}
 function closeMenu(){document.getElementById("menu").classList.remove("active")}
 document.querySelectorAll(".acc-item").forEach(item=>{
