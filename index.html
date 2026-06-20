@@ -4,331 +4,107 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LU Fitness Coaching</title>
-
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:#080808;
-  color:#fff;
-}
-header{
-  position:fixed;top:0;width:100%;z-index:10;
-  padding:22px 7%;
-  display:flex;justify-content:space-between;align-items:center;
-  background:rgba(0,0,0,.75);
-  backdrop-filter:blur(14px);
-  border-bottom:1px solid rgba(255,255,255,.12);
-}
-.logo{
-  font-size:22px;
-  font-weight:900;
-  letter-spacing:3px;
-}
-.logo span{
-  display:block;
-  font-size:10px;
-  color:#c8a96a;
-  letter-spacing:4px;
-  margin-top:4px;
-}
-nav a{
-  color:#ccc;
-  text-decoration:none;
-  margin-left:25px;
-  font-size:14px;
-  font-weight:600;
-}
-nav a:hover{color:#c8a96a}
-.lang{
-  margin-left:25px;
-  padding:10px 16px;
-  background:none;
-  border:1px solid #c8a96a;
-  color:#fff;
-  border-radius:30px;
-  font-weight:700;
-}
-.hero{
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:120px 7% 80px;
-  background:
-    radial-gradient(circle at center,rgba(200,169,106,.22),transparent 35%),
-    linear-gradient(180deg,#151515,#050505);
-}
-.hero-box{
-  max-width:1000px;
-  animation:fadeUp 1.2s ease forwards;
-}
-.mark{
-  width:220px;
-  height:220px;
-  margin:0 auto 35px;
-  border:1px solid rgba(200,169,106,.5);
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  box-shadow:0 0 80px rgba(200,169,106,.18);
-}
-.mark strong{
-  font-size:72px;
-  letter-spacing:-6px;
-  color:#c8a96a;
-}
-.tag{
-  color:#c8a96a;
-  letter-spacing:8px;
-  font-size:13px;
-  margin-bottom:25px;
-}
-h1{
-  font-size:clamp(42px,7vw,92px);
-  line-height:.95;
-  letter-spacing:-4px;
-  text-transform:uppercase;
-}
-.hero p{
-  max-width:720px;
-  margin:30px auto;
-  color:#bbb;
-  font-size:18px;
-  line-height:1.7;
-}
-.buttons{
-  display:flex;
-  gap:16px;
-  justify-content:center;
-  flex-wrap:wrap;
-}
-.btn{
-  padding:16px 26px;
-  border-radius:40px;
-  text-decoration:none;
-  font-weight:900;
-  text-transform:uppercase;
-  letter-spacing:1px;
-  font-size:13px;
-}
-.primary{
-  background:linear-gradient(135deg,#f4e3b4,#9d7c3b);
-  color:#090909;
-  box-shadow:0 0 35px rgba(200,169,106,.35);
-}
-.secondary{
-  color:#fff;
-  border:1px solid rgba(255,255,255,.22);
-}
-section{
-  padding:110px 7%;
-  border-top:1px solid rgba(255,255,255,.12);
-}
-.label{
-  color:#c8a96a;
-  text-transform:uppercase;
-  letter-spacing:5px;
-  font-size:12px;
-  margin-bottom:18px;
-}
-h2{
-  font-size:clamp(34px,5vw,68px);
-  line-height:1;
-  letter-spacing:-3px;
-  margin-bottom:35px;
-}
-.grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:22px;
-}
-.card{
-  background:linear-gradient(180deg,#191919,#0d0d0d);
-  border:1px solid rgba(255,255,255,.13);
-  border-radius:28px;
-  padding:34px;
-  min-height:230px;
-  transition:.35s;
-}
-.card:hover{
-  transform:translateY(-8px);
-  border-color:#c8a96a;
-  box-shadow:0 0 45px rgba(200,169,106,.12);
-}
-.card h3{
-  font-size:24px;
-  margin-bottom:16px;
-}
-.card p,.text{
-  color:#bbb;
-  line-height:1.8;
-  font-size:16px;
-}
-.about{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:55px;
-  align-items:center;
-}
-.photo{
-  min-height:520px;
-  border-radius:32px;
-  border:1px solid rgba(200,169,106,.45);
-  background:
-    linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.45)),
-    radial-gradient(circle at center,#333,#0d0d0d);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:#777;
-  font-size:36px;
-  font-weight:900;
-  letter-spacing:6px;
-}
-.contact{
-  text-align:center;
-}
-.contact-box{
-  margin:35px auto 0;
-  max-width:850px;
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-}
-.contact-box div{
-  padding:28px;
-  border-radius:24px;
-  border:1px solid rgba(255,255,255,.13);
-  background:#111;
-}
-.contact-box strong{display:block;margin-bottom:10px}
-.contact-box span{color:#c8a96a;font-size:13px;letter-spacing:2px}
-footer{
-  padding:35px 7%;
-  border-top:1px solid rgba(255,255,255,.12);
-  display:flex;
-  justify-content:space-between;
-  color:#999;
-  letter-spacing:3px;
-}
-@keyframes fadeUp{
-  from{opacity:0;transform:translateY(35px)}
-  to{opacity:1;transform:none}
-}
-@media(max-width:850px){
-  nav{display:none}
-  .grid,.about,.contact-box{grid-template-columns:1fr}
-  .photo{min-height:360px}
-}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:#050505;color:white;overflow-x:hidden}
+header{position:fixed;top:0;width:100%;z-index:99;padding:22px 6%;display:flex;justify-content:space-between;align-items:center;background:rgba(0,0,0,.55);backdrop-filter:blur(18px)}
+.logo{font-weight:900;font-size:22px;letter-spacing:3px}.logo span{color:#c8a96a}
+nav a,button{margin-left:20px;color:white;background:none;border:none;text-decoration:none;font-weight:700}button{border:1px solid #c8a96a;border-radius:30px;padding:9px 15px}
+.hero{min-height:100vh;background:linear-gradient(90deg,rgba(0,0,0,.95),rgba(0,0,0,.45)),url('Screenshot_20260620_141238_Instagram.jpg') center/cover;display:flex;align-items:center;padding:120px 7%}
+.hero-content{max-width:750px}.tag{color:#c8a96a;letter-spacing:7px;font-size:13px;margin-bottom:22px}
+h1{font-size:clamp(48px,8vw,105px);line-height:.9;text-transform:uppercase;letter-spacing:-5px}
+.dynamic{height:55px;margin:25px 0;color:#c8a96a;font-size:clamp(26px,4vw,48px);font-weight:900}
+p{color:#cfcfcf;line-height:1.8;font-size:18px}
+.btn{display:inline-block;margin-top:30px;padding:16px 30px;border-radius:40px;background:linear-gradient(135deg,#f3dfaa,#9e7c3b);color:#050505;text-decoration:none;font-weight:900}
+section{padding:110px 7%}.label{color:#c8a96a;letter-spacing:5px;font-size:12px;margin-bottom:18px;text-transform:uppercase}
+h2{font-size:clamp(36px,5vw,70px);line-height:1;margin-bottom:40px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.card{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.12);border-radius:28px;padding:34px;transition:.35s}
+.card:hover{transform:translateY(-10px);border-color:#c8a96a;box-shadow:0 0 50px rgba(200,169,106,.15)}
+.card h3{font-size:24px;margin-bottom:14px;color:white}.card small{color:#c8a96a;letter-spacing:3px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.about-img{min-height:520px;border-radius:36px;background:url('Screenshot_20260620_141238_Instagram.jpg') center/cover;border:1px solid rgba(200,169,106,.35)}
+.contact{text-align:center;background:radial-gradient(circle at center,rgba(200,169,106,.18),transparent 40%)}
+footer{padding:35px 7%;border-top:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-between;color:#999}
+@media(max-width:850px){nav a{display:none}.hero{background-position:center}.grid,.about{grid-template-columns:1fr}.about-img{min-height:380px}footer{flex-direction:column;gap:10px}}
 </style>
 </head>
-
 <body>
 
 <header>
-  <div class="logo">LU <span>FITNESS COACHING</span></div>
-  <nav>
-    <a href="#fitness" data-de="Fitness Coaching" data-es="Fitness Coaching">Fitness Coaching</a>
-    <a href="#nutrition" data-de="Ernährung" data-es="Nutrición">Ernährung</a>
-    <a href="#about" data-de="Über LU" data-es="Sobre LU">Über LU</a>
-    <a href="#contact" data-de="Kontakt" data-es="Contacto">Kontakt</a>
-    <button class="lang" onclick="changeLang()">DE / ES</button>
-  </nav>
+<div class="logo">LU <span>FITNESS COACHING</span></div>
+<nav>
+<a href="#coaching">Coaching</a>
+<a href="#nutrition">Ernährung</a>
+<a href="#about">Über LU</a>
+<a href="#contact">Kontakt</a>
+<button onclick="switchLang()">DE / ES</button>
+</nav>
 </header>
 
-<div class="hero">
-  <div class="hero-box">
-    <div class="mark"><strong>LU</strong></div>
-    <div class="tag">BODY, MIND AND SOUL</div>
-    <h1 data-de="Fitness Coaching mit Struktur, Disziplin und Resultaten." data-es="Fitness coaching con estructura, disciplina y resultados.">
-      Fitness Coaching mit Struktur, Disziplin und Resultaten.
-    </h1>
-    <p data-de="Individuelles Fitness- und Ernährungscoaching für Menschen, die mehr von sich erwarten." data-es="Coaching personalizado de fitness y nutrición para personas que esperan más de sí mismas.">
-      Individuelles Fitness- und Ernährungscoaching für Menschen, die mehr von sich erwarten.
-    </p>
-    <div class="buttons">
-      <a class="btn primary" href="#contact" data-de="Jetzt starten" data-es="Empezar ahora">Jetzt starten</a>
-      <a class="btn secondary" href="#fitness" data-de="Mehr erfahren" data-es="Ver más">Mehr erfahren</a>
-    </div>
-  </div>
+<section class="hero">
+<div class="hero-content">
+<div class="tag">BODY, MIND AND SOUL</div>
+<h1 data-de="Premium Fitness Coaching" data-es="Fitness Coaching Premium">Premium Fitness Coaching</h1>
+<div class="dynamic" id="dynamicText">PERSONAL TRAINING</div>
+<p data-de="Individuelles Coaching für Menschen, die ihren Körper verändern, stärker werden und mit Struktur echte Resultate erreichen wollen." data-es="Coaching personalizado para personas que quieren transformar su cuerpo, ganar fuerza y conseguir resultados reales con estructura.">
+Individuelles Coaching für Menschen, die ihren Körper verändern, stärker werden und mit Struktur echte Resultate erreichen wollen.
+</p>
+<a class="btn" href="#contact" data-de="Jetzt starten" data-es="Empezar ahora">Jetzt starten</a>
 </div>
+</section>
 
-<section id="fitness">
-  <div class="label">Fitness Coaching</div>
-  <h2 data-de="Jeder erfolgreiche Körper beginnt mit einem klaren Plan." data-es="Todo cuerpo exitoso empieza con un plan claro.">
-    Jeder erfolgreiche Körper beginnt mit einem klaren Plan.
-  </h2>
-  <div class="grid">
-    <div class="card">
-      <h3 data-de="Personal Training" data-es="Entrenamiento personal">Personal Training</h3>
-      <p data-de="Direkte Betreuung, saubere Technik und klare Progression." data-es="Seguimiento directo, técnica correcta y progresión clara.">Direkte Betreuung, saubere Technik und klare Progression.</p>
-    </div>
-    <div class="card">
-      <h3 data-de="Online Coaching" data-es="Coaching online">Online Coaching</h3>
-      <p data-de="Struktur, Kontrolle und Planung unabhängig von deinem Standort." data-es="Estructura, control y planificación estés donde estés.">Struktur, Kontrolle und Planung unabhängig von deinem Standort.</p>
-    </div>
-    <div class="card">
-      <h3 data-de="Muskelaufbau & Fettabbau" data-es="Ganancia muscular y pérdida de grasa">Muskelaufbau & Fettabbau</h3>
-      <p data-de="Strategien für Kraft, Form, Leistung und Körperkomposition." data-es="Estrategias para fuerza, forma, rendimiento y composición corporal.">Strategien für Kraft, Form, Leistung und Körperkomposition.</p>
-    </div>
-  </div>
+<section id="coaching">
+<div class="label">Fitness Coaching</div>
+<h2 data-de="Ein klares System für echte körperliche Veränderung." data-es="Un sistema claro para una transformación física real.">Ein klares System für echte körperliche Veränderung.</h2>
+<div class="grid">
+<div class="card"><small>01</small><h3>Personal Training</h3><p data-de="Direkte Betreuung, Technik, Kontrolle und Progression." data-es="Seguimiento directo, técnica, control y progresión.">Direkte Betreuung, Technik, Kontrolle und Progression.</p></div>
+<div class="card"><small>02</small><h3>Online Coaching</h3><p data-de="Strukturierte Betreuung unabhängig von deinem Standort." data-es="Seguimiento estructurado estés donde estés.">Strukturierte Betreuung unabhängig von deinem Standort.</p></div>
+<div class="card"><small>03</small><h3>Neuro Athletics</h3><p data-de="Mehr Fokus, bessere Bewegung und stärkere Leistung." data-es="Más enfoque, mejor movimiento y mayor rendimiento.">Mehr Fokus, bessere Bewegung und stärkere Leistung.</p></div>
+</div>
 </section>
 
 <section id="nutrition">
-  <div class="label">Ernährung</div>
-  <h2 data-de="Training bringt dich voran. Ernährung bringt dich ans Ziel." data-es="El entrenamiento te impulsa. La nutrición te lleva al objetivo.">
-    Training bringt dich voran. Ernährung bringt dich ans Ziel.
-  </h2>
-  <p class="text" data-de="Eine gute Ernährung muss nicht kompliziert sein. Sie muss zu deinem Alltag, deinem Körper und deinem Ziel passen." data-es="Una buena nutrición no tiene que ser complicada. Tiene que encajar con tu vida, tu cuerpo y tu objetivo.">
-    Eine gute Ernährung muss nicht kompliziert sein. Sie muss zu deinem Alltag, deinem Körper und deinem Ziel passen.
-  </p>
+<div class="label">Ernährung</div>
+<h2 data-de="Training bringt dich voran. Ernährung bringt dich ans Ziel." data-es="El entrenamiento te impulsa. La nutrición te lleva al objetivo.">Training bringt dich voran. Ernährung bringt dich ans Ziel.</h2>
+<div class="grid">
+<div class="card"><small>04</small><h3>Ernährungscoaching</h3><p data-de="Einfache Struktur für Fettabbau, Muskelaufbau und Alltag." data-es="Estructura sencilla para pérdida de grasa, ganancia muscular y vida diaria.">Einfache Struktur für Fettabbau, Muskelaufbau und Alltag.</p></div>
+<div class="card"><small>05</small><h3>Muskelaufbau</h3><p data-de="Gezielte Planung für Kraft, Form und Entwicklung." data-es="Planificación enfocada en fuerza, forma y desarrollo.">Gezielte Planung für Kraft, Form und Entwicklung.</p></div>
+<div class="card"><small>06</small><h3>Body Transformation</h3><p data-de="Nachhaltige Veränderung von Körper, Gewohnheiten und Mindset." data-es="Cambio sostenible del cuerpo, hábitos y mentalidad.">Nachhaltige Veränderung von Körper, Gewohnheiten und Mindset.</p></div>
+</div>
 </section>
 
 <section id="about" class="about">
-  <div class="photo">FOTO</div>
-  <div>
-    <div class="label">Über LU</div>
-    <h2 data-de="Disziplin. Struktur. Resultate." data-es="Disciplina. Estructura. Resultados.">
-      Disziplin. Struktur. Resultate.
-    </h2>
-    <p class="text" data-de="Mein Ziel ist es, Menschen dabei zu helfen, ihre körperlichen Ziele mit einem professionellen und individuellen Coaching zu erreichen. Jeder Mensch ist unterschiedlich, deshalb wird jeder Plan auf die persönlichen Bedürfnisse und Ziele abgestimmt." data-es="Mi objetivo es ayudar a las personas a alcanzar sus metas físicas con un coaching profesional e individual. Cada persona es diferente, por eso cada plan se adapta a sus necesidades y objetivos personales.">
-      Mein Ziel ist es, Menschen dabei zu helfen, ihre körperlichen Ziele mit einem professionellen und individuellen Coaching zu erreichen. Jeder Mensch ist unterschiedlich, deshalb wird jeder Plan auf die persönlichen Bedürfnisse und Ziele abgestimmt.
-    </p>
-  </div>
+<div class="about-img"></div>
+<div>
+<div class="label">Über LU</div>
+<h2 data-de="Disziplin. Struktur. Resultate." data-es="Disciplina. Estructura. Resultados.">Disziplin. Struktur. Resultate.</h2>
+<p data-de="LU Fitness Coaching steht für klare Planung, persönliche Betreuung und echte Umsetzung. Jeder Mensch ist anders, deshalb wird jedes Coaching individuell auf Ziele, Alltag und Leistungsniveau angepasst." data-es="LU Fitness Coaching representa planificación clara, seguimiento personal y ejecución real. Cada persona es diferente, por eso cada coaching se adapta a sus objetivos, rutina y nivel.">
+LU Fitness Coaching steht für klare Planung, persönliche Betreuung und echte Umsetzung. Jeder Mensch ist anders, deshalb wird jedes Coaching individuell auf Ziele, Alltag und Leistungsniveau angepasst.
+</p>
+</div>
 </section>
 
 <section id="contact" class="contact">
-  <div class="label">Kontakt</div>
-  <h2 data-de="Bereit für deinen nächsten Schritt?" data-es="¿Listo para tu próximo paso?">
-    Bereit für deinen nächsten Schritt?
-  </h2>
-  <p class="text" data-de="Kontaktmöglichkeiten werden bald ergänzt." data-es="Las opciones de contacto se añadirán pronto.">
-    Kontaktmöglichkeiten werden bald ergänzt.
-  </p>
-  <div class="contact-box">
-    <div><strong>WhatsApp</strong><span>COMING SOON</span></div>
-    <div><strong>Instagram</strong><span>COMING SOON</span></div>
-    <div><strong>Email</strong><span>COMING SOON</span></div>
-  </div>
+<div class="label">Kontakt</div>
+<h2 data-de="Bereit für deinen nächsten Schritt?" data-es="¿Listo para tu próximo paso?">Bereit für deinen nächsten Schritt?</h2>
+<p data-de="WhatsApp, Instagram und Kontaktformular werden bald ergänzt." data-es="WhatsApp, Instagram y formulario se añadirán pronto.">WhatsApp, Instagram und Kontaktformular werden bald ergänzt.</p>
+<a class="btn" href="#">COMING SOON</a>
 </section>
 
 <footer>
-  <strong>LU FITNESS COACHING</strong>
-  <span>BODY, MIND AND SOUL</span>
+<strong>LU FITNESS COACHING</strong>
+<span>BODY, MIND AND SOUL</span>
 </footer>
 
 <script>
 let lang="de";
-function changeLang(){
-  lang = lang === "de" ? "es" : "de";
-  document.documentElement.lang = lang;
-  document.querySelectorAll("[data-de]").forEach(el=>{
-    el.textContent = el.dataset[lang];
-  });
+function switchLang(){
+lang=lang==="de"?"es":"de";
+document.querySelectorAll("[data-de]").forEach(el=>el.textContent=el.dataset[lang]);
 }
+const words=["PERSONAL TRAINING","FITNESS COACHING","NEURO ATHLETICS","ERNÄHRUNGSCOACHING","ONLINE COACHING","BODY TRANSFORMATION"];
+let i=0;
+setInterval(()=>{i=(i+1)%words.length;document.getElementById("dynamicText").textContent=words[i];},1200);
 </script>
 
 </body>
