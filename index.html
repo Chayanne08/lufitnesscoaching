@@ -14,21 +14,21 @@ a{text-decoration:none;color:inherit}
 :root{
 --line:rgba(255,255,255,.16);
 --card:#0d0d0d;
---gold:#bfa46a;
+--gold:#fff;
 --text:#f6f6f6;
 --soft:#dcdcdc;
 }
 
 header{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:20px 6%;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(180deg,rgba(0,0,0,.94),rgba(0,0,0,.20));backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.1)}
 .logo{font-size:22px;font-weight:900;letter-spacing:2px;text-transform:uppercase;color:#fff}
-.menu-btn{background:none;border:1px solid rgba(191,164,106,.45);color:white;font-size:14px;font-weight:900;letter-spacing:1px;padding:10px 16px;border-radius:6px}
+.menu-btn{background:none;border:1px solid rgba(255,255,255,.45);color:white;font-size:14px;font-weight:900;letter-spacing:1px;padding:10px 16px;border-radius:6px}
 .menu-btn span{font-size:22px;margin-left:8px;color:var(--gold)}
 
 .menu{position:fixed;top:0;right:-100%;width:82%;max-width:420px;height:100vh;background:#080808;z-index:2000;padding:90px 38px;transition:.4s;border-left:1px solid var(--line)}
 .menu.active{right:0}
 .close{position:absolute;right:32px;top:28px;font-size:42px}
 .menu a{display:block;font-size:28px;font-weight:900;text-transform:uppercase;margin:22px 0;color:#fff}
-.menu a:hover{color:var(--gold)}
+.menu a:hover{color:#dcdcdc}
 
 .hero{min-height:76vh;position:relative;display:flex;align-items:end;padding:105px 6% 52px;background:url('Screenshot_20260620_141238_Instagram.jpg') center/cover}
 .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.12),rgba(0,0,0,.88)),linear-gradient(90deg,rgba(0,0,0,.82),rgba(0,0,0,.06))}
@@ -57,14 +57,14 @@ h2{font-size:clamp(34px,7vw,72px);line-height:.9;letter-spacing:-4px;text-transf
 .services-accordion .acc-head,.faq-accordion .acc-head{grid-template-columns:1fr 40px}
 .services-accordion .acc-body,.faq-accordion .acc-body{padding-left:0}
 
-.image-band{height:230px;background:center/cover;border-top:1px solid var(--line);border-bottom:1px solid var(--line);filter:contrast(1.05)}
+.image-band{height:230px;background:center/cover;border-top:1px solid var(--line);border-bottom:1px solid var(--line);filter:contrast(1.05) grayscale(.2)}
 .band-1{background-image:url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1600&q=80')}
 .band-2{background-image:url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1600&q=80')}
 
 .pricing-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-bottom:30px}
 .price-card{background:linear-gradient(180deg,#111,#090909);border:1px solid var(--line);padding:30px;border-radius:8px;transition:.3s}
-.price-card:hover{transform:translateY(-6px);border-color:var(--gold)}
-.price-icon{width:54px;height:54px;border:1px solid rgba(191,164,106,.45);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:900;letter-spacing:1px;margin-bottom:20px;color:var(--gold)}
+.price-card:hover{transform:translateY(-6px);border-color:#fff}
+.price-icon{width:54px;height:54px;border:1px solid rgba(255,255,255,.45);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:900;letter-spacing:1px;margin-bottom:20px;color:var(--gold)}
 .price-card h3{font-size:32px;text-transform:uppercase;margin-bottom:10px;color:#fff}
 .price-card .type{color:#e0e0e0;text-transform:uppercase;letter-spacing:2px;font-size:12px;margin-bottom:20px}
 .price{font-size:48px;font-weight:900;margin-bottom:20px;color:#fff}
@@ -72,29 +72,29 @@ h2{font-size:clamp(34px,7vw,72px);line-height:.9;letter-spacing:-4px;text-transf
 .price-card ul{list-style:none;margin-bottom:26px}
 .price-card li{margin:10px 0;color:#f1f1f1}
 .price-card li:before{content:"✓";margin-right:12px;color:var(--gold)}
-.price-card.featured{background:#f5f5f5;color:#000;border-color:var(--gold)}
+.price-card.featured{background:#f5f5f5;color:#000;border-color:#fff}
 .price-card.featured h3,.price-card.featured .price,.price-card.featured .price-icon{color:#000}
 .price-card.featured .type,.price-card.featured .price span,.price-card.featured li{color:#222}
 .price-card.featured .btn{background:#000;color:#fff;border-color:#000}
 
-.discount-box{border:1px solid rgba(191,164,106,.38);background:#0b0b0b;padding:30px;border-radius:8px;margin-top:12px}
+.discount-box{border:1px solid rgba(255,255,255,.38);background:#0b0b0b;padding:30px;border-radius:8px;margin-top:12px}
 .discount-box h3{font-size:32px;text-transform:uppercase;margin-bottom:16px;color:var(--gold)}
 .discount-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .discount-item{border:1px solid var(--line);padding:22px;background:#111;border-radius:6px}
 .discount-item strong{display:block;font-size:26px;margin-bottom:8px;color:#fff}
 .discount-item span{color:#e0e0e0}
 
-.btn{display:inline-block;padding:15px 24px;border:1px solid rgba(255,255,255,.55);border-radius:6px;text-transform:uppercase;font-size:13px;font-weight:900;letter-spacing:1.2px;transition:.25s;cursor:pointer;background:transparent;color:#fff}
+.btn{display:inline-block;padding:15px 24px;border:1px solid rgba(255,255,255,.55);border-radius:6px;text-transform:uppercase;font-size:13px;font-weight:900;letter-spacing:1.2px;transition:.25s;cursor:pointer;background:transparent;color:#fff;margin:4px 4px 4px 0}
 .btn:hover{background:#fff;color:#000;transform:translateY(-3px)}
 .btn.primary{background:linear-gradient(135deg,#fff,#d9d9d9);color:#000;border-color:#fff}
-.btn.gold{background:linear-gradient(135deg,#d8c08a,#a88f5a);color:#050505;border-color:#bfa46a}
+.btn.gold{background:#fff;color:#050505;border-color:#fff}
 
 .about{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center}
-.about-img{min-height:390px;background:url('https://images.unsplash.com/photo-1594737625785-a6cbdabd333c?auto=format&fit=crop&w=1200&q=80') center/cover;border:1px solid var(--line);border-radius:8px}
+.about-img{min-height:390px;background:url('https://images.unsplash.com/photo-1594737625785-a6cbdabd333c?auto=format&fit=crop&w=1200&q=80') center/cover;border:1px solid var(--line);border-radius:8px;filter:grayscale(.2)}
 .about p{font-size:18px;line-height:1.7;color:#e8e8e8;margin-bottom:16px}
 
 .cta{padding:58px 6%;background:#0f0f0f}
-.cta-card{border:1px solid rgba(191,164,106,.38);padding:30px;display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center;background:#0b0b0b;border-radius:8px}
+.cta-card{border:1px solid rgba(255,255,255,.38);padding:30px;display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center;background:#0b0b0b;border-radius:8px}
 .cta-card p{color:#e0e0e0;font-size:18px;line-height:1.55}
 .cta-actions{display:grid;gap:12px}
 
@@ -105,7 +105,7 @@ h2{font-size:clamp(34px,7vw,72px);line-height:.9;letter-spacing:-4px;text-transf
 .social-row i{font-size:28px}
 .legal-row{display:flex;gap:22px;flex-wrap:wrap;margin-bottom:24px}
 .legal-row a{color:#e0e0e0;text-transform:uppercase;letter-spacing:2px;font-size:13px}
-.legal-row a:hover{color:var(--gold)}
+.legal-row a:hover{color:#fff}
 .copy{color:#cfcfcf;letter-spacing:2px;text-transform:uppercase;font-size:13px}
 
 .modal{position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:3000;display:none;align-items:center;justify-content:center;padding:22px}
@@ -116,7 +116,7 @@ h2{font-size:clamp(34px,7vw,72px);line-height:.9;letter-spacing:-4px;text-transf
 .modal-box ul{margin-left:18px;margin-bottom:18px}
 .modal-close{float:right;font-size:32px;cursor:pointer}
 
-.whatsapp-float{position:fixed;right:22px;bottom:22px;z-index:999;background:#25D366;color:#000;width:62px;height:62px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900;box-shadow:0 12px 35px rgba(0,0,0,.35)}
+.whatsapp-float{position:fixed;right:22px;bottom:22px;z-index:999;background:#fff;color:#000;width:62px;height:62px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900;box-shadow:0 12px 35px rgba(0,0,0,.35)}
 .whatsapp-float i{font-size:30px}
 
 @media(max-width:900px){
@@ -130,7 +130,7 @@ section{padding:52px 5%}
 .acc-head{grid-template-columns:48px 1fr 30px}
 .acc-body{padding:0 0 24px 68px}
 .services-accordion .acc-head,.faq-accordion .acc-head{grid-template-columns:1fr 30px}
-.services-accordion .acc-body,.faq-accordion .acc-body{padding-left:0}
+services-accordion .acc-body,.faq-accordion .acc-body{padding-left:0}
 .pricing-grid,.about,.cta-card,.discount-grid{grid-template-columns:1fr}
 .about-img{min-height:330px}
 }
@@ -159,7 +159,7 @@ section{padding:52px 5%}
 <div class="hero-content">
 <div class="hero-kicker">Wir begleiten dich ans Ziel</div>
 <h1 id="serviceTitle">Personal Training</h1>
-<p class="hero-text" id="serviceText">Individuelles Training, Ernährungsempfehlungen, Kontrolle und persönliche Betreuung.</p>
+<p class="hero-text" id="serviceText">Individuelles Training, Ernährungsplan, Kontrolle und persönliche Betreuung.</p>
 </div>
 </section>
 
@@ -175,7 +175,6 @@ section{padding:52px 5%}
 <div class="acc-item"><div class="acc-head"><div class="acc-num">04</div><h3>Individueller Plan</h3><div class="plus">+</div></div><div class="acc-body">Du bekommst eine klare Struktur, passend zu deinem Alltag, deinem Körper und deinem Ziel.</div></div>
 <div class="acc-item"><div class="acc-head"><div class="acc-num">05</div><h3>Umsetzung</h3><div class="plus">+</div></div><div class="acc-body">Training, Ernährung und Gewohnheiten werden konsequent umgesetzt.</div></div>
 <div class="acc-item"><div class="acc-head"><div class="acc-num">06</div><h3>Kontrolle & Anpassung</h3><div class="plus">+</div></div><div class="acc-body">Wir kontrollieren deinen Fortschritt und passen den Plan bei Bedarf an.</div></div>
-<div class="acc-item"><div class="acc-head"><div class="acc-num">07</div><h3>Wo trainieren wir?</h3><div class="plus">+</div></div><div class="acc-body"><p>Du entscheidest, wo das Training stattfindet. Wir passen uns an deine Situation, deinen Alltag und dein Ziel an.</p><ul><li>Bei dir zu Hause</li><li>In deinem Fitnessstudio</li><li>Im Fitnessstudio von LU Fitness Coaching</li><li>Im Büro / am Arbeitsplatz</li></ul></div></div>
 </div>
 </section>
 
@@ -186,9 +185,9 @@ section{padding:52px 5%}
 <h2>Unsere Leistungen</h2>
 
 <div class="accordion services-accordion">
-<div class="acc-item active"><div class="acc-head"><h3>Personal Training</h3><div class="plus">+</div></div><div class="acc-body"><p>Individuelles Training mit persönlicher Betreuung. Jede Einheit wird an dein Ziel, dein Niveau und deinen Körper angepasst. Ernährungsempfehlungen sind immer Teil der Betreuung.</p><ul><li>Personal Training Session</li><li>Ernährungsempfehlungen inklusive</li><li>Technik & Ausführung</li><li>Kontrolle & Anpassung</li></ul><br><button class="btn primary" onclick="openBooking()">Vertrag lesen & buchen</button></div></div>
+<div class="acc-item active"><div class="acc-head"><h3>Personal Training</h3><div class="plus">+</div></div><div class="acc-body"><p>Individuelles Training mit persönlicher Betreuung. Jede Einheit wird an dein Ziel, dein Niveau und deinen Körper angepasst. Ein Ernährungsplan und WhatsApp Support 24/7 sind Teil der Betreuung.</p><ul><li>Personal Training Session</li><li>Ernährungsplan inklusive</li><li>Technik & Ausführung</li><li>Kontrolle & Anpassung</li><li>WhatsApp Support 24/7</li></ul><br><button class="btn primary" onclick="openBooking()">Vertrag lesen & buchen</button><a class="btn" href="https://wa.me/41767401541?text=Hallo%20LU%20Fitness%20Coaching%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Personal%20Training%20und%20m%C3%B6chte%20ein%20Probetraining%20buchen." target="_blank">Probetraining buchen</a></div></div>
 
-<div class="acc-item"><div class="acc-head"><h3>Fitness Coaching</h3><div class="plus">+</div></div><div class="acc-body"><p>Fitness Coaching ist die intensivere Begleitung im Fitnessstudio. Du bekommst nicht nur Training, sondern mehr Präsenz, Struktur, Führung und Kontrolle während des gesamten Prozesses. Ernährungsempfehlungen sind inklusive.</p><ul><li>Begleitung im Fitnessstudio</li><li>Trainingsplanung</li><li>Ernährungsempfehlungen inklusive</li><li>Technik-Korrektur</li><li>Fortschrittskontrolle</li></ul><br><button class="btn primary" onclick="openBooking()">Vertrag lesen & buchen</button></div></div>
+<div class="acc-item"><div class="acc-head"><h3>Fitness Coaching</h3><div class="plus">+</div></div><div class="acc-body"><p>Fitness Coaching ist die intensivere Begleitung im Fitnessstudio. Du bekommst nicht nur Training, sondern mehr Präsenz, Struktur, Führung und Kontrolle während des gesamten Prozesses. Ernährungsplan und WhatsApp Support 24/7 sind inklusive.</p><ul><li>Begleitung im Fitnessstudio</li><li>Trainingsplanung</li><li>Ernährungsplan inklusive</li><li>Technik-Korrektur</li><li>Fortschrittskontrolle</li><li>WhatsApp Support 24/7</li></ul><br><button class="btn primary" onclick="openBooking()">Vertrag lesen & buchen</button><a class="btn" href="https://wa.me/41767401541?text=Hallo%20LU%20Fitness%20Coaching%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Fitness%20Coaching%20und%20m%C3%B6chte%20ein%20Probetraining%20buchen." target="_blank">Probetraining buchen</a></div></div>
 </div>
 </section>
 
@@ -204,8 +203,9 @@ section{padding:52px 5%}
 <div class="type">Personal Training</div>
 <h3>Personal Training</h3>
 <div class="price">CHF 130 <span>/ Stunde</span></div>
-<ul><li>Individuelle Trainingseinheit</li><li>Ernährungsempfehlungen inklusive</li><li>Technik & Ausführung</li><li>Persönliche Betreuung</li></ul>
+<ul><li>Individuelle Trainingseinheit</li><li>Ernährungsplan inklusive</li><li>Technik & Ausführung</li><li>Persönliche Betreuung</li><li>WhatsApp Support 24/7</li></ul>
 <button class="btn primary" onclick="openBooking()">Vertrag lesen & buchen</button>
+<a class="btn" href="https://wa.me/41767401541?text=Hallo%20LU%20Fitness%20Coaching%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Personal%20Training%20und%20m%C3%B6chte%20ein%20Probetraining%20buchen." target="_blank">Probetraining buchen</a>
 </div>
 
 <div class="price-card featured">
@@ -213,8 +213,9 @@ section{padding:52px 5%}
 <div class="type">Fitness Coaching</div>
 <h3>Fitness Coaching</h3>
 <div class="price">CHF 150 <span>/ Stunde</span></div>
-<ul><li>Begleitung im Fitnessstudio</li><li>Ernährungsempfehlungen inklusive</li><li>Trainingsstruktur & Kontrolle</li><li>Mehr Präsenz während des Prozesses</li></ul>
+<ul><li>Begleitung im Fitnessstudio</li><li>Ernährungsplan inklusive</li><li>Trainingsstruktur & Kontrolle</li><li>Mehr Präsenz während des Prozesses</li><li>WhatsApp Support 24/7</li></ul>
 <button class="btn" onclick="openBooking()">Vertrag lesen & buchen</button>
+<a class="btn" href="https://wa.me/41767401541?text=Hallo%20LU%20Fitness%20Coaching%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Fitness%20Coaching%20und%20m%C3%B6chte%20ein%20Probetraining%20buchen." target="_blank">Probetraining buchen</a>
 </div>
 </div>
 
@@ -258,8 +259,9 @@ section{padding:52px 5%}
 <h2>Fragen vor dem Start</h2>
 <div class="accordion faq-accordion">
 <div class="acc-item"><div class="acc-head"><h3>Ist das Probetraining kostenlos?</h3><div class="plus">+</div></div><div class="acc-body">Ja. Das Probetraining dient dazu, dein Niveau zu sehen und zu prüfen, wie wir am besten starten.</div></div>
-<div class="acc-item"><div class="acc-head"><h3>Unterschied Personal Training und Fitness Coaching?</h3><div class="plus">+</div></div><div class="acc-body">Personal Training ist eine individuelle Trainingseinheit mit persönlicher Betreuung, Technik-Korrektur und Ernährungsempfehlungen. Fitness Coaching ist intensiver und beinhaltet mehr Begleitung im Fitnessstudio, mehr Struktur, mehr Kontrolle und mehr Präsenz während des Prozesses.</div></div>
-<div class="acc-item"><div class="acc-head"><h3>Ist Ernährung inklusive?</h3><div class="plus">+</div></div><div class="acc-body">Ja. Ernährungsempfehlungen sind sowohl im Personal Training als auch im Fitness Coaching enthalten.</div></div>
+<div class="acc-item"><div class="acc-head"><h3>Unterschied Personal Training und Fitness Coaching?</h3><div class="plus">+</div></div><div class="acc-body">Personal Training ist eine individuelle Trainingseinheit mit persönlicher Betreuung, Technik-Korrektur und Ernährungsplan. Fitness Coaching ist intensiver und beinhaltet mehr Begleitung im Fitnessstudio, mehr Struktur, mehr Kontrolle und mehr Präsenz während des Prozesses.</div></div>
+<div class="acc-item"><div class="acc-head"><h3>Ist Ernährung inklusive?</h3><div class="plus">+</div></div><div class="acc-body">Ja. Ein Ernährungsplan ist sowohl im Personal Training als auch im Fitness Coaching enthalten.</div></div>
+<div class="acc-item"><div class="acc-head"><h3>Wo trainieren wir?</h3><div class="plus">+</div></div><div class="acc-body"><p>Du entscheidest, wo das Training stattfindet. Wir passen uns an deine Situation, deinen Alltag und dein Ziel an.</p><ul><li>Bei dir zu Hause</li><li>In deinem Fitnessstudio</li><li>Im Fitnessstudio von LU Fitness Coaching</li><li>Im Büro / am Arbeitsplatz</li></ul></div></div>
 <div class="acc-item"><div class="acc-head"><h3>Brauche ich Erfahrung im Gym?</h3><div class="plus">+</div></div><div class="acc-body">Nein. Das Coaching wird an dein aktuelles Niveau angepasst.</div></div>
 </div>
 </section>
@@ -267,14 +269,14 @@ section{padding:52px 5%}
 <footer class="simple-footer">
 <div class="social-row">
 <a href="https://instagram.com/lucianofitnesscoaching_" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-<a href="https://wa.me/41767401541?text=Hallo%20LU%20Fitness%20Coaching%2C%20ich%20m%C3%B6chte%20mehr%20Informationen%20zu%20euren%20Leistungen%20erhalten." target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+<a href="https://wa.me/41767401541?text=Hallo%20LU%20Fitness%20Coaching%2C%20ich%20m%C3%B6chte%20mehr%20Informationen%20zu%20euren%20Leistungen%20erhalten." target="blank"><i class="fa-brands fa-whatsapp"></i></a>
 </div>
 <div class="legal-row">
 <a href="#" onclick="openModal('agb')">AGB</a>
 <a href="#" onclick="openModal('datenschutz')">Datenschutz</a>
 <a href="#" onclick="openModal('impressum')">Impressum</a>
 </div>
-<div class="copy">© 2026 LU Fitness Coaching · @lucianofitnesscoaching_</div>
+<div class="copy">© 2026 LU Fitness Coaching · @lucianofitnesscoaching</div>
 </footer>
 
 <div class="modal" id="agb">
@@ -310,8 +312,8 @@ section{padding:52px 5%}
 const bookingFormLink="https://pci.jotform.com/form/261712724462051";
 
 const heroServices=[
-["Personal Training","Individuelles Training, Ernährungsempfehlungen, Kontrolle und persönliche Betreuung."],
-["Fitness Coaching","Begleitung im Fitnessstudio mit Struktur, Technik, Kontrolle und Ernährungsempfehlungen."],
+["Personal Training","Individuelles Training, Ernährungsplan, Kontrolle und persönliche Betreuung."],
+["Fitness Coaching","Begleitung im Fitnessstudio mit Struktur, Technik, Kontrolle und Ernährungsplan."],
 ["Probetraining","Lerne unser System kennen und starte mit einem klaren ersten Schritt."]
 ];
 
