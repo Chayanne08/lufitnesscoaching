@@ -180,11 +180,45 @@ section{padding:62px 5%}
 <h2>Unsere Leistungen</h2>
 
 <div class="accordion services-accordion">
-<div class="acc-item active"><div class="acc-head"><h3>Personal Training</h3><div class="plus">+</div></div><div class="acc-body"><p>Individuelles Training mit persönlicher Betreuung. Jede Einheit wird an dein Ziel, dein Niveau und deinen Körper angepasst. Ernährungsempfehlungen sind immer Teil der Betreuung.</p><ul><li>Personal Training Session</li><li>Ernährungsempfehlungen inklusive</li><li>Technik & Ausführung</li><li>Kontrolle & Anpassung</li></ul><br><button class="btn primary" onclick="openModal('vertrag')">Jetzt buchen</button></div></div>
+<div class="acc-item active">
+<div class="acc-head"><h3>Personal Training</h3><div class="plus">+</div></div>
+<div class="acc-body">
+<p>Individuelles Training mit persönlicher Betreuung. Jede Einheit wird an dein Ziel, dein Niveau und deinen Körper angepasst. Ernährungsempfehlungen sind immer Teil der Betreuung.</p>
+<ul>
+<li>Personal Training Session</li>
+<li>Ernährungsempfehlungen inklusive</li>
+<li>Technik & Ausführung</li>
+<li>Kontrolle & Anpassung</li>
+</ul>
+<br>
+<button class="btn primary" onclick="openContract('pt')">Jetzt buchen</button>
+</div>
+</div>
 
-<div class="acc-item"><div class="acc-head"><h3>Fitness Coaching</h3><div class="plus">+</div></div><div class="acc-body"><p>Fitness Coaching ist die intensivere Begleitung im Fitnessstudio. Du bekommst nicht nur Training, sondern mehr Präsenz, Struktur, Führung und Kontrolle während des gesamten Prozesses. Ernährungsempfehlungen sind inklusive.</p><ul><li>Begleitung im Fitnessstudio</li><li>Trainingsplanung</li><li>Ernährungsempfehlungen inklusive</li><li>Technik-Korrektur</li><li>Fortschrittskontrolle</li></ul><br><button class="btn primary" onclick="openModal('vertrag')">Jetzt buchen</button></div></div>
+<div class="acc-item">
+<div class="acc-head"><h3>Fitness Coaching</h3><div class="plus">+</div></div>
+<div class="acc-body">
+<p>Fitness Coaching ist die intensivere Begleitung im Fitnessstudio. Du bekommst nicht nur Training, sondern mehr Präsenz, Struktur, Führung und Kontrolle während des gesamten Prozesses. Ernährungsempfehlungen sind inklusive.</p>
+<ul>
+<li>Begleitung im Fitnessstudio</li>
+<li>Trainingsplanung</li>
+<li>Ernährungsempfehlungen inklusive</li>
+<li>Technik-Korrektur</li>
+<li>Fortschrittskontrolle</li>
+</ul>
+<br>
+<button class="btn primary" onclick="openContract('fc')">Jetzt buchen</button>
+</div>
+</div>
 
-<div class="acc-item"><div class="acc-head"><h3>Online Coaching</h3><div class="plus">+</div></div><div class="acc-body">Planung und Betreuung aus der Distanz. Ideal, wenn du flexibel trainieren möchtest und trotzdem klare Struktur, Kontrolle und Ernährungsempfehlungen brauchst.<br><br><button class="btn primary" onclick="openModal('vertrag')">Jetzt buchen</button></div></div>
+<div class="acc-item">
+<div class="acc-head"><h3>Online Coaching</h3><div class="plus">+</div></div>
+<div class="acc-body">
+Planung und Betreuung aus der Distanz. Ideal, wenn du flexibel trainieren möchtest und trotzdem klare Struktur, Kontrolle und Ernährungsempfehlungen brauchst.
+<br><br>
+<button class="btn primary" onclick="openContract('online')">Jetzt buchen</button>
+</div>
+</div>
 </div>
 </section>
 
@@ -206,7 +240,7 @@ section{padding:62px 5%}
 <li>Technik & Ausführung</li>
 <li>Persönliche Betreuung</li>
 </ul>
-<button class="btn primary" onclick="openModal('vertrag')">Jetzt buchen</button>
+<button class="btn primary" onclick="openContract('pt')">Jetzt buchen</button>
 </div>
 
 <div class="price-card featured">
@@ -220,7 +254,7 @@ section{padding:62px 5%}
 <li>Trainingsstruktur & Kontrolle</li>
 <li>Mehr Präsenz während des Prozesses</li>
 </ul>
-<button class="btn" onclick="openModal('vertrag')">Jetzt buchen</button>
+<button class="btn" onclick="openContract('fc')">Jetzt buchen</button>
 </div>
 </div>
 
@@ -266,7 +300,7 @@ section{padding:62px 5%}
 <h2>Überzeuge dich selbst</h2>
 <p>Buche jetzt dein kostenloses Probetraining und lerne persönlich kennen, wie LU Fitness Coaching arbeitet.</p>
 </div>
-<button class="btn primary" onclick="openModal('vertrag')">Jetzt Probetraining buchen</button>
+<button class="btn primary" onclick="openContract('probe')">Jetzt Probetraining buchen</button>
 </div>
 </section>
 
@@ -288,23 +322,32 @@ section{padding:62px 5%}
 <div class="modal" id="vertrag">
 <div class="modal-box">
 <div class="modal-close" onclick="closeModal('vertrag')">×</div>
-<h2>Coaching Vertrag</h2>
-<p><strong>Vertragspartner:</strong> LU Fitness Coaching und der jeweilige Kunde / die jeweilige Kundin.</p>
-<p>Mit der Buchung bestätigt der Kunde, dass er die vereinbarten Leistungen, Preise und Bedingungen verstanden hat.</p>
+
+<h2 id="contractTitle">Coaching Vertrag</h2>
+
+<p><strong>Gewählte Leistung:</strong> <span id="contractService">Personal Training</span></p>
+<p><strong>Preis:</strong> <span id="contractPrice">CHF 130 / Stunde</span></p>
+
+<p>Mit der Buchung bestätigt der Kunde, dass er die gewählte Leistung, den Preis und die Bedingungen verstanden hat.</p>
+
 <ul>
-<li>Personal Training: CHF 130 pro Stunde.</li>
-<li>Fitness Coaching: CHF 150 pro Stunde.</li>
-<li>Ernährungsempfehlungen sind in beiden Leistungen enthalten.</li>
-<li>10 Stunden: 10 % Rabatt.</li>
-<li>20 Stunden: 15 % Rabatt.</li>
-<li>50 Stunden: individuelles Angebot.</li>
+<li>Ernährungsempfehlungen sind in der Betreuung enthalten.</li>
 <li>Termine müssen mindestens 24 Stunden vorher abgesagt werden.</li>
 <li>Zu spät abgesagte Termine können verrechnet werden.</li>
-<li>Der Kunde trainiert eigenverantwortlich und informiert LU Fitness Coaching über gesundheitliche Einschränkungen.</li>
+<li>Der Kunde trainiert eigenverantwortlich.</li>
+<li>Gesundheitliche Einschränkungen müssen vor Beginn mitgeteilt werden.</li>
+<li>Pakete sind persönlich und nicht übertragbar.</li>
+<li>LU Fitness Coaching kann Leistungen bei gesundheitlichen Risiken anpassen oder ablehnen.</li>
 </ul>
-<p>Nach Annahme der Bedingungen kann die Buchung direkt über WhatsApp bestätigt werden.</p>
+
+<p>Nach Annahme der Bedingungen kann die Buchung direkt über WhatsApp bestätigt werden. Die Nachricht enthält automatisch die gewählte Leistung und den Preis.</p>
+
 <br>
-<a class="btn primary" href="https://wa.me/41767401541?text=Hallo%20LU%20Fitness%20Coaching%2C%20ich%20habe%20den%20Coaching%20Vertrag%20gelesen%20und%20m%C3%B6chte%20einen%20Termin%20buchen." target="_blank">Vertrag akzeptieren & buchen</a>
+
+<a id="contractWhatsapp" class="btn primary" href="#" target="_blank">
+Vertrag akzeptieren & buchen
+</a>
+
 </div>
 </div>
 
@@ -358,7 +401,9 @@ const heroServices=[
 ["Online Coaching","Planung und Betreuung aus der Distanz mit klarer Struktur."],
 ["Probetraining","Lerne unser System kennen und starte mit einem klaren ersten Schritt."]
 ];
+
 let heroIndex=0;
+
 function rotateHero(){
 heroIndex=(heroIndex+1)%heroServices.length;
 const title=document.getElementById("serviceTitle");
@@ -372,12 +417,50 @@ title.style.opacity=1;
 text.style.opacity=1;
 },250);
 }
+
 setInterval(rotateHero,5200);
+
+function openContract(type){
+let service="";
+let price="";
+let message="";
+
+if(type==="pt"){
+service="Personal Training";
+price="CHF 130 / Stunde";
+message="Hallo LU Fitness Coaching, ich habe den Vertrag für Personal Training gelesen und akzeptiert. Preis: CHF 130 pro Stunde. Ich möchte einen Termin buchen.";
+}
+
+if(type==="fc"){
+service="Fitness Coaching";
+price="CHF 150 / Stunde";
+message="Hallo LU Fitness Coaching, ich habe den Vertrag für Fitness Coaching gelesen und akzeptiert. Preis: CHF 150 pro Stunde. Ich möchte einen Termin buchen.";
+}
+
+if(type==="online"){
+service="Online Coaching";
+price="Nach Vereinbarung";
+message="Hallo LU Fitness Coaching, ich habe die Informationen zum Online Coaching gelesen und möchte weitere Informationen erhalten.";
+}
+
+if(type==="probe"){
+service="Kostenloses Probetraining";
+price="Kostenlos";
+message="Hallo LU Fitness Coaching, ich möchte ein kostenloses Probetraining buchen.";
+}
+
+document.getElementById("contractService").textContent=service;
+document.getElementById("contractPrice").textContent=price;
+document.getElementById("contractWhatsapp").href="https://wa.me/41767401541?text="+encodeURIComponent(message);
+
+openModal("vertrag");
+}
 
 function openMenu(){document.getElementById("menu").classList.add("active")}
 function closeMenu(){document.getElementById("menu").classList.remove("active")}
 function openModal(id){document.getElementById(id).classList.add("active")}
 function closeModal(id){document.getElementById(id).classList.remove("active")}
+
 document.querySelectorAll(".acc-item").forEach(item=>{
 item.addEventListener("click",()=>item.classList.toggle("active"));
 });
