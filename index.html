@@ -12,16 +12,16 @@ html{scroll-behavior:smooth}
 body{font-family:Arial,Helvetica,sans-serif;background:#050505;color:#fff;overflow-x:hidden}
 a{text-decoration:none;color:inherit}
 :root{
---line:rgba(255,255,255,.18);
+--line:rgba(255,255,255,.16);
 --card:#0d0d0d;
---gold:#d6a94f;
+--gold:#bfa46a;
 --text:#f6f6f6;
 --soft:#dcdcdc;
 }
 
 header{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:20px 6%;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(180deg,rgba(0,0,0,.94),rgba(0,0,0,.20));backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.1)}
 .logo{font-size:22px;font-weight:900;letter-spacing:2px;text-transform:uppercase;color:#fff}
-.menu-btn{background:none;border:1px solid rgba(214,169,79,.55);color:white;font-size:14px;font-weight:900;letter-spacing:1px;padding:10px 16px;border-radius:6px}
+.menu-btn{background:none;border:1px solid rgba(191,164,106,.45);color:white;font-size:14px;font-weight:900;letter-spacing:1px;padding:10px 16px;border-radius:6px}
 .menu-btn span{font-size:22px;margin-left:8px;color:var(--gold)}
 
 .menu{position:fixed;top:0;right:-100%;width:82%;max-width:420px;height:100vh;background:#080808;z-index:2000;padding:90px 38px;transition:.4s;border-left:1px solid var(--line)}
@@ -64,7 +64,7 @@ h2{font-size:clamp(34px,7vw,72px);line-height:.9;letter-spacing:-4px;text-transf
 .pricing-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-bottom:30px}
 .price-card{background:linear-gradient(180deg,#111,#090909);border:1px solid var(--line);padding:30px;border-radius:8px;transition:.3s}
 .price-card:hover{transform:translateY(-6px);border-color:var(--gold)}
-.price-icon{width:54px;height:54px;border:1px solid rgba(214,169,79,.55);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:900;letter-spacing:1px;margin-bottom:20px;color:var(--gold)}
+.price-icon{width:54px;height:54px;border:1px solid rgba(191,164,106,.45);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:900;letter-spacing:1px;margin-bottom:20px;color:var(--gold)}
 .price-card h3{font-size:32px;text-transform:uppercase;margin-bottom:10px;color:#fff}
 .price-card .type{color:#e0e0e0;text-transform:uppercase;letter-spacing:2px;font-size:12px;margin-bottom:20px}
 .price{font-size:48px;font-weight:900;margin-bottom:20px;color:#fff}
@@ -72,12 +72,12 @@ h2{font-size:clamp(34px,7vw,72px);line-height:.9;letter-spacing:-4px;text-transf
 .price-card ul{list-style:none;margin-bottom:26px}
 .price-card li{margin:10px 0;color:#f1f1f1}
 .price-card li:before{content:"✓";margin-right:12px;color:var(--gold)}
-.price-card.featured{background:#fff;color:#000;border-color:var(--gold)}
+.price-card.featured{background:#f5f5f5;color:#000;border-color:var(--gold)}
 .price-card.featured h3,.price-card.featured .price,.price-card.featured .price-icon{color:#000}
 .price-card.featured .type,.price-card.featured .price span,.price-card.featured li{color:#222}
 .price-card.featured .btn{background:#000;color:#fff;border-color:#000}
 
-.discount-box{border:1px solid rgba(214,169,79,.45);background:#0b0b0b;padding:30px;border-radius:8px;margin-top:12px}
+.discount-box{border:1px solid rgba(191,164,106,.38);background:#0b0b0b;padding:30px;border-radius:8px;margin-top:12px}
 .discount-box h3{font-size:32px;text-transform:uppercase;margin-bottom:16px;color:var(--gold)}
 .discount-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .discount-item{border:1px solid var(--line);padding:22px;background:#111;border-radius:6px}
@@ -87,14 +87,14 @@ h2{font-size:clamp(34px,7vw,72px);line-height:.9;letter-spacing:-4px;text-transf
 .btn{display:inline-block;padding:15px 24px;border:1px solid rgba(255,255,255,.55);border-radius:6px;text-transform:uppercase;font-size:13px;font-weight:900;letter-spacing:1.2px;transition:.25s;cursor:pointer;background:transparent;color:#fff}
 .btn:hover{background:#fff;color:#000;transform:translateY(-3px)}
 .btn.primary{background:linear-gradient(135deg,#fff,#d9d9d9);color:#000;border-color:#fff}
-.btn.gold{background:linear-gradient(135deg,#e4be65,#b98930);color:#000;border-color:var(--gold)}
+.btn.gold{background:linear-gradient(135deg,#d8c08a,#a88f5a);color:#050505;border-color:#bfa46a}
 
 .about{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center}
 .about-img{min-height:390px;background:url('https://images.unsplash.com/photo-1594737625785-a6cbdabd333c?auto=format&fit=crop&w=1200&q=80') center/cover;border:1px solid var(--line);border-radius:8px}
 .about p{font-size:18px;line-height:1.7;color:#e8e8e8;margin-bottom:16px}
 
 .cta{padding:58px 6%;background:#0f0f0f}
-.cta-card{border:1px solid rgba(214,169,79,.45);padding:30px;display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center;background:#0b0b0b;border-radius:8px}
+.cta-card{border:1px solid rgba(191,164,106,.38);padding:30px;display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center;background:#0b0b0b;border-radius:8px}
 .cta-card p{color:#e0e0e0;font-size:18px;line-height:1.55}
 .cta-actions{display:grid;gap:12px}
 
@@ -175,6 +175,7 @@ section{padding:52px 5%}
 <div class="acc-item"><div class="acc-head"><div class="acc-num">04</div><h3>Individueller Plan</h3><div class="plus">+</div></div><div class="acc-body">Du bekommst eine klare Struktur, passend zu deinem Alltag, deinem Körper und deinem Ziel.</div></div>
 <div class="acc-item"><div class="acc-head"><div class="acc-num">05</div><h3>Umsetzung</h3><div class="plus">+</div></div><div class="acc-body">Training, Ernährung und Gewohnheiten werden konsequent umgesetzt.</div></div>
 <div class="acc-item"><div class="acc-head"><div class="acc-num">06</div><h3>Kontrolle & Anpassung</h3><div class="plus">+</div></div><div class="acc-body">Wir kontrollieren deinen Fortschritt und passen den Plan bei Bedarf an.</div></div>
+<div class="acc-item"><div class="acc-head"><div class="acc-num">07</div><h3>Wo trainieren wir?</h3><div class="plus">+</div></div><div class="acc-body"><p>Du entscheidest, wo das Training stattfindet. Wir passen uns an deine Situation, deinen Alltag und dein Ziel an.</p><ul><li>Bei dir zu Hause</li><li>In deinem Fitnessstudio</li><li>Im Fitnessstudio von LU Fitness Coaching</li><li>Im Büro / am Arbeitsplatz</li></ul></div></div>
 </div>
 </section>
 
@@ -185,23 +186,9 @@ section{padding:52px 5%}
 <h2>Unsere Leistungen</h2>
 
 <div class="accordion services-accordion">
-<div class="acc-item active">
-<div class="acc-head"><h3>Personal Training</h3><div class="plus">+</div></div>
-<div class="acc-body">
-<p>Individuelles Training mit persönlicher Betreuung. Jede Einheit wird an dein Ziel, dein Niveau und deinen Körper angepasst. Ernährungsempfehlungen sind immer Teil der Betreuung.</p>
-<ul><li>Personal Training Session</li><li>Ernährungsempfehlungen inklusive</li><li>Technik & Ausführung</li><li>Kontrolle & Anpassung</li></ul>
-<br><button class="btn primary" onclick="openBooking()">Vertrag lesen & buchen</button>
-</div>
-</div>
+<div class="acc-item active"><div class="acc-head"><h3>Personal Training</h3><div class="plus">+</div></div><div class="acc-body"><p>Individuelles Training mit persönlicher Betreuung. Jede Einheit wird an dein Ziel, dein Niveau und deinen Körper angepasst. Ernährungsempfehlungen sind immer Teil der Betreuung.</p><ul><li>Personal Training Session</li><li>Ernährungsempfehlungen inklusive</li><li>Technik & Ausführung</li><li>Kontrolle & Anpassung</li></ul><br><button class="btn primary" onclick="openBooking()">Vertrag lesen & buchen</button></div></div>
 
-<div class="acc-item">
-<div class="acc-head"><h3>Fitness Coaching</h3><div class="plus">+</div></div>
-<div class="acc-body">
-<p>Fitness Coaching ist die intensivere Begleitung im Fitnessstudio. Du bekommst nicht nur Training, sondern mehr Präsenz, Struktur, Führung und Kontrolle während des gesamten Prozesses. Ernährungsempfehlungen sind inklusive.</p>
-<ul><li>Begleitung im Fitnessstudio</li><li>Trainingsplanung</li><li>Ernährungsempfehlungen inklusive</li><li>Technik-Korrektur</li><li>Fortschrittskontrolle</li></ul>
-<br><button class="btn primary" onclick="openBooking()">Vertrag lesen & buchen</button>
-</div>
-</div>
+<div class="acc-item"><div class="acc-head"><h3>Fitness Coaching</h3><div class="plus">+</div></div><div class="acc-body"><p>Fitness Coaching ist die intensivere Begleitung im Fitnessstudio. Du bekommst nicht nur Training, sondern mehr Präsenz, Struktur, Führung und Kontrolle während des gesamten Prozesses. Ernährungsempfehlungen sind inklusive.</p><ul><li>Begleitung im Fitnessstudio</li><li>Trainingsplanung</li><li>Ernährungsempfehlungen inklusive</li><li>Technik-Korrektur</li><li>Fortschrittskontrolle</li></ul><br><button class="btn primary" onclick="openBooking()">Vertrag lesen & buchen</button></div></div>
 </div>
 </section>
 
