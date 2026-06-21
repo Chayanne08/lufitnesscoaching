@@ -88,7 +88,6 @@ h2{font-size:clamp(34px,7vw,72px);line-height:.9;letter-spacing:-4px;text-transf
 .btn:hover{background:#fff;color:#000;transform:translateY(-3px)}
 .btn.primary{background:linear-gradient(135deg,#fff,#d9d9d9);color:#000;border-color:#fff}
 .btn.gold{background:linear-gradient(135deg,#e4be65,#b98930);color:#000;border-color:var(--gold)}
-.btn.disabled{opacity:.35;pointer-events:none}
 
 .about{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center}
 .about-img{min-height:390px;background:url('https://images.unsplash.com/photo-1594737625785-a6cbdabd333c?auto=format&fit=crop&w=1200&q=80') center/cover;border:1px solid var(--line);border-radius:8px}
@@ -116,13 +115,6 @@ h2{font-size:clamp(34px,7vw,72px);line-height:.9;letter-spacing:-4px;text-transf
 .modal-box p,.modal-box li{color:#e1e1e1;line-height:1.65;margin-bottom:12px}
 .modal-box ul{margin-left:18px;margin-bottom:18px}
 .modal-close{float:right;font-size:32px;cursor:pointer}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0}
-.form-row input{width:100%;padding:15px;background:#111;border:1px solid var(--line);color:#fff;border-radius:6px;font-size:15px}
-.signature-wrap{margin:18px 0}
-.signature-wrap p{margin-bottom:8px}
-#signaturePad{width:100%;height:180px;background:#fff;border-radius:6px;touch-action:none}
-.checkbox-row{display:flex;gap:12px;align-items:flex-start;margin:18px 0;color:#e1e1e1;line-height:1.5}
-.checkbox-row input{margin-top:4px;transform:scale(1.2)}
 
 .whatsapp-float{position:fixed;right:22px;bottom:22px;z-index:999;background:#25D366;color:#000;width:62px;height:62px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900;box-shadow:0 12px 35px rgba(0,0,0,.35)}
 .whatsapp-float i{font-size:30px}
@@ -139,7 +131,7 @@ section{padding:52px 5%}
 .acc-body{padding:0 0 24px 68px}
 .services-accordion .acc-head,.faq-accordion .acc-head{grid-template-columns:1fr 30px}
 .services-accordion .acc-body,.faq-accordion .acc-body{padding-left:0}
-.pricing-grid,.about,.cta-card,.discount-grid,.form-row{grid-template-columns:1fr}
+.pricing-grid,.about,.cta-card,.discount-grid{grid-template-columns:1fr}
 .about-img{min-height:330px}
 }
 </style>
@@ -198,7 +190,7 @@ section{padding:52px 5%}
 <div class="acc-body">
 <p>Individuelles Training mit persönlicher Betreuung. Jede Einheit wird an dein Ziel, dein Niveau und deinen Körper angepasst. Ernährungsempfehlungen sind immer Teil der Betreuung.</p>
 <ul><li>Personal Training Session</li><li>Ernährungsempfehlungen inklusive</li><li>Technik & Ausführung</li><li>Kontrolle & Anpassung</li></ul>
-<br><button class="btn primary" onclick="openContract('pt')">Jetzt buchen</button>
+<br><button class="btn primary" onclick="openBooking()">Vertrag lesen & buchen</button>
 </div>
 </div>
 
@@ -207,7 +199,7 @@ section{padding:52px 5%}
 <div class="acc-body">
 <p>Fitness Coaching ist die intensivere Begleitung im Fitnessstudio. Du bekommst nicht nur Training, sondern mehr Präsenz, Struktur, Führung und Kontrolle während des gesamten Prozesses. Ernährungsempfehlungen sind inklusive.</p>
 <ul><li>Begleitung im Fitnessstudio</li><li>Trainingsplanung</li><li>Ernährungsempfehlungen inklusive</li><li>Technik-Korrektur</li><li>Fortschrittskontrolle</li></ul>
-<br><button class="btn primary" onclick="openContract('fc')">Jetzt buchen</button>
+<br><button class="btn primary" onclick="openBooking()">Vertrag lesen & buchen</button>
 </div>
 </div>
 </div>
@@ -226,7 +218,7 @@ section{padding:52px 5%}
 <h3>Personal Training</h3>
 <div class="price">CHF 130 <span>/ Stunde</span></div>
 <ul><li>Individuelle Trainingseinheit</li><li>Ernährungsempfehlungen inklusive</li><li>Technik & Ausführung</li><li>Persönliche Betreuung</li></ul>
-<button class="btn primary" onclick="openContract('pt')">Jetzt buchen</button>
+<button class="btn primary" onclick="openBooking()">Vertrag lesen & buchen</button>
 </div>
 
 <div class="price-card featured">
@@ -235,7 +227,7 @@ section{padding:52px 5%}
 <h3>Fitness Coaching</h3>
 <div class="price">CHF 150 <span>/ Stunde</span></div>
 <ul><li>Begleitung im Fitnessstudio</li><li>Ernährungsempfehlungen inklusive</li><li>Trainingsstruktur & Kontrolle</li><li>Mehr Präsenz während des Prozesses</li></ul>
-<button class="btn" onclick="openContract('fc')">Jetzt buchen</button>
+<button class="btn" onclick="openBooking()">Vertrag lesen & buchen</button>
 </div>
 </div>
 
@@ -298,46 +290,6 @@ section{padding:52px 5%}
 <div class="copy">© 2026 LU Fitness Coaching · @lucianofitnesscoaching_</div>
 </footer>
 
-<div class="modal" id="vertrag">
-<div class="modal-box">
-<div class="modal-close" onclick="closeModal('vertrag')">×</div>
-<h2>Coaching Vertrag</h2>
-<p><strong>Gewählte Leistung:</strong> <span id="contractService">Personal Training</span></p>
-<p><strong>Preis:</strong> <span id="contractPrice">CHF 130 / Stunde</span></p>
-
-<div class="form-row">
-<input id="clientName" type="text" placeholder="Vor- und Nachname">
-<input id="clientEmail" type="email" placeholder="E-Mail">
-</div>
-
-<p>Mit der Buchung bestätigt der Kunde, dass er die gewählte Leistung, den Preis und die Bedingungen verstanden hat.</p>
-<ul>
-<li>Ernährungsempfehlungen sind in der Betreuung enthalten.</li>
-<li>Der Kunde kann über Stripe mehrere Stunden kaufen.</li>
-<li>Termine müssen mindestens 24 Stunden vorher abgesagt werden.</li>
-<li>Zu spät abgesagte Termine können verrechnet werden.</li>
-<li>Der Kunde trainiert eigenverantwortlich.</li>
-<li>Gesundheitliche Einschränkungen müssen vor Beginn mitgeteilt werden.</li>
-<li>Pakete sind persönlich und nicht übertragbar.</li>
-<li>LU Fitness Coaching kann Leistungen bei gesundheitlichen Risiken anpassen oder ablehnen.</li>
-</ul>
-
-<div class="signature-wrap">
-<p><strong>Unterschrift des Kunden:</strong></p>
-<canvas id="signaturePad"></canvas>
-<br><br>
-<button class="btn" onclick="clearSignature()">Unterschrift löschen</button>
-</div>
-
-<label class="checkbox-row">
-<input type="checkbox" id="acceptTerms" onchange="validateContract()">
-<span>Ich habe den Vertrag gelesen, verstanden und akzeptiere die Bedingungen.</span>
-</label>
-
-<a id="payButton" class="btn primary disabled" href="#" target="_blank">Vertrag akzeptieren & bezahlen</a>
-</div>
-</div>
-
 <div class="modal" id="agb">
 <div class="modal-box"><div class="modal-close" onclick="closeModal('agb')">×</div>
 <h2>AGB</h2>
@@ -368,10 +320,7 @@ section{padding:52px 5%}
 <a class="whatsapp-float" href="https://wa.me/41767401541?text=Hallo%20LU%20Fitness%20Coaching%2C%20ich%20m%C3%B6chte%20mehr%20Informationen%20zu%20euren%20Leistungen%20erhalten." target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
 
 <script>
-const stripeLinks={
-pt:"https://buy.stripe.com/00waEX96jeCD0Bs8xUe7m01",
-fc:"https://buy.stripe.com/5kQ28reqDgKL83U8xUe7m00"
-};
+const bookingFormLink="https://pci.jotform.com/form/261712724462051";
 
 const heroServices=[
 ["Personal Training","Individuelles Training, Ernährungsempfehlungen, Kontrolle und persönliche Betreuung."],
@@ -380,9 +329,6 @@ const heroServices=[
 ];
 
 let heroIndex=0;
-let currentPaymentLink="";
-let signatureDone=false;
-let drawing=false;
 
 function rotateHero(){
 heroIndex=(heroIndex+1)%heroServices.length;
@@ -397,89 +343,8 @@ title.style.opacity=1;text.style.opacity=1;
 }
 setInterval(rotateHero,5200);
 
-function openContract(type){
-signatureDone=false;
-document.getElementById("acceptTerms").checked=false;
-document.getElementById("clientName").value="";
-document.getElementById("clientEmail").value="";
-document.getElementById("payButton").classList.add("disabled");
-
-if(type==="pt"){
-document.getElementById("contractService").textContent="Personal Training";
-document.getElementById("contractPrice").textContent="CHF 130 / Stunde";
-currentPaymentLink=stripeLinks.pt;
-}
-if(type==="fc"){
-document.getElementById("contractService").textContent="Fitness Coaching";
-document.getElementById("contractPrice").textContent="CHF 150 / Stunde";
-currentPaymentLink=stripeLinks.fc;
-}
-
-document.getElementById("payButton").href=currentPaymentLink;
-openModal("vertrag");
-setTimeout(setupSignaturePad,200);
-}
-
-function validateContract(){
-const accepted=document.getElementById("acceptTerms").checked;
-const name=document.getElementById("clientName").value.trim();
-const email=document.getElementById("clientEmail").value.trim();
-const btn=document.getElementById("payButton");
-
-if(accepted && signatureDone && name.length>2 && email.length>5){
-btn.classList.remove("disabled");
-}else{
-btn.classList.add("disabled");
-}
-}
-
-document.addEventListener("input",function(e){
-if(e.target.id==="clientName" || e.target.id==="clientEmail"){validateContract();}
-});
-
-function setupSignaturePad(){
-const canvas=document.getElementById("signaturePad");
-const rect=canvas.getBoundingClientRect();
-canvas.width=rect.width;
-canvas.height=180;
-const ctx=canvas.getContext("2d");
-ctx.lineWidth=2;
-ctx.lineCap="round";
-ctx.strokeStyle="#000";
-
-function getPos(e){
-const r=canvas.getBoundingClientRect();
-if(e.touches){return {x:e.touches[0].clientX-r.left,y:e.touches[0].clientY-r.top};}
-return {x:e.clientX-r.left,y:e.clientY-r.top};
-}
-
-canvas.onmousedown=canvas.ontouchstart=function(e){
-drawing=true;
-const p=getPos(e);
-ctx.beginPath();
-ctx.moveTo(p.x,p.y);
-e.preventDefault();
-};
-
-canvas.onmousemove=canvas.ontouchmove=function(e){
-if(!drawing)return;
-const p=getPos(e);
-ctx.lineTo(p.x,p.y);
-ctx.stroke();
-signatureDone=true;
-validateContract();
-e.preventDefault();
-};
-
-canvas.onmouseup=canvas.onmouseleave=canvas.ontouchend=function(){drawing=false;};
-}
-
-function clearSignature(){
-const canvas=document.getElementById("signaturePad");
-const ctx=canvas.getContext("2d");
-ctx.clearRect(0,0,canvas.width,canvas.height);
-signatureDone=false;
-validateContract();
+function openBooking(){
+window.open(bookingFormLink,"_blank");
 }
 
 function openMenu(){document.getElementById("menu").classList.add("active")}
@@ -493,4 +358,4 @@ item.addEventListener("click",()=>item.classList.toggle("active"));
 </script>
 
 </body>
-  </html>
+</html>
