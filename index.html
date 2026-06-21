@@ -11,46 +11,44 @@
 html{scroll-behavior:smooth}
 body{font-family:Arial,Helvetica,sans-serif;background:#050505;color:#fff;overflow-x:hidden}
 a{text-decoration:none;color:inherit}
-:root{--line:rgba(255,255,255,.18);--muted:#d6d6d6;--card:#0d0d0d;--soft:#f2f2f2}
+:root{--line:rgba(255,255,255,.18);--card:#0d0d0d}
 
 header{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:22px 6%;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(180deg,rgba(0,0,0,.92),rgba(0,0,0,.18));backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.1)}
-.logo{font-size:22px;font-weight:900;letter-spacing:2px;text-transform:uppercase;color:#fff}
+.logo{font-size:22px;font-weight:900;letter-spacing:2px;text-transform:uppercase}
 .menu-btn{background:none;border:0;color:white;font-size:15px;font-weight:900;letter-spacing:1px}
 .menu-btn span{font-size:28px;margin-left:12px;font-weight:300}
 
 .menu{position:fixed;top:0;right:-100%;width:82%;max-width:420px;height:100vh;background:#080808;z-index:2000;padding:100px 38px;transition:.4s;border-left:1px solid var(--line)}
 .menu.active{right:0}
 .close{position:absolute;right:32px;top:28px;font-size:42px}
-.menu a{display:block;font-size:30px;font-weight:900;text-transform:uppercase;margin:24px 0;color:#fff}
+.menu a{display:block;font-size:30px;font-weight:900;text-transform:uppercase;margin:24px 0}
 
 .hero{min-height:78vh;position:relative;display:flex;align-items:end;padding:105px 6% 58px;background:url('Screenshot_20260620_141238_Instagram.jpg') center/cover}
 .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.18),rgba(0,0,0,.86)),linear-gradient(90deg,rgba(0,0,0,.78),rgba(0,0,0,.08))}
-.hero-content{position:relative;z-index:2;max-width:900px;overflow:hidden}
+.hero-content{position:relative;z-index:2;max-width:900px}
 .hero-kicker{font-size:18px;letter-spacing:5px;text-transform:uppercase;margin-bottom:18px;color:#f1f1f1}
-h1{font-size:clamp(42px,10vw,92px);line-height:.86;text-transform:uppercase;letter-spacing:-4px;margin-bottom:18px;overflow-wrap:anywhere;color:#fff}
+h1{font-size:clamp(42px,10vw,92px);line-height:.86;text-transform:uppercase;letter-spacing:-4px;margin-bottom:18px;color:#fff}
 .hero-text{font-size:20px;line-height:1.55;color:#f1f1f1;max-width:720px}
 
 section{padding:72px 6%}
 .label{font-size:13px;letter-spacing:4px;text-transform:uppercase;color:#dcdcdc;margin-bottom:18px}
-h2{font-size:clamp(36px,7vw,76px);line-height:.9;letter-spacing:-4px;text-transform:uppercase;margin-bottom:34px;color:#fff}
+h2{font-size:clamp(36px,7vw,76px);line-height:.9;letter-spacing:-4px;text-transform:uppercase;margin-bottom:34px}
 .intro{font-size:20px;line-height:1.55;color:#e2e2e2;max-width:850px;margin-bottom:40px}
 
 .accordion{border-top:1px solid var(--line)}
 .acc-item{border-bottom:1px solid var(--line)}
 .acc-head{display:grid;grid-template-columns:70px 1fr 40px;gap:22px;align-items:center;padding:28px 0;cursor:pointer}
 .acc-num{font-size:28px;font-weight:900;color:#e8e8e8}
-.acc-head h3{font-size:clamp(24px,4vw,40px);text-transform:uppercase;line-height:1;color:#fff}
-.plus{font-size:34px;text-align:right;color:#fff}
+.acc-head h3{font-size:clamp(24px,4vw,40px);text-transform:uppercase;line-height:1}
+.plus{font-size:34px;text-align:right}
 .acc-body{display:none;color:#e0e0e0;font-size:17px;line-height:1.7;max-width:820px;padding:0 0 30px 92px}
 .acc-item.active .acc-body{display:block}
 .acc-body ul{list-style:none;margin-top:18px;color:#fff}
 .acc-body li{margin:10px 0}
 .acc-body li:before{content:"+";margin-right:12px}
 
-.services-accordion .acc-head,
-.faq-accordion .acc-head{grid-template-columns:1fr 40px}
-.services-accordion .acc-body,
-.faq-accordion .acc-body{padding-left:0}
+.services-accordion .acc-head,.faq-accordion .acc-head{grid-template-columns:1fr 40px}
+.services-accordion .acc-body,.faq-accordion .acc-body{padding-left:0}
 
 .image-band{height:280px;background:center/cover;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .band-1{background-image:url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1600&q=80')}
@@ -59,29 +57,27 @@ h2{font-size:clamp(36px,7vw,76px);line-height:.9;letter-spacing:-4px;text-transf
 .pricing-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-bottom:38px}
 .price-card{background:var(--card);border:1px solid var(--line);padding:32px;border-radius:6px;transition:.3s}
 .price-card:hover{transform:translateY(-6px);border-color:#fff}
-.price-icon{width:54px;height:54px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:900;letter-spacing:1px;margin-bottom:22px;color:#fff}
-.price-card h3{font-size:32px;text-transform:uppercase;margin-bottom:10px;color:#fff}
+.price-icon{width:54px;height:54px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:900;letter-spacing:1px;margin-bottom:22px}
+.price-card h3{font-size:32px;text-transform:uppercase;margin-bottom:10px}
 .price-card .type{color:#e0e0e0;text-transform:uppercase;letter-spacing:2px;font-size:12px;margin-bottom:22px}
-.price{font-size:48px;font-weight:900;margin-bottom:22px;color:#fff}
+.price{font-size:48px;font-weight:900;margin-bottom:22px}
 .price span{font-size:16px;color:#e0e0e0}
 .price-card ul{list-style:none;margin-bottom:28px}
 .price-card li{margin:10px 0;color:#f1f1f1}
 .price-card li:before{content:"+";margin-right:12px}
 .price-card.featured{background:#fff;color:#000}
-.price-card.featured h3,.price-card.featured .price,.price-card.featured .price-icon{color:#000}
-.price-card.featured .type,.price-card.featured .price span,.price-card.featured li{color:#222}
 .price-card.featured .btn{background:#000;color:#fff;border-color:#000}
 
 .discount-box{border:1px solid var(--line);background:#0b0b0b;padding:34px;border-radius:6px;margin-top:20px}
-.discount-box h3{font-size:34px;text-transform:uppercase;margin-bottom:18px;color:#fff}
+.discount-box h3{font-size:34px;text-transform:uppercase;margin-bottom:18px}
 .discount-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .discount-item{border:1px solid var(--line);padding:24px;background:#111}
-.discount-item strong{display:block;font-size:28px;margin-bottom:8px;color:#fff}
-.discount-item span{color:#e0e0e0}
+.discount-item strong{display:block;font-size:28px;margin-bottom:8px}
 
 .btn{display:inline-block;padding:16px 26px;border:1px solid rgba(255,255,255,.55);border-radius:6px;text-transform:uppercase;font-size:13px;font-weight:900;letter-spacing:1.2px;transition:.25s;cursor:pointer;background:transparent;color:#fff}
 .btn:hover{background:#fff;color:#000;transform:translateY(-3px)}
 .btn.primary{background:#fff;color:#000;border-color:#fff}
+.btn.disabled{opacity:.35;pointer-events:none}
 
 .about{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
 .about-img{min-height:420px;background:url('https://images.unsplash.com/photo-1594737625785-a6cbdabd333c?auto=format&fit=crop&w=1200&q=80') center/cover}
@@ -98,16 +94,22 @@ h2{font-size:clamp(36px,7vw,76px);line-height:.9;letter-spacing:-4px;text-transf
 .social-row i{font-size:28px}
 .legal-row{display:flex;gap:22px;flex-wrap:wrap;margin-bottom:28px}
 .legal-row a{color:#e0e0e0;text-transform:uppercase;letter-spacing:2px;font-size:13px}
-.legal-row a:hover{color:#fff}
 .copy{color:#cfcfcf;letter-spacing:2px;text-transform:uppercase;font-size:13px}
 
 .modal{position:fixed;inset:0;background:rgba(0,0,0,.86);z-index:3000;display:none;align-items:center;justify-content:center;padding:22px}
 .modal.active{display:flex}
-.modal-box{background:#080808;border:1px solid var(--line);max-width:760px;width:100%;max-height:82vh;overflow:auto;padding:32px}
+.modal-box{background:#080808;border:1px solid var(--line);max-width:820px;width:100%;max-height:88vh;overflow:auto;padding:32px}
 .modal-box h2{font-size:42px;margin-bottom:22px}
 .modal-box p,.modal-box li{color:#e1e1e1;line-height:1.7;margin-bottom:12px}
 .modal-box ul{margin-left:18px;margin-bottom:20px}
-.modal-close{float:right;font-size:32px;cursor:pointer;color:#fff}
+.modal-close{float:right;font-size:32px;cursor:pointer}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0}
+.form-row input{width:100%;padding:15px;background:#111;border:1px solid var(--line);color:#fff;border-radius:6px;font-size:15px}
+.signature-wrap{margin:18px 0}
+.signature-wrap p{margin-bottom:8px}
+#signaturePad{width:100%;height:180px;background:#fff;border-radius:6px;touch-action:none}
+.checkbox-row{display:flex;gap:12px;align-items:flex-start;margin:18px 0;color:#e1e1e1;line-height:1.5}
+.checkbox-row input{margin-top:4px;transform:scale(1.2)}
 
 .whatsapp-float{position:fixed;right:22px;bottom:22px;z-index:999;background:#25D366;color:#000;width:62px;height:62px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900;box-shadow:0 12px 35px rgba(0,0,0,.35)}
 .whatsapp-float i{font-size:30px}
@@ -122,11 +124,9 @@ section{padding:62px 5%}
 .image-band{height:230px}
 .acc-head{grid-template-columns:50px 1fr 30px}
 .acc-body{padding:0 0 28px 72px}
-.services-accordion .acc-head,
-.faq-accordion .acc-head{grid-template-columns:1fr 30px}
-.services-accordion .acc-body,
-.faq-accordion .acc-body{padding-left:0}
-.pricing-grid,.about,.cta-card,.discount-grid{grid-template-columns:1fr}
+.services-accordion .acc-head,.faq-accordion .acc-head{grid-template-columns:1fr 30px}
+.services-accordion .acc-body,.faq-accordion .acc-body{padding-left:0}
+.pricing-grid,.about,.cta-card,.discount-grid,.form-row{grid-template-columns:1fr}
 .about-img{min-height:360px}
 }
 </style>
@@ -184,14 +184,8 @@ section{padding:62px 5%}
 <div class="acc-head"><h3>Personal Training</h3><div class="plus">+</div></div>
 <div class="acc-body">
 <p>Individuelles Training mit persönlicher Betreuung. Jede Einheit wird an dein Ziel, dein Niveau und deinen Körper angepasst. Ernährungsempfehlungen sind immer Teil der Betreuung.</p>
-<ul>
-<li>Personal Training Session</li>
-<li>Ernährungsempfehlungen inklusive</li>
-<li>Technik & Ausführung</li>
-<li>Kontrolle & Anpassung</li>
-</ul>
-<br>
-<button class="btn primary" onclick="openContract('pt')">Jetzt buchen</button>
+<ul><li>Personal Training Session</li><li>Ernährungsempfehlungen inklusive</li><li>Technik & Ausführung</li><li>Kontrolle & Anpassung</li></ul>
+<br><button class="btn primary" onclick="openContract('pt')">Jetzt buchen</button>
 </div>
 </div>
 
@@ -199,24 +193,8 @@ section{padding:62px 5%}
 <div class="acc-head"><h3>Fitness Coaching</h3><div class="plus">+</div></div>
 <div class="acc-body">
 <p>Fitness Coaching ist die intensivere Begleitung im Fitnessstudio. Du bekommst nicht nur Training, sondern mehr Präsenz, Struktur, Führung und Kontrolle während des gesamten Prozesses. Ernährungsempfehlungen sind inklusive.</p>
-<ul>
-<li>Begleitung im Fitnessstudio</li>
-<li>Trainingsplanung</li>
-<li>Ernährungsempfehlungen inklusive</li>
-<li>Technik-Korrektur</li>
-<li>Fortschrittskontrolle</li>
-</ul>
-<br>
-<button class="btn primary" onclick="openContract('fc')">Jetzt buchen</button>
-</div>
-</div>
-
-<div class="acc-item">
-<div class="acc-head"><h3>Online Coaching</h3><div class="plus">+</div></div>
-<div class="acc-body">
-Planung und Betreuung aus der Distanz. Ideal, wenn du flexibel trainieren möchtest und trotzdem klare Struktur, Kontrolle und Ernährungsempfehlungen brauchst.
-<br><br>
-<button class="btn primary" onclick="openContract('online')">Jetzt buchen</button>
+<ul><li>Begleitung im Fitnessstudio</li><li>Trainingsplanung</li><li>Ernährungsempfehlungen inklusive</li><li>Technik-Korrektur</li><li>Fortschrittskontrolle</li></ul>
+<br><button class="btn primary" onclick="openContract('fc')">Jetzt buchen</button>
 </div>
 </div>
 </div>
@@ -234,12 +212,7 @@ Planung und Betreuung aus der Distanz. Ideal, wenn du flexibel trainieren möcht
 <div class="type">Personal Training</div>
 <h3>Personal Training</h3>
 <div class="price">CHF 130 <span>/ Stunde</span></div>
-<ul>
-<li>Individuelle Trainingseinheit</li>
-<li>Ernährungsempfehlungen inklusive</li>
-<li>Technik & Ausführung</li>
-<li>Persönliche Betreuung</li>
-</ul>
+<ul><li>Individuelle Trainingseinheit</li><li>Ernährungsempfehlungen inklusive</li><li>Technik & Ausführung</li><li>Persönliche Betreuung</li></ul>
 <button class="btn primary" onclick="openContract('pt')">Jetzt buchen</button>
 </div>
 
@@ -248,12 +221,7 @@ Planung und Betreuung aus der Distanz. Ideal, wenn du flexibel trainieren möcht
 <div class="type">Fitness Coaching</div>
 <h3>Fitness Coaching</h3>
 <div class="price">CHF 150 <span>/ Stunde</span></div>
-<ul>
-<li>Begleitung im Fitnessstudio</li>
-<li>Ernährungsempfehlungen inklusive</li>
-<li>Trainingsstruktur & Kontrolle</li>
-<li>Mehr Präsenz während des Prozesses</li>
-</ul>
+<ul><li>Begleitung im Fitnessstudio</li><li>Ernährungsempfehlungen inklusive</li><li>Trainingsstruktur & Kontrolle</li><li>Mehr Präsenz während des Prozesses</li></ul>
 <button class="btn" onclick="openContract('fc')">Jetzt buchen</button>
 </div>
 </div>
@@ -284,11 +252,8 @@ Planung und Betreuung aus der Distanz. Ideal, wenn du flexibel trainieren möcht
 <h2>Fragen vor dem Start</h2>
 <div class="accordion faq-accordion">
 <div class="acc-item"><div class="acc-head"><h3>Ist das Probetraining kostenlos?</h3><div class="plus">+</div></div><div class="acc-body">Ja. Das Probetraining dient dazu, dein Niveau zu sehen und zu prüfen, wie wir am besten starten.</div></div>
-
 <div class="acc-item"><div class="acc-head"><h3>Unterschied Personal Training und Fitness Coaching?</h3><div class="plus">+</div></div><div class="acc-body">Personal Training ist eine individuelle Trainingseinheit mit persönlicher Betreuung, Technik-Korrektur und Ernährungsempfehlungen. Fitness Coaching ist intensiver und beinhaltet mehr Begleitung im Fitnessstudio, mehr Struktur, mehr Kontrolle und mehr Präsenz während des Prozesses.</div></div>
-
 <div class="acc-item"><div class="acc-head"><h3>Ist Ernährung inklusive?</h3><div class="plus">+</div></div><div class="acc-body">Ja. Ernährungsempfehlungen sind sowohl im Personal Training als auch im Fitness Coaching enthalten.</div></div>
-
 <div class="acc-item"><div class="acc-head"><h3>Brauche ich Erfahrung im Gym?</h3><div class="plus">+</div></div><div class="acc-body">Nein. Das Coaching wird an dein aktuelles Niveau angepasst.</div></div>
 </div>
 </section>
@@ -300,22 +265,20 @@ Planung und Betreuung aus der Distanz. Ideal, wenn du flexibel trainieren möcht
 <h2>Überzeuge dich selbst</h2>
 <p>Buche jetzt dein kostenloses Probetraining und lerne persönlich kennen, wie LU Fitness Coaching arbeitet.</p>
 </div>
-<button class="btn primary" onclick="openContract('probe')">Jetzt Probetraining buchen</button>
+<a class="btn primary" href="https://wa.me/41767401541" target="_blank">Jetzt Probetraining buchen</a>
 </div>
 </section>
 
 <footer class="simple-footer">
 <div class="social-row">
-<a href="https://instagram.com/lucianofitnesscoaching_" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-<a href="https://wa.me/41767401541" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+<a href="https://instagram.com/lucianofitnesscoaching_" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+<a href="https://wa.me/41767401541" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
 </div>
-
 <div class="legal-row">
 <a href="#" onclick="openModal('agb')">AGB</a>
 <a href="#" onclick="openModal('datenschutz')">Datenschutz</a>
 <a href="#" onclick="openModal('impressum')">Impressum</a>
 </div>
-
 <div class="copy">© 2026 LU Fitness Coaching · @lucianofitnesscoaching_</div>
 </footer>
 
@@ -323,15 +286,21 @@ Planung und Betreuung aus der Distanz. Ideal, wenn du flexibel trainieren möcht
 <div class="modal-box">
 <div class="modal-close" onclick="closeModal('vertrag')">×</div>
 
-<h2 id="contractTitle">Coaching Vertrag</h2>
+<h2>Coaching Vertrag</h2>
 
 <p><strong>Gewählte Leistung:</strong> <span id="contractService">Personal Training</span></p>
 <p><strong>Preis:</strong> <span id="contractPrice">CHF 130 / Stunde</span></p>
+
+<div class="form-row">
+<input id="clientName" type="text" placeholder="Vor- und Nachname">
+<input id="clientEmail" type="email" placeholder="E-Mail">
+</div>
 
 <p>Mit der Buchung bestätigt der Kunde, dass er die gewählte Leistung, den Preis und die Bedingungen verstanden hat.</p>
 
 <ul>
 <li>Ernährungsempfehlungen sind in der Betreuung enthalten.</li>
+<li>Der Kunde kann über Stripe mehrere Stunden kaufen.</li>
 <li>Termine müssen mindestens 24 Stunden vorher abgesagt werden.</li>
 <li>Zu spät abgesagte Termine können verrechnet werden.</li>
 <li>Der Kunde trainiert eigenverantwortlich.</li>
@@ -340,49 +309,41 @@ Planung und Betreuung aus der Distanz. Ideal, wenn du flexibel trainieren möcht
 <li>LU Fitness Coaching kann Leistungen bei gesundheitlichen Risiken anpassen oder ablehnen.</li>
 </ul>
 
-<p>Nach Annahme der Bedingungen kann die Buchung direkt über WhatsApp bestätigt werden. Die Nachricht enthält automatisch die gewählte Leistung und den Preis.</p>
+<div class="signature-wrap">
+<p><strong>Unterschrift des Kunden:</strong></p>
+<canvas id="signaturePad"></canvas>
+<br><br>
+<button class="btn" onclick="clearSignature()">Unterschrift löschen</button>
+</div>
 
-<br>
+<label class="checkbox-row">
+<input type="checkbox" id="acceptTerms" onchange="validateContract()">
+<span>Ich habe den Vertrag gelesen, verstanden und akzeptiere die Bedingungen.</span>
+</label>
 
-<a id="contractWhatsapp" class="btn primary" href="#" target="_blank">
-Vertrag akzeptieren & buchen
-</a>
+<a id="payButton" class="btn primary disabled" href="#" target="_blank">Vertrag akzeptieren & bezahlen</a>
 
 </div>
 </div>
 
 <div class="modal" id="agb">
-<div class="modal-box">
-<div class="modal-close" onclick="closeModal('agb')">×</div>
+<div class="modal-box"><div class="modal-close" onclick="closeModal('agb')">×</div>
 <h2>AGB</h2>
 <p>Die Buchung eines Coachings, Personal Trainings oder Probetrainings erfolgt nach individueller Vereinbarung. Termine gelten als verbindlich, sobald sie bestätigt wurden.</p>
-<ul>
-<li>Absagen müssen mindestens 24 Stunden vorher erfolgen.</li>
-<li>Nicht rechtzeitig abgesagte Termine können verrechnet werden.</li>
-<li>Pakete sind persönlich und nicht übertragbar.</li>
-<li>Zahlungen erfolgen nach Vereinbarung im Voraus oder vor Beginn der Leistung.</li>
-<li>LU Fitness Coaching behält sich vor, Leistungen bei gesundheitlichen Risiken anzupassen oder abzulehnen.</li>
-</ul>
+<ul><li>Absagen müssen mindestens 24 Stunden vorher erfolgen.</li><li>Nicht rechtzeitig abgesagte Termine können verrechnet werden.</li><li>Pakete sind persönlich und nicht übertragbar.</li><li>Zahlungen erfolgen nach Vereinbarung im Voraus oder vor Beginn der Leistung.</li></ul>
 </div>
 </div>
 
 <div class="modal" id="datenschutz">
-<div class="modal-box">
-<div class="modal-close" onclick="closeModal('datenschutz')">×</div>
+<div class="modal-box"><div class="modal-close" onclick="closeModal('datenschutz')">×</div>
 <h2>Datenschutz</h2>
 <p>Personenbezogene Daten werden nur verwendet, um Anfragen zu beantworten, Termine zu organisieren und Coaching-Leistungen durchzuführen.</p>
-<ul>
-<li>Kontaktaufnahme kann über WhatsApp, Instagram oder Telefon erfolgen.</li>
-<li>Gesundheits-, Trainings- und Fortschrittsdaten werden vertraulich behandelt.</li>
-<li>Daten werden nicht ohne Zustimmung an Dritte verkauft oder weitergegeben.</li>
-<li>Du kannst jederzeit Auskunft oder Löschung deiner Daten verlangen.</li>
-</ul>
+<ul><li>Kontaktaufnahme kann über WhatsApp, Instagram oder Telefon erfolgen.</li><li>Gesundheits-, Trainings- und Fortschrittsdaten werden vertraulich behandelt.</li><li>Daten werden nicht ohne Zustimmung an Dritte verkauft oder weitergegeben.</li></ul>
 </div>
 </div>
 
 <div class="modal" id="impressum">
-<div class="modal-box">
-<div class="modal-close" onclick="closeModal('impressum')">×</div>
+<div class="modal-box"><div class="modal-close" onclick="closeModal('impressum')">×</div>
 <h2>Impressum</h2>
 <p><strong>LU Fitness Coaching</strong></p>
 <p>Inhaber: Chayanne Luciano</p>
@@ -395,65 +356,122 @@ Vertrag akzeptieren & buchen
 <a class="whatsapp-float" href="https://wa.me/41767401541" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
 
 <script>
+const stripeLinks={
+pt:"https://buy.stripe.com/00waEX96jeCD0Bs8xUe7m01",
+fc:"https://buy.stripe.com/5kQ28reqDgKL83U8xUe7m00"
+};
+
 const heroServices=[
 ["Personal Training","Individuelles Training, Ernährungsempfehlungen, Kontrolle und persönliche Betreuung."],
 ["Fitness Coaching","Begleitung im Fitnessstudio mit Struktur, Technik, Kontrolle und Ernährungsempfehlungen."],
-["Online Coaching","Planung und Betreuung aus der Distanz mit klarer Struktur."],
 ["Probetraining","Lerne unser System kennen und starte mit einem klaren ersten Schritt."]
 ];
 
 let heroIndex=0;
+let currentPaymentLink="";
+let signatureDone=false;
+let drawing=false;
 
 function rotateHero(){
 heroIndex=(heroIndex+1)%heroServices.length;
 const title=document.getElementById("serviceTitle");
 const text=document.getElementById("serviceText");
-title.style.opacity=0;
-text.style.opacity=0;
+title.style.opacity=0;text.style.opacity=0;
 setTimeout(()=>{
 title.textContent=heroServices[heroIndex][0];
 text.textContent=heroServices[heroIndex][1];
-title.style.opacity=1;
-text.style.opacity=1;
+title.style.opacity=1;text.style.opacity=1;
 },250);
 }
-
 setInterval(rotateHero,5200);
 
 function openContract(type){
-let service="";
-let price="";
-let message="";
+signatureDone=false;
+document.getElementById("acceptTerms").checked=false;
+document.getElementById("clientName").value="";
+document.getElementById("clientEmail").value="";
+document.getElementById("payButton").classList.add("disabled");
 
 if(type==="pt"){
-service="Personal Training";
-price="CHF 130 / Stunde";
-message="Hallo LU Fitness Coaching, ich habe den Vertrag für Personal Training gelesen und akzeptiert. Preis: CHF 130 pro Stunde. Ich möchte einen Termin buchen.";
+document.getElementById("contractService").textContent="Personal Training";
+document.getElementById("contractPrice").textContent="CHF 130 / Stunde";
+currentPaymentLink=stripeLinks.pt;
 }
-
 if(type==="fc"){
-service="Fitness Coaching";
-price="CHF 150 / Stunde";
-message="Hallo LU Fitness Coaching, ich habe den Vertrag für Fitness Coaching gelesen und akzeptiert. Preis: CHF 150 pro Stunde. Ich möchte einen Termin buchen.";
+document.getElementById("contractService").textContent="Fitness Coaching";
+document.getElementById("contractPrice").textContent="CHF 150 / Stunde";
+currentPaymentLink=stripeLinks.fc;
 }
 
-if(type==="online"){
-service="Online Coaching";
-price="Nach Vereinbarung";
-message="Hallo LU Fitness Coaching, ich habe die Informationen zum Online Coaching gelesen und möchte weitere Informationen erhalten.";
-}
-
-if(type==="probe"){
-service="Kostenloses Probetraining";
-price="Kostenlos";
-message="Hallo LU Fitness Coaching, ich möchte ein kostenloses Probetraining buchen.";
-}
-
-document.getElementById("contractService").textContent=service;
-document.getElementById("contractPrice").textContent=price;
-document.getElementById("contractWhatsapp").href="https://wa.me/41767401541?text="+encodeURIComponent(message);
-
+document.getElementById("payButton").href=currentPaymentLink;
 openModal("vertrag");
+setTimeout(setupSignaturePad,200);
+}
+
+function validateContract(){
+const accepted=document.getElementById("acceptTerms").checked;
+const name=document.getElementById("clientName").value.trim();
+const email=document.getElementById("clientEmail").value.trim();
+const btn=document.getElementById("payButton");
+
+if(accepted && signatureDone && name.length>2 && email.length>5){
+btn.classList.remove("disabled");
+}else{
+btn.classList.add("disabled");
+}
+}
+
+document.addEventListener("input",function(e){
+if(e.target.id==="clientName" || e.target.id==="clientEmail"){validateContract();}
+});
+
+function setupSignaturePad(){
+const canvas=document.getElementById("signaturePad");
+const rect=canvas.getBoundingClientRect();
+canvas.width=rect.width;
+canvas.height=180;
+const ctx=canvas.getContext("2d");
+ctx.lineWidth=2;
+ctx.lineCap="round";
+ctx.strokeStyle="#000";
+
+function getPos(e){
+const r=canvas.getBoundingClientRect();
+if(e.touches){
+return {x:e.touches[0].clientX-r.left,y:e.touches[0].clientY-r.top};
+}
+return {x:e.clientX-r.left,y:e.clientY-r.top};
+}
+
+canvas.onmousedown=canvas.ontouchstart=function(e){
+drawing=true;
+const p=getPos(e);
+ctx.beginPath();
+ctx.moveTo(p.x,p.y);
+e.preventDefault();
+};
+
+canvas.onmousemove=canvas.ontouchmove=function(e){
+if(!drawing)return;
+const p=getPos(e);
+ctx.lineTo(p.x,p.y);
+ctx.stroke();
+signatureDone=true;
+validateContract();
+e.preventDefault();
+};
+
+canvas.onmouseup=canvas.onmouseleave=canvas.ontouchend=function(){
+drawing=false;
+};
+}
+
+function clearSignature(){
+const canvas=document.getElementById("signaturePad");
+const ctx=canvas.getContext("2d");
+ctx.clearRect(0,0,canvas.width,canvas.height);
+signatureDone=false;
+validateContract();
 }
 
 function openMenu(){document.getElementById("menu").classList.add("active")}
@@ -467,4 +485,4 @@ item.addEventListener("click",()=>item.classList.toggle("active"));
 </script>
 
 </body>
-     </html>
+</html>
