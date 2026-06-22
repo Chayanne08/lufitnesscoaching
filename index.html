@@ -59,8 +59,8 @@ h2{font-size:clamp(34px,7vw,72px);line-height:.9;letter-spacing:-4px;text-transf
 .services-accordion .acc-body,.faq-accordion .acc-body{padding-left:0}
 
 .image-band{height:230px;background:center/cover;border-top:1px solid var(--line);border-bottom:1px solid var(--line);filter:contrast(1.05) grayscale(.2)}
-.band-1{background-image:url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1600&q=80')}
-.band-2{background-image:url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1600&q=80')}
+.band-1{background-image:url('https://images.unsplash.com/photo-1549476464-37392f717541?auto=format&fit=crop&w=1600&q=80')}
+.band-2{background-image:url('https://images.unsplash.com/photo-1517438322307-e67111335449?auto=format&fit=crop&w=1600&q=80')}
 
 .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:30px}
 .price-card{background:linear-gradient(180deg,#111,#090909);border:1px solid var(--line);padding:30px;border-radius:10px;transition:.35s;transform-style:preserve-3d}
@@ -87,8 +87,13 @@ h2{font-size:clamp(34px,7vw,72px);line-height:.9;letter-spacing:-4px;text-transf
 .btn.primary{background:linear-gradient(135deg,#fff,#d9d9d9);color:#000;border-color:#fff}
 .btn.gold{background:#fff;color:#050505;border-color:#fff}
 
+.content-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+.content-card{border:1px solid var(--line);background:#0b0b0b;padding:26px;border-radius:10px}
+.content-card h3{font-size:24px;text-transform:uppercase;margin-bottom:14px}
+.content-card p{color:#e1e1e1;line-height:1.6;font-size:16px}
+
 .about{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center}
-.about-img{min-height:390px;background:url('https://images.unsplash.com/photo-1594737625785-a6cbdabd333c?auto=format&fit=crop&w=1200&q=80') center/cover;border:1px solid var(--line);border-radius:10px;filter:grayscale(.2)}
+.about-img{min-height:390px;background:url('https://images.unsplash.com/photo-1517438322307-e67111335449?auto=format&fit=crop&w=1200&q=80') center/cover;border:1px solid var(--line);border-radius:10px;filter:grayscale(.2)}
 .about p{font-size:18px;line-height:1.7;color:#e8e8e8;margin-bottom:16px}
 
 .cta{padding:58px 6%;background:#0f0f0f}
@@ -138,7 +143,7 @@ section{padding:52px 5%}
 .acc-body{padding:0 0 24px 68px}
 .services-accordion .acc-head,.faq-accordion .acc-head{grid-template-columns:1fr 30px}
 .services-accordion .acc-body,.faq-accordion .acc-body{padding-left:0}
-.pricing-grid,.about,.cta-card{grid-template-columns:1fr}
+.pricing-grid,.about,.cta-card,.content-grid{grid-template-columns:1fr}
 .about-img{min-height:330px}
 }
 </style>
@@ -176,12 +181,12 @@ section{padding:52px 5%}
 <p class="intro">Ein klarer Ablauf vom ersten Gespräch bis zur Umsetzung. Du weißt von Anfang an, was passiert, warum wir so vorgehen und wie dein Fortschritt kontrolliert wird.</p>
 
 <div class="accordion">
-<div class="acc-item active"><div class="acc-head"><div class="acc-num">01</div><h3>Erstgespräch</h3><div class="plus">+</div></div><div class="acc-body">Wir sprechen über dein Ziel, deine Erfahrung, deinen Alltag und mögliche Einschränkungen.</div></div>
-<div class="acc-item"><div class="acc-head"><div class="acc-num">02</div><h3>Probetraining</h3><div class="plus">+</div></div><div class="acc-body">Kostenloses Training, um dein aktuelles Niveau und deinen Bedarf zu analysieren.</div></div>
-<div class="acc-item"><div class="acc-head"><div class="acc-num">03</div><h3>Analyse & Messungen</h3><div class="plus">+</div></div><div class="acc-body">Gewicht, Körpermaße, Trainingsstand und Ziel werden festgehalten.</div></div>
-<div class="acc-item"><div class="acc-head"><div class="acc-num">04</div><h3>Individueller Plan</h3><div class="plus">+</div></div><div class="acc-body">Du bekommst eine klare Struktur, passend zu deinem Alltag, deinem Körper und deinem Ziel.</div></div>
-<div class="acc-item"><div class="acc-head"><div class="acc-num">05</div><h3>Umsetzung</h3><div class="plus">+</div></div><div class="acc-body">Training, Ernährung und Gewohnheiten werden konsequent umgesetzt.</div></div>
-<div class="acc-item"><div class="acc-head"><div class="acc-num">06</div><h3>Kontrolle & Anpassung</h3><div class="plus">+</div></div><div class="acc-body">Wir kontrollieren deinen Fortschritt und passen den Plan bei Bedarf an.</div></div>
+<div class="acc-item active"><div class="acc-head"><div class="acc-num">01</div><h3>Erstgespräch</h3><div class="plus">+</div></div><div class="acc-body">Wir sprechen über dein Ziel, deine Erfahrung, deinen Alltag und mögliche Einschränkungen. So entsteht die Basis für ein Training, das realistisch, effektiv und langfristig umsetzbar ist.</div></div>
+<div class="acc-item"><div class="acc-head"><div class="acc-num">02</div><h3>Probetraining</h3><div class="plus">+</div></div><div class="acc-body">Kostenloses Training, um dein aktuelles Niveau und deinen Bedarf zu analysieren. Dabei schauen wir auf Technik, Bewegung, Kondition, Kraft und Motivation.</div></div>
+<div class="acc-item"><div class="acc-head"><div class="acc-num">03</div><h3>Analyse & Messungen</h3><div class="plus">+</div></div><div class="acc-body">Gewicht, Körpermaße, Trainingsstand und Ziel werden festgehalten. Dadurch können wir Fortschritt sichtbar machen und nicht nur nach Gefühl arbeiten.</div></div>
+<div class="acc-item"><div class="acc-head"><div class="acc-num">04</div><h3>Individueller Plan</h3><div class="plus">+</div></div><div class="acc-body">Du bekommst eine klare Struktur, passend zu deinem Alltag, deinem Körper und deinem Ziel. Der Plan ist einfach verständlich, aber konsequent aufgebaut.</div></div>
+<div class="acc-item"><div class="acc-head"><div class="acc-num">05</div><h3>Umsetzung</h3><div class="plus">+</div></div><div class="acc-body">Training, Ernährung und Gewohnheiten werden Schritt für Schritt umgesetzt. Wir achten auf saubere Technik, Intensität, Disziplin und realistische Fortschritte.</div></div>
+<div class="acc-item"><div class="acc-head"><div class="acc-num">06</div><h3>Kontrolle & Anpassung</h3><div class="plus">+</div></div><div class="acc-body">Wir kontrollieren deinen Fortschritt regelmäßig und passen den Plan bei Bedarf an. Wenn etwas nicht funktioniert, wird es verändert. Wenn etwas funktioniert, bauen wir darauf auf.</div></div>
 </div>
 </section>
 
@@ -190,6 +195,7 @@ section{padding:52px 5%}
 <section id="services" class="reveal">
 <div class="label">Leistungen</div>
 <h2>Personal Training mit System</h2>
+<p class="intro">LU Fitness Coaching verbindet Personal Training, klare Trainingsplanung, Ernährungsempfehlungen, Kontrolle und auf Wunsch Fitness Boxing. Das Ziel ist nicht nur eine gute Einheit, sondern echte Veränderung.</p>
 
 <div class="accordion services-accordion">
 <div class="acc-item active">
@@ -223,10 +229,27 @@ section{padding:52px 5%}
 <li>Bessere Koordination und Reaktion</li>
 <li>Hoher Kalorienverbrauch</li>
 <li>Mehr Motivation durch dynamisches Training</li>
+<li>Ideal für Anfänger und Fortgeschrittene</li>
+<li>Perfekt als Ergänzung zu Krafttraining</li>
 </ul>
 <br>
 <a class="btn primary" href="https://wa.me/41767401541?text=Hallo%20LU%20Fitness%20Coaching%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Personal%20Training%20mit%20Fitness%20Boxing." target="_blank">Fitness Boxing anfragen</a>
 </div>
+</div>
+</div>
+
+<div class="content-grid">
+<div class="content-card">
+<h3>Technik</h3>
+<p>Saubere Ausführung ist die Grundlage. Wir korrigieren Haltung, Bewegung und Belastung, damit du sicher trainierst und bessere Ergebnisse erreichst.</p>
+</div>
+<div class="content-card">
+<h3>Struktur</h3>
+<p>Du bekommst keinen Zufallsplan. Jede Einheit hat ein Ziel, jede Woche hat eine Richtung und jeder Fortschritt wird kontrolliert.</p>
+</div>
+<div class="content-card">
+<h3>Kontrolle</h3>
+<p>Wir schauen regelmäßig, was funktioniert und was angepasst werden muss. So bleibst du motiviert und verlierst dein Ziel nicht aus den Augen.</p>
 </div>
 </div>
 </section>
@@ -298,6 +321,7 @@ section{padding:52px 5%}
 <h2>Mehr als Training</h2>
 <p>Wir arbeiten nicht nach Standardprogrammen. Jeder Körper, jeder Alltag und jedes Ziel braucht eine andere Strategie. Genau darum geht es bei LU Fitness Coaching: Training, Ernährung und Betreuung so aufzubauen, dass es zu deinem Leben passt.</p>
 <p>Unsere Erfahrung kommt aus der Praxis. Aus echten Trainingsflächen, echten Kunden und echten Fortschritten. Wir legen Wert auf saubere Technik, klare Struktur, ehrliche Kontrolle und konsequente Umsetzung.</p>
+<p>Personal Training bedeutet für uns Verantwortung. Du bekommst nicht einfach Übungen, sondern Führung. Wir zeigen dir, wie du trainierst, wie du dich verbesserst und wie du dranbleibst.</p>
 <p>Kein unnötiges Gerede. Kein kompliziertes System. Du bekommst einen klaren Plan und eine Betreuung, die dich Schritt für Schritt weiterbringt.</p>
 </div>
 </section>
@@ -385,8 +409,7 @@ const bookingFormLink="https://pci.jotform.com/form/261712724462051";
 
 const heroServices=[
 ["Personal Training","Individuelles Coaching mit Trainingsplanung, Ernährung, Kontrolle und auf Wunsch Fitness Boxing."],
-["Fitness Boxing auf Wunsch","Mehr Ausdauer, Kraft, Koordination und Energie durch Boxelemente im Training."],
-["10 & 20 Stunden Pakete","Klare Struktur, bessere Kontrolle und günstigere Stundenpreise für echte Fortschritte."]
+["Fitness Boxing auf Wunsch","Mehr Ausdauer, Kraft, Koordination und Energie durch Boxelemente im Training."]
 ];
 
 let heroIndex=0;
@@ -429,4 +452,4 @@ window.addEventListener("load",revealOnScroll);
 </script>
 
 </body>
-                                                                                    </html>
+  </html>
