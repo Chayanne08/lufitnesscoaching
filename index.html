@@ -17,6 +17,7 @@ a{text-decoration:none;color:inherit}
 --gold:#fff;
 --text:#f6f6f6;
 --soft:#dcdcdc;
+--accent:#c79a35;
 }
 
 header{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:20px 6%;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(180deg,rgba(0,0,0,.94),rgba(0,0,0,.20));backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.1)}
@@ -64,6 +65,71 @@ h2{font-size:clamp(34px,7vw,72px);line-height:.9;letter-spacing:-4px;text-transf
 
 .services-accordion .acc-head,.faq-accordion .acc-head{grid-template-columns:1fr 40px}
 .services-accordion .acc-body,.faq-accordion .acc-body{padding-left:0}
+
+.kundenbereich{background:#f4f4f1;color:#111;padding:58px 6%}
+.kundenbereich .label{color:#111}
+.kundenbereich h2{color:#111}
+.kundenbereich .intro{color:#333}
+.portal-wrap{display:grid;grid-template-columns:160px 1fr;gap:28px;align-items:start;margin-bottom:28px}
+.portal-side{display:grid;gap:24px}
+.portal-info{background:#0d1117;color:#fff;border-radius:16px;padding:22px;box-shadow:0 20px 45px rgba(0,0,0,.12)}
+.portal-info h3{font-size:20px;text-transform:uppercase;margin-bottom:8px}
+.portal-info p{font-size:14px;line-height:1.6;color:#eaeaea}
+.portal-icon{width:54px;height:54px;border:1px solid rgba(199,154,53,.8);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:22px;margin-top:20px}
+
+.portal-screen{background:#07090c;color:#fff;border-radius:14px;overflow:hidden;border:1px solid rgba(0,0,0,.2);box-shadow:0 24px 70px rgba(0,0,0,.25)}
+.portal-top{height:56px;background:#030303;display:flex;align-items:center;justify-content:space-between;padding:0 24px;border-bottom:1px solid rgba(255,255,255,.08)}
+.portal-brand{font-size:18px;font-weight:900;letter-spacing:1px;text-transform:uppercase;color:#d8a84a}
+.portal-user{display:flex;align-items:center;gap:12px;font-size:13px}
+.portal-user img{width:34px;height:34px;border-radius:50%;object-fit:cover}
+
+.portal-layout{display:grid;grid-template-columns:170px 1fr}
+.portal-nav{background:#0b0f14;border-right:1px solid rgba(255,255,255,.08);padding:18px}
+.portal-nav a{display:flex;align-items:center;gap:10px;padding:12px;border-radius:8px;color:#d9d9d9;font-size:13px;margin-bottom:7px}
+.portal-nav a.active,.portal-nav a:hover{background:linear-gradient(135deg,#c79a35,#8d6720);color:#fff}
+.portal-main{padding:22px}
+.portal-hello{display:flex;justify-content:space-between;gap:18px;margin-bottom:18px}
+.portal-hello h3{font-size:24px;margin-bottom:4px}
+.portal-hello p{font-size:14px;color:#ccc}
+.portal-banner{min-width:330px;border-radius:12px;background:url('https://images.pexels.com/photos/7674494/pexels-photo-7674494.jpeg?auto=compress&cs=tinysrgb&w=900') center/cover;min-height:120px;position:relative;overflow:hidden}
+.portal-banner:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.8),rgba(0,0,0,.15))}
+.portal-banner span{position:absolute;left:20px;bottom:18px;font-weight:900;max-width:230px;font-size:17px}
+
+.portal-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:14px}
+.portal-card{background:linear-gradient(180deg,#151a20,#0f1318);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:16px}
+.portal-card small{display:block;color:#ccc;margin-bottom:8px}
+.portal-card strong{font-size:21px;display:block;line-height:1.25}
+.portal-card em{display:block;color:#d8a84a;font-style:normal;margin-top:6px;font-size:12px}
+
+.portal-grid{display:grid;grid-template-columns:1.1fr 1.1fr 1.1fr .95fr;gap:12px}
+.training-list li,.week-list li{list-style:none;display:flex;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.07);padding:8px 0;font-size:13px;color:#eee}
+.portal-card h4{font-size:16px;margin-bottom:12px}
+.done-btn{width:100%;margin-top:12px;border:0;background:linear-gradient(135deg,#d2a03c,#8c641d);color:#fff;padding:12px;border-radius:7px;font-weight:900;cursor:pointer}
+.progress-box{height:145px;border-left:1px solid rgba(255,255,255,.14);border-bottom:1px solid rgba(255,255,255,.14);position:relative;margin:15px 0}
+.progress-line{position:absolute;left:10px;right:10px;top:35px;height:72px;background:linear-gradient(135deg,rgba(199,154,53,.45),rgba(199,154,53,.02));clip-path:polygon(0 10%,15% 35%,30% 32%,46% 48%,62% 58%,78% 72%,100% 70%,100% 100%,0 100%)}
+.coach-note{font-size:13px;line-height:1.55;color:#eee}
+.coach-mini{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.coach-mini img{width:42px;height:42px;border-radius:50%;object-fit:cover}
+
+.coach-panel{display:grid;grid-template-columns:1fr 1.5fr 1.35fr;gap:12px;padding:22px;background:#f5f5f5;color:#111}
+.coach-box{background:#fff;border:1px solid #ddd;border-radius:10px;padding:16px}
+.coach-box h4{font-size:17px;margin-bottom:12px}
+.client-row{display:flex;align-items:center;gap:10px;padding:10px;border-radius:8px;border-bottom:1px solid #eee}
+.client-row.active{background:#222;color:#fff}
+.client-row img{width:42px;height:42px;border-radius:50%;object-fit:cover}
+.client-row span{font-size:12px;color:inherit;opacity:.75}
+.profile-grid{display:grid;grid-template-columns:140px 1fr 1fr;gap:14px}
+.profile-grid img{width:100%;height:150px;object-fit:cover;border-radius:8px}
+.data-list p{display:flex;justify-content:space-between;font-size:13px;border-bottom:1px solid #eee;padding:7px 0}
+.form-row{display:grid;grid-template-columns:1fr 60px 60px 30px;gap:8px;margin-bottom:8px}
+.fake-input{border:1px solid #ddd;border-radius:6px;padding:10px;font-size:13px;color:#333;background:#fafafa}
+.coach-save{background:linear-gradient(135deg,#d2a03c,#8c641d);border:0;color:#fff;border-radius:7px;padding:13px;width:100%;font-weight:900;margin-top:10px}
+
+.how-works{background:#fff;color:#111;border-radius:14px;padding:26px;margin-top:24px}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.step{font-size:13px}
+.step i{width:44px;height:44px;border:1px solid #d2a03c;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#b48223;font-size:20px;margin-bottom:10px}
+.step strong{display:block;margin-bottom:6px}
 
 .pricing-section{padding-top:44px}
 .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:30px}
@@ -140,6 +206,16 @@ from{opacity:0;transform:translateY(-8px)}
 to{opacity:1;transform:translateY(0)}
 }
 
+@media(max-width:1100px){
+.portal-wrap{grid-template-columns:1fr}
+.portal-side{grid-template-columns:1fr 1fr}
+.portal-layout,.coach-panel,.portal-grid,.portal-stats,.steps{grid-template-columns:1fr}
+.portal-nav{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.portal-hello{flex-direction:column}
+.portal-banner{min-width:100%}
+.profile-grid{grid-template-columns:1fr}
+}
+
 @media(max-width:900px){
 header{padding:18px 5%}
 .logo{font-size:18px}
@@ -157,6 +233,7 @@ section{padding:42px 5%}
 .pricing-section{padding-top:36px}
 .pricing-grid,.about,.cta-card{grid-template-columns:1fr}
 .about-img{min-height:330px}
+.portal-side{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -173,6 +250,7 @@ section{padding:42px 5%}
 <a href="#home" onclick="closeMenu()">Start</a>
 <a href="#process" onclick="closeMenu()">System</a>
 <a href="#services" onclick="closeMenu()">Leistungen</a>
+<a href="#kundenbereich" onclick="closeMenu()">Kundenbereich</a>
 <a href="#preise" onclick="closeMenu()">Preise</a>
 <a href="#about" onclick="closeMenu()">Über uns</a>
 <a href="#faq" onclick="closeMenu()">FAQ</a>
@@ -212,8 +290,6 @@ section{padding:42px 5%}
 <div class="acc-head"><h3>Personal Training</h3><div class="plus">+</div></div>
 <div class="acc-body">
 <p>Personal Training bei LU Fitness Coaching bedeutet mehr als nur eine Trainingsstunde. Du bekommst eine klare Struktur, persönliche Führung, saubere Technik, Ernährungsstrategie und ehrliche Kontrolle. Jede Einheit wird an dein Ziel, dein Niveau, deinen Alltag und deinen Körper angepasst.</p>
-<p>Ob Muskelaufbau, Gewichtsreduktion, bessere Kondition, mehr Disziplin oder ein kompletter Neustart: Wir bauen dein Training so auf, dass du verstehst, was du tust und warum du es tust.</p>
-<p>Dabei geht es nicht nur darum, dich im Training zu pushen. Es geht darum, dir ein System zu geben, das funktioniert: klare Übungen, saubere Ausführung, realistische Ernährungsempfehlungen, regelmäßige Kontrolle und Anpassung, wenn dein Körper oder dein Alltag es verlangt.</p>
 <ul>
 <li>Individuelle Trainingseinheiten</li>
 <li>Trainingsplanung passend zu deinem Ziel</li>
@@ -233,20 +309,174 @@ section{padding:42px 5%}
 <div class="acc-head"><h3>Fitness Boxing</h3><div class="plus">+</div></div>
 <div class="acc-body">
 <p>Fitness Boxing ist kein klassisches Wettkampfboxen. Es ist ein intensives Fitness-Training mit Elementen aus dem Boxen. Dabei trainierst du Ausdauer, Kraft, Koordination, Schnelligkeit, Reaktion und Körperspannung.</p>
-<p>Das Training bringt Abwechslung, Energie und Intensität in dein Coaching. Es eignet sich besonders, wenn du Fett verbrennen, deine Kondition verbessern, Stress abbauen und gleichzeitig deinen ganzen Körper trainieren möchtest.</p>
-<p>Je nach Ziel arbeiten wir mit Kombinationen, Beinarbeit, Pratzen, Intervallen, Core-Übungen und funktionellem Training. Du brauchst keine Boxerfahrung. Das Training wird an dein Niveau angepasst und kann direkt in dein Personal Training integriert werden.</p>
 <ul>
 <li>Boxelemente ohne Wettkampf</li>
 <li>Mehr Ausdauer und Kondition</li>
 <li>Bessere Koordination und Reaktion</li>
 <li>Hoher Kalorienverbrauch</li>
-<li>Mehr Motivation durch dynamisches Training</li>
 <li>Ideal für Anfänger und Fortgeschrittene</li>
-<li>Perfekt als Ergänzung zu Krafttraining</li>
 </ul>
 <br>
 <a class="btn primary" href="https://wa.me/41767401541?text=Hallo%20LU%20Fitness%20Coaching%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Fitness%20Boxing." target="_blank">Fitness Boxing anfragen</a>
 </div>
+</div>
+</div>
+</section>
+
+<section id="kundenbereich" class="kundenbereich reveal">
+<div class="label">Kundenbereich</div>
+<h2>Alles an einem Ort</h2>
+<p class="intro">Der digitale Bereich für Kunden und Coach. Der Kunde sieht seinen Plan, Fortschritt, Sessions und Nachrichten. Der Coach kann Kunden verwalten, Trainings hochladen und den Fortschritt kontrollieren.</p>
+
+<div class="portal-wrap">
+<div class="portal-side">
+<div class="portal-info">
+<h3>Cliente</h3>
+<p>Der Kunde greift mit seinem Login auf seinen persönlichen Bereich zu: Plan, Training, Ernährung, Fortschritt und Nachrichten.</p>
+<div class="portal-icon"><i class="fa-solid fa-lock"></i></div>
+</div>
+<div class="portal-info">
+<h3>Coach</h3>
+<p>Der Coach verwaltet Kunden, lädt Trainings hoch, kontrolliert Fortschritte und hält alles professionell organisiert.</p>
+<div class="portal-icon"><i class="fa-solid fa-user-shield"></i></div>
+</div>
+</div>
+
+<div>
+<div class="portal-screen">
+<div class="portal-top">
+<div class="portal-brand">LU Fitness Coaching</div>
+<div class="portal-user"><i class="fa-regular fa-bell"></i><img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=200"> Maria Keller</div>
+</div>
+
+<div class="portal-layout">
+<div class="portal-nav">
+<a class="active"><i class="fa-solid fa-house"></i>Inicio</a>
+<a><i class="fa-solid fa-dumbbell"></i>Mi plan</a>
+<a><i class="fa-solid fa-person-running"></i>Entrenamientos</a>
+<a><i class="fa-solid fa-apple-whole"></i>Nutrición</a>
+<a><i class="fa-solid fa-chart-line"></i>Progreso</a>
+<a><i class="fa-regular fa-calendar"></i>Sesiones</a>
+<a><i class="fa-regular fa-message"></i>Mensajes</a>
+<a><i class="fa-regular fa-user"></i>Mi perfil</a>
+</div>
+
+<div class="portal-main">
+<div class="portal-hello">
+<div>
+<h3>¡Hola, Maria! 👋</h3>
+<p>Aquí tienes un resumen de tu progreso y tu plan actual.</p>
+</div>
+<div class="portal-banner"><span>Confía en el proceso. Los resultados llegan.</span></div>
+</div>
+
+<div class="portal-stats">
+<div class="portal-card"><small>Peso actual</small><strong>72 kg</strong><em>↓ 6 kg desde el inicio</em></div>
+<div class="portal-card"><small>Objetivo</small><strong>Bajar grasa / tonificar</strong></div>
+<div class="portal-card"><small>Plan activo</small><strong>Personal Training 10H</strong><em>8 sesiones restantes</em></div>
+<div class="portal-card"><small>Próxima sesión</small><strong>Lunes 27 Mayo<br>18:00</strong><em>Boxing + Fuerza</em></div>
+</div>
+
+<div class="portal-grid">
+<div class="portal-card">
+<h4>Entrenamiento de hoy</h4>
+<ul class="training-list">
+<li><span>Sentadilla</span><span>4 x 10</span></li>
+<li><span>Peso muerto rumano</span><span>4 x 12</span></li>
+<li><span>Prensa</span><span>4 x 12</span></li>
+<li><span>Zancadas</span><span>3 x 12</span></li>
+<li><span>Abdominales</span><span>3 rondas</span></li>
+</ul>
+<button class="done-btn">Marcar como completado</button>
+</div>
+
+<div class="portal-card">
+<h4>Plan semanal</h4>
+<ul class="week-list">
+<li><span>Lunes</span><span>Pierna y glúteo</span></li>
+<li><span>Martes</span><span>Cardio / Boxing</span></li>
+<li><span>Miércoles</span><span>Descanso</span></li>
+<li><span>Jueves</span><span>Tren superior</span></li>
+<li><span>Viernes</span><span>Full body</span></li>
+<li><span>Sábado</span><span>Cardio suave</span></li>
+<li><span>Domingo</span><span>Descanso</span></li>
+</ul>
+</div>
+
+<div class="portal-card">
+<h4>Progreso</h4>
+<div class="progress-box"><div class="progress-line"></div></div>
+<p style="font-size:13px;color:#ddd">Peso inicial: 78 kg · Objetivo: 65 kg</p>
+</div>
+
+<div class="portal-card">
+<h4>Notas de tu coach</h4>
+<div class="coach-mini"><img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=200"><div><strong>Lucía</strong><br><small>Tu entrenadora</small></div></div>
+<p class="coach-note">¡Muy buen trabajo esta semana! Vas por el buen camino. Recuerda mantener la constancia y cuidar la alimentación.</p>
+<button class="done-btn">Enviar mensaje</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="portal-screen" style="margin-top:18px">
+<div class="portal-top">
+<div class="portal-brand">LU Fitness Coaching</div>
+<div class="portal-user"><i class="fa-regular fa-bell"></i><img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=200"> Lucía · Entrenadora</div>
+</div>
+
+<div class="coach-panel">
+<div class="coach-box">
+<h4>Clientes</h4>
+<div class="client-row active"><img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=200"><div>Maria Keller<br><span>Plan: PT 10H</span></div></div>
+<div class="client-row"><img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=200"><div>Daniel Ruiz<br><span>Plan: PT 20H</span></div></div>
+<div class="client-row"><img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=200"><div>Sofia Meier<br><span>Plan: PT 10H</span></div></div>
+</div>
+
+<div class="coach-box">
+<h4>Ficha de Maria Keller</h4>
+<div class="profile-grid">
+<img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=400">
+<div class="data-list">
+<p><span>Email</span><strong>maria@email.com</strong></p>
+<p><span>Edad</span><strong>28 años</strong></p>
+<p><span>Objetivo</span><strong>Bajar grasa</strong></p>
+<p><span>Plan</span><strong>PT 10H</strong></p>
+</div>
+<div class="data-list">
+<p><span>Peso actual</span><strong>72 kg</strong></p>
+<p><span>Peso inicial</span><strong>78 kg</strong></p>
+<p><span>Altura</span><strong>168 cm</strong></p>
+<p><span>Sesiones</span><strong>2 / 10</strong></p>
+</div>
+</div>
+</div>
+
+<div class="coach-box">
+<h4>Subir entrenamiento</h4>
+<div class="fake-input">Semana 1 - Día 1 · Pierna y glúteo</div><br>
+<div class="form-row"><div class="fake-input">Sentadilla</div><div class="fake-input">4</div><div class="fake-input">10</div><div class="fake-input">×</div></div>
+<div class="form-row"><div class="fake-input">Peso muerto rumano</div><div class="fake-input">4</div><div class="fake-input">12</div><div class="fake-input">×</div></div>
+<div class="form-row"><div class="fake-input">Prensa</div><div class="fake-input">4</div><div class="fake-input">12</div><div class="fake-input">×</div></div>
+<div class="form-row"><div class="fake-input">Zancadas</div><div class="fake-input">3</div><div class="fake-input">12</div><div class="fake-input">×</div></div>
+<div class="fake-input">Notas para el cliente: Enfócate en la técnica y mantén buena ejecución.</div>
+<button class="coach-save">Guardar entrenamiento</button>
+</div>
+</div>
+</div>
+
+<div class="how-works">
+<h3>¿Cómo funciona?</h3>
+<div class="steps">
+<div class="step"><i class="fa-regular fa-user"></i><strong>1. Registro</strong>El cliente se registra desde la web.</div>
+<div class="step"><i class="fa-solid fa-lock"></i><strong>2. Acceso</strong>Accede a su panel personal.</div>
+<div class="step"><i class="fa-solid fa-dumbbell"></i><strong>3. Plan</strong>El coach sube entrenamientos y notas.</div>
+<div class="step"><i class="fa-solid fa-chart-line"></i><strong>4. Progreso</strong>Ambos siguen la evolución.</div>
+<div class="step"><i class="fa-regular fa-message"></i><strong>5. Contacto</strong>Mensajes y seguimiento constante.</div>
+</div>
+</div>
+
 </div>
 </div>
 </section>
@@ -303,7 +533,7 @@ section{padding:42px 5%}
 
 <div class="info-box">
 <h3>Warum ein Paket?</h3>
-<p>Einzelstunden sind gut für den Einstieg. Pakete sind besser, wenn du wirklich Veränderung willst. Mit 10 oder 20 Stunden können wir sauber planen, kontrollieren und anpassen. Je größer das Paket, desto günstiger der Stundenpreis und desto klarer der Weg zu deinem Ziel.</p>
+<p>Einzelstunden sind gut für den Einstieg. Pakete sind besser, wenn du wirklich Veränderung willst. Mit 10 oder 20 Stunden können wir sauber planen, kontrollieren und anpassen.</p>
 </div>
 </section>
 
@@ -312,10 +542,9 @@ section{padding:42px 5%}
 <div>
 <div class="label">Über uns</div>
 <h2>Mehr als Training</h2>
-<p>Wir arbeiten nicht nach Standardprogrammen. Jeder Körper, jeder Alltag und jedes Ziel braucht eine andere Strategie. Genau darum geht es bei LU Fitness Coaching: Training, Ernährung und Betreuung so aufzubauen, dass es zu deinem Leben passt.</p>
-<p>Unsere Erfahrung kommt aus der Praxis. Aus echten Trainingsflächen, echten Kunden und echten Fortschritten. Wir legen Wert auf saubere Technik, klare Struktur, ehrliche Kontrolle und konsequente Umsetzung.</p>
-<p>Personal Training bedeutet für uns Verantwortung. Du bekommst nicht einfach Übungen, sondern Führung. Wir zeigen dir, wie du trainierst, wie du dich verbesserst und wie du dranbleibst.</p>
-<p>Kein unnötiges Gerede. Kein kompliziertes System. Du bekommst einen klaren Plan und eine Betreuung, die dich Schritt für Schritt weiterbringt.</p>
+<p>Wir arbeiten nicht nach Standardprogrammen. Jeder Körper, jeder Alltag und jedes Ziel braucht eine andere Strategie.</p>
+<p>Unsere Erfahrung kommt aus der Praxis. Aus echten Trainingsflächen, echten Kunden und echten Fortschritten.</p>
+<p>Personal Training bedeutet für uns Verantwortung. Du bekommst nicht einfach Übungen, sondern Führung.</p>
 </div>
 </section>
 
@@ -324,11 +553,11 @@ section{padding:42px 5%}
 <div>
 <div class="label">Probetraining</div>
 <h2>Überzeuge dich selbst</h2>
-<p>Buche jetzt dein kostenloses Probetraining über WhatsApp. Wir sprechen kurz über dein Ziel und finden gemeinsam den passenden Start.</p>
+<p>Buche jetzt dein kostenloses Probetraining über WhatsApp.</p>
 </div>
 <div class="cta-actions">
-<a class="btn gold" href="https://wa.me/41767401541?text=Hallo%20LU%20Fitness%20Coaching%2C%20ich%20interessiere%20mich%20f%C3%BCr%20ein%20kostenloses%20Probetraining.%20Wann%20w%C3%A4re%20ein%20Termin%20m%C3%B6glich%3F" target="_blank">Probetraining buchen</a>
-<a class="btn primary" href="https://wa.me/41767401541?text=Hallo%20LU%20Fitness%20Coaching%2C%20ich%20m%C3%B6chte%20mehr%20Informationen%20zu%20Personal%20Training%20und%20Fitness%20Boxing%20erhalten." target="_blank">Informationen anfragen</a>
+<a class="btn gold" href="https://wa.me/41767401541?text=Hallo%20LU%20Fitness%20Coaching%2C%20ich%20interessiere%20mich%20f%C3%BCr%20ein%20kostenloses%20Probetraining." target="_blank">Probetraining buchen</a>
+<a class="btn primary" href="https://wa.me/41767401541?text=Hallo%20LU%20Fitness%20Coaching%2C%20ich%20m%C3%B6chte%20mehr%20Informationen%20erhalten." target="_blank">Informationen anfragen</a>
 </div>
 </div>
 </section>
@@ -339,9 +568,8 @@ section{padding:42px 5%}
 <div class="accordion faq-accordion">
 <div class="acc-item"><div class="acc-head"><h3>Ist das Probetraining kostenlos?</h3><div class="plus">+</div></div><div class="acc-body">Ja. Das Probetraining dient dazu, dein Niveau zu sehen und zu prüfen, wie wir am besten starten.</div></div>
 <div class="acc-item"><div class="acc-head"><h3>Was ist im Personal Training enthalten?</h3><div class="plus">+</div></div><div class="acc-body">Individuelle Trainingseinheiten, Trainingsplanung, Ernährungsempfehlungen, Technik-Korrektur, Fortschrittskontrolle und WhatsApp Support.</div></div>
-<div class="acc-item"><div class="acc-head"><h3>Kann ich Fitness Boxing wählen?</h3><div class="plus">+</div></div><div class="acc-body">Ja. Fitness Boxing kann in dein Personal Training integriert werden. Du brauchst keine Vorkenntnisse.</div></div>
-<div class="acc-item"><div class="acc-head"><h3>Wo trainieren wir?</h3><div class="plus">+</div></div><div class="acc-body"><p>Du entscheidest, wo das Training stattfindet. Wir passen uns an deine Situation, deinen Alltag und dein Ziel an.</p><ul><li>Bei dir zu Hause</li><li>In deinem Fitnessstudio</li><li>Im Fitnessstudio von LU Fitness Coaching</li><li>Im Büro / am Arbeitsplatz</li></ul></div></div>
-<div class="acc-item"><div class="acc-head"><h3>Brauche ich Erfahrung im Gym?</h3><div class="plus">+</div></div><div class="acc-body">Nein. Das Coaching wird an dein aktuelles Niveau angepasst.</div></div>
+<div class="acc-item"><div class="acc-head"><h3>Hat jeder Kunde einen eigenen Bereich?</h3><div class="plus">+</div></div><div class="acc-body">Ja. Geplant ist ein persönlicher Kundenbereich, in dem der Kunde Trainings, Fortschritt, Sessions und Nachrichten sehen kann.</div></div>
+<div class="acc-item"><div class="acc-head"><h3>Wo trainieren wir?</h3><div class="plus">+</div></div><div class="acc-body"><p>Bei dir zu Hause, in deinem Fitnessstudio, im Fitnessstudio von LU Fitness Coaching oder im Büro.</p></div></div>
 </div>
 </section>
 
@@ -460,4 +688,4 @@ window.addEventListener("load",revealOnScroll);
 </script>
 
 </body>
-  </html>
+                          </html>
